@@ -1,13 +1,13 @@
 import React from 'react';
 
-class CustomCheckbox.jsx extends React.Component{
+class CustomCheckbox extends React.Component{
     render(){
         return (
             <div>
-            salut din CustomCheckbox.jsx
+            salut din CustomCheckbox
             </div>
         );
     }
 }
 
-export default CustomCheckbox.jsx;
+export default CustomCheckbox;

@@ -1,13 +1,13 @@
 import React from 'react';
 
-class general.jsx extends React.Component{
+class general extends React.Component{
     render(){
         return (
             <div>
-            salut din general.jsx
+            salut din general
             </div>
         );
     }
 }
 
-export default general.jsx;
+export default general;

@@ -1,13 +1,13 @@
 import React from 'react';
 
-class Table.jsx extends React.Component{
+class Table extends React.Component{
     render(){
         return (
             <div>
-            salut din Table.jsx
+            salut din Table
             </div>
         );
     }
 }
 
-export default Table.jsx;
+export default Table;

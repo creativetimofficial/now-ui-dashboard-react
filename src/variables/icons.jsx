@@ -1,13 +1,13 @@
 import React from 'react';
 
-class icons.jsx extends React.Component{
+class icons extends React.Component{
     render(){
         return (
             <div>
-            salut din icons.jsx
+            salut din icons
             </div>
         );
     }
 }
 
-export default icons.jsx;
+export default icons;

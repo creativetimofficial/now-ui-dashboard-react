@@ -1,13 +1,13 @@
 import React from 'react';
 
-class FormInputs.jsx extends React.Component{
+class FormInputs extends React.Component{
     render(){
         return (
             <div>
-            salut din FormInputs.jsx
+            salut din FormInputs
             </div>
         );
     }
 }
 
-export default FormInputs.jsx;
+export default FormInputs;

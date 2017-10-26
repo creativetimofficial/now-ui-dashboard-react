@@ -1,13 +1,13 @@
 import React from 'react';
 
-class charts.jsx extends React.Component{
+class charts extends React.Component{
     render(){
         return (
             <div>
-            salut din charts.jsx
+            salut din charts
             </div>
         );
     }
 }
 
-export default charts.jsx;
+export default charts;

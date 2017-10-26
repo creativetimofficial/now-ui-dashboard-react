@@ -1,13 +1,13 @@
 import React from 'react';
 
-class Header.jsx extends React.Component{
+class Header extends React.Component{
     render(){
         return (
             <div>
-            salut din Header.jsx
+            salut din Header
             </div>
         );
     }
 }
 
-export default Header.jsx;
+export default Header;

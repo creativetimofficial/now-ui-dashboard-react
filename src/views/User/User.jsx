@@ -1,13 +1,13 @@
 import React from 'react';
 
-class User.jsx extends React.Component{
+class User extends React.Component{
     render(){
         return (
             <div>
-            salut din User.jsx
+            salut din User
             </div>
         );
     }
 }
 
-export default User.jsx;
+export default User;

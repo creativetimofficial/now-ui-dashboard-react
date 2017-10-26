@@ -1,13 +1,13 @@
 import React from 'react';
 
-class Card.jsx extends React.Component{
+class Card extends React.Component{
     render(){
         return (
             <div>
-            salut din Card.jsx
+            salut din Card
             </div>
         );
     }
 }
 
-export default Card.jsx;
+export default Card;

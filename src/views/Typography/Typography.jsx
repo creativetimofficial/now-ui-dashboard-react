@@ -1,13 +1,13 @@
 import React from 'react';
 
-class Typography.jsx extends React.Component{
+class Typography extends React.Component{
     render(){
         return (
             <div>
-            salut din Typography.jsx
+            salut din Typography
             </div>
         );
     }
 }
 
-export default Typography.jsx;
+export default Typography;

@@ -1,13 +1,13 @@
 import React from 'react';
 
-class Footer.jsx extends React.Component{
+class Footer extends React.Component{
     render(){
         return (
             <div>
-            salut din Footer.jsx
+            salut din Footer
             </div>
         );
     }
 }
 
-export default Footer.jsx;
+export default Footer;

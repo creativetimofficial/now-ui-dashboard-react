@@ -1,13 +1,13 @@
 import React from 'react';
 
-class CustomRadio.jsx extends React.Component{
+class CustomRadio extends React.Component{
     render(){
         return (
             <div>
-            salut din CustomRadio.jsx
+            salut din CustomRadio
             </div>
         );
     }
 }
 
-export default CustomRadio.jsx;
+export default CustomRadio;

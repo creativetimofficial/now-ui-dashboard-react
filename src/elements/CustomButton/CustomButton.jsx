@@ -1,13 +1,13 @@
 import React from 'react';
 
-class CustomButton.jsx extends React.Component{
+class CustomButton extends React.Component{
     render(){
         return (
             <div>
-            salut din CustomButton.jsx
+            salut din CustomButton
             </div>
         );
     }
 }
 
-export default CustomButton.jsx;
+export default CustomButton;

@@ -1,13 +1,13 @@
 import React from 'react';
 
-class Dashboard.jsx extends React.Component{
+class Dashboard extends React.Component{
     render(){
         return (
             <div>
-            salut din Dashboard.jsx
+            salut din Dashboard
             </div>
         );
     }
 }
 
-export default Dashboard.jsx;
+export default Dashboard;

@@ -1,13 +1,13 @@
 import React from 'react';
 
-class Maps.jsx extends React.Component{
+class Maps extends React.Component{
     render(){
         return (
             <div>
-            salut din Maps.jsx
+            salut din Maps
             </div>
         );
     }
 }
 
-export default Maps.jsx;
+export default Maps;

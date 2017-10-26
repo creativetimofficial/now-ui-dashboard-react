@@ -1,13 +1,13 @@
 import React from 'react';
 
-class Task.jsx extends React.Component{
+class Task extends React.Component{
     render(){
         return (
             <div>
-            salut din Task.jsx
+            salut din Task
             </div>
         );
     }
 }
 
-export default Task.jsx;
+export default Task;
