@@ -3,6 +3,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 
 import Sidebar from 'components/Sidebar/Sidebar.jsx';
 import Header from 'components/Header/Header.jsx';
+import Footer from 'components/Footer/Footer.jsx';
 
 import appRoutes from 'routes/app.jsx';
 
@@ -28,6 +29,7 @@ class App extends React.Component{
                             }
                         </Switch>
                     </div>
+                    <Footer {...this.props}/>
                 </div>
             </div>
         );

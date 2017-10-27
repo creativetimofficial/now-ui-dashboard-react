@@ -1,0 +1,62 @@
+/*!
+
+ =========================================================
+ * Now Ui Dashboard - v1.0.0
+ =========================================================
+
+ * Product Page: http://www.creative-tim.com/product/now-ui-dashboard
+ * Copyright 2017 Creative Tim (http://www.creative-tim.com)
+ * Licensed under MIT (https://github.com/creativetimofficial/now-ui-dashboard/blob/master/LICENSE.md)
+
+ * Designed by www.invisionapp.com Coded by www.creative-tim.com
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+ */
+
+@import 'now-ui-dashboard/variables';
+@import 'now-ui-dashboard/mixins';
+
+// Plugins CSS
+@import "now-ui-dashboard/plugins/plugin-bootstrap-switch";
+@import "now-ui-dashboard/plugins/plugin-nouislider";
+@import "now-ui-dashboard/plugins/plugin-datepicker";
+@import "now-ui-dashboard/plugins/chartist";
+@import "now-ui-dashboard/plugins/animate";
+
+// Core CSS
+@import "now-ui-dashboard/buttons";
+@import "now-ui-dashboard/inputs";
+@import "now-ui-dashboard/checkboxes-radio";
+@import "now-ui-dashboard/progress";
+@import "now-ui-dashboard/badges";
+@import "now-ui-dashboard/pagination";
+@import "now-ui-dashboard/typography";
+@import "now-ui-dashboard/misc";
+@import "now-ui-dashboard/pills";
+
+// components
+@import "now-ui-dashboard/social-buttons";
+@import "now-ui-dashboard/tabs";
+@import "now-ui-dashboard/navbar";
+@import "now-ui-dashboard/dropdown";
+@import "now-ui-dashboard/alerts";
+@import "now-ui-dashboard/images";
+@import "now-ui-dashboard/popups";
+@import "now-ui-dashboard/nucleo-outline";
+@import "now-ui-dashboard/modals";
+@import "now-ui-dashboard/carousel";
+@import "now-ui-dashboard/tables";
+@import "now-ui-dashboard/sidebar-and-main-panel";
+@import "now-ui-dashboard/cards";
+@import "now-ui-dashboard/footers";
+@import "now-ui-dashboard/fixed-plugin";
+
+// example pages and sections
+@import "now-ui-dashboard/example-pages";
+@import "now-ui-dashboard/sections";
+
+
+@import "now-ui-dashboard/responsive";

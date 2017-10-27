@@ -1,5 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { Nav } from 'reactstrap';
+
+
+import bgImage from 'assets/img/bg1.jpg';
 
 class Sidebar extends React.Component{
     constructor(props){
@@ -12,24 +16,27 @@ class Sidebar extends React.Component{
     }
     render(){
         return (
-            <div class="sidebar" data-color="orange" data-image="../assets/img/blurred-image-1.jpg">
+            <div className="sidebar" data-color="orange" data-image={bgImage}>
+                <div className="sidebar-background" style={{backgroundImage: "url("+bgImage+")"}}></div>
                 {/*
                 Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
 
-                Tip 2: you can also add an image using data-image tag
+                Tip 2: you can also add an filter over the background-image using data-image tag
                 */}
 
-                <div class="logo">
-                    <a href="http://www.creative-tim.com" class="simple-text">
+                <div className="logo">
+                    <a href="http://www.creative-tim.com" className="simple-text">
                         Creative Tim
                     </a>
                 </div>
 
-                <div class="sidebar-wrapper">
+                <div className="sidebar-wrapper">
 
-                    <ul class="nav">
+                    <Nav>
                         {
                             this.props.routes.map((prop,key) => {
+                                if(prop.redirect)
+                                    return null;
                                 return (
                                     <li className={this.activeRoute(prop.path)} key={key}>
                                         <NavLink to={prop.path} className="nav-link" activeClassName="active">
@@ -40,7 +47,7 @@ class Sidebar extends React.Component{
                                 );
                             })
                         }
-                    </ul>
+                    </Nav>
 
                 </div>
             </div>
