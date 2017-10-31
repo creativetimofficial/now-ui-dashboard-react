@@ -23,11 +23,6 @@ class Header extends React.Component{
         });
     }
     dropdownToggle(e){
-        console.log(e);
-        console.log(document.getElementById("cevaceva"));
-        setTimeout(function(){document.getElementById("cevaceva").removeAttribute("style");document.getElementById("cevaceva").removeAttribute("data-placement")},1)
-        e.preventDefault();
-
         this.setState({
             dropdownOpen: !this.state.dropdownOpen
         });
@@ -46,7 +41,7 @@ class Header extends React.Component{
                             <DropdownToggle caret nav>
                                 <p>Dropdown</p>
                             </DropdownToggle>
-                            <DropdownMenu id="cevaceva">
+                            <DropdownMenu>
                                 <DropdownItem tag="a">Action</DropdownItem>
                                 <DropdownItem tag="a">Another Action</DropdownItem>
                                 <DropdownItem tag="a">Something else here</DropdownItem>

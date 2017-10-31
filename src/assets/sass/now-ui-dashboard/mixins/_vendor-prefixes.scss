@@ -44,14 +44,6 @@
         transform: translate3d(0,$value,0);
 }
 
-@mixin transform-translate-y-dropdown($value){
-     -webkit-transform:  translate3d(0,$value,0) !important;
-        -moz-transform: translate3d(0,$value,0) !important;
-        -o-transform: translate3d(0,$value,0) !important;
-        -ms-transform: translate3d(0,$value,0) !important;
-        transform: translate3d(0,$value,0) !important;
-}
-
 @mixin icon-gradient($color){
     background: $color;
     background: -webkit-linear-gradient($color 0%, #000 80%);

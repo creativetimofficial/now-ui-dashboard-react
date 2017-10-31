@@ -72,25 +72,22 @@
     }
 
     .dropdown &{
-        @include transform-translate-y-dropdown(20px);
+        @include transform-translate-y(-25px);
         visibility: hidden;
         display: block;
         @include opacity(0);
-        top: 0 !important;
-        will-change: auto !important;
-        position: absolute;
     }
 
     .dropdown.show &,
     &.open{
         @include opacity(1);
         visibility: visible;
-        @include transform-translate-y-dropdown(51px);
+        @include transform-translate-y(0px);
     }
 
-    // .navbar .dropdown.show &{
-    //     @include transform-translate-y(7px);
-    // }
+    .navbar .dropdown.show &{
+        @include transform-translate-y(7px);
+    }
 }
 
 .button-dropdown{
