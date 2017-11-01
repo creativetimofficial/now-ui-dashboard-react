@@ -1,5 +1,7 @@
 import React from 'react';
-import { UncontrolledTooltip, FormGroup, Label, Input, Button } from 'reactstrap';
+import { UncontrolledTooltip, FormGroup, Label, Input } from 'reactstrap';
+
+import Button from 'elements/CustomButton/CustomButton';
 
 class Task extends React.Component{
     render(){
@@ -27,7 +29,7 @@ class Task extends React.Component{
                     <td className="td-actions text-right">
                         <Button
                             id={edit}
-                            className="btn-round btn-icon btn-icon-mini btn-neutral"
+                            round icon iconMini neutral
                             color="info"
                         >
                             <i className="now-ui-icons ui-2_settings-90"></i>
@@ -35,7 +37,7 @@ class Task extends React.Component{
                         <UncontrolledTooltip placement="top" target={edit} delay={0}>Edit Task</UncontrolledTooltip>
                         <Button
                             id={remove}
-                            className="btn-round btn-icon btn-icon-mini btn-neutral"
+                            round icon iconMini neutral
                             color="danger"
                         >
                             <i className="now-ui-icons ui-1_simple-remove"></i>
