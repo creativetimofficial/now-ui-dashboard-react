@@ -3519,8 +3519,14 @@ body {
     background-color: #46b3ff; }
   .alert.alert-primary {
     background-color: #fa764b; }
+  .alert.alert-light, .alert.alert-secondary, .alert.alert-dark,
+  .alert.alert-light button.close,
+  .alert.alert-dark button.close,
+  .alert.alert-secondary button.close {
+    color: #595959; }
   .alert i.fa,
-  .alert i.now-ui-icons {
+  .alert i.now-ui-icons,
+  .alert button.now-ui-icons {
     font-size: 20px; }
   .alert .close {
     color: #FFFFFF;
@@ -3543,6 +3549,8 @@ body {
     width: 25px;
     height: 25px;
     padding: 3px; }
+    .alert button.close span {
+      display: none; }
   .alert .close ~ span {
     display: block;
     max-width: 89%; }
@@ -4112,14 +4120,14 @@ Created using IcoMoon - icomoon.io
 .modal-backdrop {
   background: rgba(0, 0, 0, 0.3); }
 
-.modal.modal-mini p {
+.modal .modal-mini p {
   text-align: center; }
 
-.modal.modal-mini .modal-dialog {
+.modal .modal-mini.modal-dialog {
   max-width: 255px;
   margin: 0 auto; }
 
-.modal.modal-mini .modal-profile {
+.modal .modal-mini .modal-profile {
   width: 70px;
   height: 70px;
   background-color: #FFFFFF;
@@ -4127,67 +4135,67 @@ Created using IcoMoon - icomoon.io
   text-align: center;
   line-height: 5.7;
   box-shadow: 0px 5px 50px 0px rgba(0, 0, 0, 0.3); }
-  .modal.modal-mini .modal-profile i {
+  .modal .modal-mini .modal-profile i {
     color: #f96332;
     font-size: 21px; }
-  .modal.modal-mini .modal-profile[class*="modal-profile-"] i {
+  .modal .modal-mini .modal-profile[class*="modal-profile-"] i {
     color: #FFFFFF; }
-  .modal.modal-mini .modal-profile.modal-profile-primary {
+  .modal .modal-mini .modal-profile.modal-profile-primary {
     background-color: #f96332; }
-  .modal.modal-mini .modal-profile.modal-profile-danger {
+  .modal .modal-mini .modal-profile.modal-profile-danger {
     background-color: #FF3636; }
-  .modal.modal-mini .modal-profile.modal-profile-warning {
+  .modal .modal-mini .modal-profile.modal-profile-warning {
     background-color: #FFB236; }
-  .modal.modal-mini .modal-profile.modal-profile-success {
+  .modal .modal-mini .modal-profile.modal-profile-success {
     background-color: #18ce0f; }
-  .modal.modal-mini .modal-profile.modal-profile-info {
+  .modal .modal-mini .modal-profile.modal-profile-info {
     background-color: #2CA8FF; }
 
-.modal.modal-mini .modal-footer button {
+.modal .modal-mini .modal-footer button {
   text-transform: uppercase; }
-  .modal.modal-mini .modal-footer button:first-child {
+  .modal .modal-mini .modal-footer button:first-child {
     opacity: .5; }
 
-.modal.modal-default .modal-content {
+.modal .modal-default .modal-content {
   background-color: #FFFFFF;
   color: #2c2c2c; }
 
-.modal.modal-default .modal-header .close {
+.modal .modal-default .modal-header .close {
   color: #2c2c2c; }
 
-.modal.modal-primary .modal-content {
+.modal .modal-primary .modal-content {
   background-color: #f96332;
   color: #FFFFFF; }
 
-.modal.modal-primary .modal-header .close {
+.modal .modal-primary .modal-header .close {
   color: #FFFFFF; }
 
-.modal.modal-danger .modal-content {
+.modal .modal-danger .modal-content {
   background-color: #FF3636;
   color: #FFFFFF; }
 
-.modal.modal-danger .modal-header .close {
+.modal .modal-danger .modal-header .close {
   color: #FFFFFF; }
 
-.modal.modal-warning .modal-content {
+.modal .modal-warning .modal-content {
   background-color: #FFB236;
   color: #FFFFFF; }
 
-.modal.modal-warning .modal-header .close {
+.modal .modal-warning .modal-header .close {
   color: #FFFFFF; }
 
-.modal.modal-success .modal-content {
+.modal .modal-success .modal-content {
   background-color: #18ce0f;
   color: #FFFFFF; }
 
-.modal.modal-success .modal-header .close {
+.modal .modal-success .modal-header .close {
   color: #FFFFFF; }
 
-.modal.modal-info .modal-content {
+.modal .modal-info .modal-content {
   background-color: #2CA8FF;
   color: #FFFFFF; }
 
-.modal.modal-info .modal-header .close {
+.modal .modal-info .modal-header .close {
   color: #FFFFFF; }
 
 .modal.show .modal-dialog {

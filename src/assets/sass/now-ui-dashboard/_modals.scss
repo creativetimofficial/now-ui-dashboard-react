@@ -69,12 +69,12 @@
 
 .modal{
 
-    &.modal-mini{
+    .modal-mini{
         p{
             text-align: center;
         }
 
-        .modal-dialog{
+        &.modal-dialog{
             max-width: 255px;
             margin: 0 auto;
         }
@@ -131,27 +131,27 @@
         }
     }
 
-    &.modal-default{
+    .modal-default{
         @include modal-colors($white-color, $black-color);
     }
 
-    &.modal-primary{
+    .modal-primary{
         @include modal-colors($primary-color, $white-color);
     }
 
-    &.modal-danger{
+    .modal-danger{
         @include modal-colors($danger-color, $white-color);
     }
 
-    &.modal-warning{
+    .modal-warning{
         @include modal-colors($warning-color, $white-color);
     }
 
-    &.modal-success{
+    .modal-success{
         @include modal-colors($success-color, $white-color);
     }
 
-    &.modal-info{
+    .modal-info{
         @include modal-colors($info-color, $white-color);
     }
 
