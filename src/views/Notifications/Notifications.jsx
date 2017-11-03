@@ -1,12 +1,14 @@
 import React from 'react';
 import {
-    Alert, UncontrolledAlert,
+    Alert,
     Modal, ModalBody, ModalFooter,
     Container, Row, Col,
     Card, CardHeader, CardTitle, CardSubtitle, CardBody
 } from 'reactstrap';
 
 import Button from 'elements/CustomButton/CustomButton.jsx';
+
+import Notify from './NotificationSystem/NotificationSystem';
 
 class Notifications extends React.Component{
     constructor(props) {
@@ -21,58 +23,22 @@ class Notifications extends React.Component{
         this.toggle = this.toggle.bind(this);
         this.notify = this.notify.bind(this);
     }
-    onDismiss() {
+    onDismiss(){
     }
     toggle() {
         this.setState({
             modal: !this.state.modal
         });
     }
-    notify(location){
-        // console.log(this.refs.hey.style);
-        var notify = this.state.notify;
-        var topleft = this.state.topleft;
-        if(this.refs.notifications.childNodes[0] !== undefined){
-            topleft += this.refs.notifications.childNodes[0].clientHeight;
-        }
-        if(this.refs.notifications.childNodes[1] === undefined){
-            notify.push(
-                <Col xs={11} sm={4} style={{display: "inline-block", margin: "0px auto", position: "fixed", transition: "all 0.5s ease-in-out", zIndex: "1031", top: topleft+"px", left: "20px"}} key={this.state.topleft}>
-                    <UncontrolledAlert color="info" className="alert-with-icon" closeClassName="now-ui-icons ui-1_simple-remove" >
-                        <span data-notify="icon" className="now-ui-icons ui-1_bell-53"></span>
-                        <span data-notify="message">Welcome to <b>Now Ui Dashboard</b> - a beautiful freebie for every web developer.</span>
-                    </UncontrolledAlert>
-                </Col>
-            );
-        } else {
-            notify.push(
-                <Col xs={11} sm={4} style={{display: "inline-block", margin: "0px auto", position: "fixed", transition: "all 0.5s ease-in-out", zIndex: "1031", top: "20px", left: "0px", right: "0px"}} key={this.state.topleft}>
-                    <UncontrolledAlert color="info" className="alert-with-icon" closeClassName="now-ui-icons ui-1_simple-remove" >
-                        <span data-notify="icon" className="now-ui-icons ui-1_bell-53"></span>
-                        <span data-notify="message">Welcome to <b>Now Ui Dashboard</b> - a beautiful freebie for every web developer.</span>
-                    </UncontrolledAlert>
-                </Col>
-            )
-        }
-        this.setState({
-            notify: notify,
-            topleft: topleft
-        });
+    notify(options){
+        this.refs.notify.notify(options);
+        // console.log(options);
     }
     render(){
         return (
             <Container fluid>
-                <div ref="notifications">
-                    {
-                        this.state.notify.map((prop,key)=>{
-                            return prop;
-                        })
-                    }
-                </div>
+                <Notify ref="notify"/>
                 <Card>
-                    <div ref="hey" style={{height: "400px"}}>
-                        Hey
-                    </div>
                     <CardHeader>
                         <CardTitle>Notifications</CardTitle>
                         <CardSubtitle>Handcrafted by our friend </CardSubtitle>
@@ -141,7 +107,17 @@ class Notifications extends React.Component{
                             </Row>
                             <Row className="justify-content-center">
                                 <Col md={3} lg={3}>
-                                    <Button block onClick={() => this.notify("tl")}>
+                                    <Button block onClick={() => this.notify(
+                                            {
+                                                place: "tl",
+                                                message: (
+                                                    <div>
+                                                        Welcome to <b>Now UI Dashboard React</b> - a beautiful freebie for every web developer.
+                                                    </div>
+                                                )
+                                            }
+                                        )}
+                                    >
                                         Top Left
                                     </Button>
                                 </Col>
