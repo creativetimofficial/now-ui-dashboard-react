@@ -107,7 +107,38 @@ Copyright (c) 2015 Daniel Eden
   animation-name: shake;
 }
 
+@-webkit-keyframes moveUp {
+  from {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
 
+  }
+
+  to {
+
+      -webkit-transform: translate3d(0, -110%, 0);
+      transform: translate3d(0, -110%, 0);
+  }
+}
+
+@keyframes moveUp {
+  from {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+
+  }
+
+  to {
+
+      -webkit-transform: translate3d(0, -110%, 0);
+      transform: translate3d(0, -110%, 0);
+  }
+}
+
+.moveUp {
+  -webkit-animation-name: moveUp;
+  animation-name: moveUp;
+}
 
 @-webkit-keyframes fadeInDown {
   from {
