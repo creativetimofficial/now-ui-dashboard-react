@@ -22,4 +22,3 @@ yarn-error.log*
 
 /Documentation
 package-lock.json
-/src/assets/sass/now-ui-dashboard.css
