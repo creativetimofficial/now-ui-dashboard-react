@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { FormGroup, Label, Input, InputGroup, InputGroupAddon } from 'reactstrap';
 
 function FieldGroup({ label,addonLeft,addonRight, formGroupProps, labelProps, inputProps, inputGroupProps, inputGroupAddonProps }) {
+    console.log(inputProps.type);
     if(addonLeft !== undefined || addonRight !== undefined)
         return (
             <InputGroup {...inputGroupProps}>
@@ -11,10 +12,18 @@ function FieldGroup({ label,addonLeft,addonRight, formGroupProps, labelProps, in
             </InputGroup>
         )
     return (
-        <FormGroup {...formGroupProps}>
-            {label ? (<Label {...labelProps}>{label}</Label>):""}
-            <Input {...inputProps} />
-        </FormGroup>
+        inputProps.type === "radio" || inputProps.type === "checkbox" ? (
+            <FormGroup {...formGroupProps}>
+                <Label {...labelProps}>
+                    <Input {...inputProps} />
+                    {inputProps.type === "checkbox" ?<span class="form-check-sign"></span>:""}
+                    {label ? label : ""}
+                </Label>
+            </FormGroup>):(
+            <FormGroup {...formGroupProps}>
+                {label ? <Label {...labelProps}>{label}</Label>:""}
+                <Input {...inputProps} />
+            </FormGroup>)
     );
 }
 
