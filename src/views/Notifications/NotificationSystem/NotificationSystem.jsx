@@ -97,54 +97,65 @@ class NotificationSystem extends React.Component{
         var sNotify = {};
         sNotify["notify"+options.place.toUpperCase()] = notify;
         if( options.autoDismiss > 0)
-            setTimeout(function(){this.onDismiss(nNumber,options.place);}.bind(this),options.autoDismiss*1000);
+            setTimeout(function(){this.onDismiss(nNumber,options.place);}.bind(this),options.autoDismiss*1000+(notify.length-1)*1000);
         this.setState(sNotify);
+    }
+    showAllNotifications(place){
+        if(this.state["notify"+place.toUpperCase()].length > 0){
+            var style = {display: "inline-block",margin: "0px auto",position: "fixed",transition: "all 0.5s ease-in-out",zIndex: "1031"};
+            if(place.indexOf("t")!==-1){
+                style["top"] = "20px";
+                switch (place) {
+                    case "tl":
+                        style["left"] =  "20px";
+                        break;
+                    case "tc":
+                        style["left"] = "0px";
+                        style["right"] = "0px";
+                        break;
+                    case "tr":
+                        style["right"] = "20px";
+                        break;
+                    default:
+                        break;
+                    }
+            } else {
+                style["bottom"] = "20px";
+                switch (place) {
+                    case "bl":
+                        style["left"] = "20px";
+                        break;
+                    case "bc":
+                        style["left"] = "0px";
+                        style["right"] = "0px";
+                        break;
+                    case "br":
+                        style["right"] = "20px";
+                        break;
+                    default:
+                        break;
+                }
+            }
+            return (
+                <Col xs={11} sm={4} style={style}>
+                    {
+                        this.state["notify"+place.toUpperCase()].map((prop,key)=>{
+                            return prop;
+                        })
+                    }
+                </Col>
+            );
+        }
     }
     render(){
         return (
             <div ref="notifications">
-                    <Col xs={11} sm={4} style={{display: "inline-block",margin: "0px auto",position: "fixed",transition: "all 0.5s ease-in-out",zIndex: "1031",top: "20px",left: "20px"}}>
-                        {
-                            this.state.notifyTL.map((prop,key)=>{
-                                return prop;
-                            })
-                        }
-                    </Col>
-                    <Col xs={11} sm={4} style={{display: "inline-block",margin: "0px auto",position: "fixed",transition: "all 0.5s ease-in-out",zIndex: "1031",top: "20px",left: "0px",right: "0px"}}>
-                        {
-                            this.state.notifyTC.map((prop,key)=>{
-                                return prop;
-                            })
-                        }
-                    </Col>
-                    <Col xs={11} sm={4} style={{display: "inline-block",margin: "0px auto",position: "fixed",transition: "all 0.5s ease-in-out",zIndex: "1031",top: "20px",right: "20px"}}>
-                        {
-                            this.state.notifyTR.map((prop,key)=>{
-                                return prop;
-                            })
-                        }
-                    </Col>
-                    <Col xs={11} sm={4} style={{display: "inline-block",margin: "0px auto",position: "fixed",transition: "all 0.5s ease-in-out",zIndex: "1031",bottom: "20px",left: "20px"}}>
-                        {
-                            this.state.notifyBL.map((prop,key)=>{
-                                return prop;
-                            })
-                        }
-                    </Col>
-                    <Col xs={11} sm={4} style={{display: "inline-block",margin: "0px auto",position: "fixed",transition: "all 0.5s ease-in-out",zIndex: "1031",bottom: "20px",left: "0px",right: "0px"}}>
-                        {
-                            this.state.notifyBC.map((prop,key)=>{
-                                return prop;
-                            })
-                        }
-                    </Col>
-                    <Col xs={11} sm={4} style={{display: "inline-block",margin: "0px auto",position: "fixed",transition: "all 0.5s ease-in-out",zIndex: "1031",bottom: "20px",right: "20px"}}>
-                        {
-                            this.state.notifyBR.map((prop,key)=>{
-                                return prop;
-                            })
-                        }
-                    </Col>
+                {this.showAllNotifications("tl")}
+                {this.showAllNotifications("tc")}
+                {this.showAllNotifications("tr")}
+                {this.showAllNotifications("bl")}
+                {this.showAllNotifications("bc")}
+                {this.showAllNotifications("br")}
             </div>
         );
     }
