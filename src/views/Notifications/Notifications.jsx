@@ -112,7 +112,9 @@ class Notifications extends React.Component{
                                                 place: "tl",
                                                 message: (
                                                     <div>
-                                                        Welcome to <b>Now UI Dashboard React</b> - a beautiful freebie for every web developer.
+                                                        <div>
+                                                            Welcome to <b>Now UI Dashboard React</b> - a beautiful freebie for every web developer.
+                                                        </div>
                                                     </div>
                                                 )
                                             }

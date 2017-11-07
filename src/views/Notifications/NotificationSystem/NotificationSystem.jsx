@@ -4,8 +4,6 @@ import {
     Col
 } from 'reactstrap';
 
-import "./NotificationSystem.css";
-
 class NotificationSystem extends React.Component{
     constructor(props) {
         super(props);
@@ -23,11 +21,10 @@ class NotificationSystem extends React.Component{
         var sNotify;
         for(var i = 0 ; i < this.state.notify.length; i++){
             if(this.state.notify[i].key!==nNumber+""){
-                // notify.push(this.state.notify[i]);
                 if(ye===undefined){
                     sNotify = React.cloneElement(
                         this.state.notify[i],
-                        {className: "alert-with-icon animated moveUp"}
+                        {className: "alert-with-icon"+(this.state.notify[i].key>nNumber+""?" animated moveUp":"")}
                     );
                 }
                 else {
@@ -36,18 +33,15 @@ class NotificationSystem extends React.Component{
                         {className: "alert-with-icon"}
                     );
                 }
-                // sNotify.className += " animated fadeOutUp";
                 notify.push(sNotify);
-                console.log(sNotify);
             } else {
+                console.log(this.state.notify[i]);
                 if(ye===undefined){
                     sNotify = React.cloneElement(
                         this.state.notify[i],
                         {className: "alert-with-icon animated fadeOutUp"}
                     );
-                    // sNotify.className += " animated fadeOutUp";
                     notify.push(sNotify);
-                    console.log(sNotify);
 
                 }
             }
@@ -81,7 +75,15 @@ class NotificationSystem extends React.Component{
         return (
             <div ref="notifications">
                 {
-                    <Col xs={11} sm={4} id="hey">
+                    <Col xs={11} sm={4} style={{
+                        display: "inline-block",
+                        margin: "0px auto",
+                        position: "fixed",
+                        transition: "all 0.5s ease-in-out",
+                        zIndex: "1031",
+                        top: "20px",
+                        left: "20px"
+                    }}>
                     {this.state.notify.map((prop,key)=>{
                         return prop;
                     })}

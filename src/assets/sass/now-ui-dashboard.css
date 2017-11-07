@@ -1772,26 +1772,6 @@ Copyright (c) 2015 Daniel Eden
   -webkit-animation-name: shake;
   animation-name: shake; }
 
-@-webkit-keyframes moveUp {
-  from {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); }
-  to {
-    -webkit-transform: translate3d(0, -110%, 0);
-    transform: translate3d(0, -110%, 0); } }
-
-@keyframes moveUp {
-  from {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); }
-  to {
-    -webkit-transform: translate3d(0, -126%, 0);
-    transform: translate3d(0, -126%, 0); } }
-
-.moveUp {
-  -webkit-animation-name: moveUp;
-  animation-name: moveUp; }
-
 @-webkit-keyframes fadeInDown {
   from {
     opacity: 0;
@@ -1871,6 +1851,26 @@ Copyright (c) 2015 Daniel Eden
 .fadeOutUp {
   -webkit-animation-name: fadeOutUp;
   animation-name: fadeOutUp; }
+
+@-webkit-keyframes moveUp {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  to {
+    -webkit-transform: translate3d(0, calc( -100% - 19px), 0);
+    transform: translate3d(0, calc( -100% - 19px), 0); } }
+
+@keyframes moveUp {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  to {
+    -webkit-transform: translate3d(0, calc( -100% - 19px), 0);
+    transform: translate3d(0, calc( -100% - 19px), 0); } }
+
+.moveUp {
+  -webkit-animation-name: moveUp;
+  animation-name: moveUp; }
 
 .btn,
 .navbar .navbar-nav > a.btn {
