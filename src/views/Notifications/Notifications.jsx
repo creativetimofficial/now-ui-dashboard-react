@@ -30,7 +30,50 @@ class Notifications extends React.Component{
             modal: !this.state.modal
         });
     }
-    notify(options){
+    notify(place){
+        var color = Math.floor((Math.random() * 8) + 1);
+        var type;
+        switch (color) {
+            case 1:
+                type = 'primary';
+                break;
+            case 2:
+                type = 'secondary';
+                break;
+            case 3:
+                type = 'success';
+                break;
+            case 4:
+                type = 'danger';
+                break;
+            case 5:
+                type = 'warning';
+                break;
+            case 6:
+                type = 'info';
+                break;
+            case 7:
+                type = 'light';
+                break;
+            case 8:
+                type = 'dark';
+                break;
+            default:
+                break;
+        }
+        var options = {};
+        options = {
+            place: place,
+            message: (
+                <div>
+                    <div>
+                        Welcome to <b>Now UI Dashboard React</b> - a beautiful freebie for every web developer.
+                    </div>
+                </div>
+            ),
+            type: type,
+            autoDismiss: 7
+        }
         this.refs.notify.notify(options);
         // console.log(options);
     }
@@ -107,46 +150,34 @@ class Notifications extends React.Component{
                             </Row>
                             <Row className="justify-content-center">
                                 <Col md={3} lg={3}>
-                                    <Button block onClick={() => this.notify(
-                                            {
-                                                place: "tl",
-                                                message: (
-                                                    <div>
-                                                        <div>
-                                                            Welcome to <b>Now UI Dashboard React</b> - a beautiful freebie for every web developer.
-                                                        </div>
-                                                    </div>
-                                                )
-                                            }
-                                        )}
-                                    >
+                                    <Button block onClick={() => this.notify("tl")}>
                                         Top Left
                                     </Button>
                                 </Col>
                                 <Col md={3} lg={3}>
-                                    <Button block>
+                                    <Button block onClick={() => this.notify("tc")}>
                                         Top Center
                                     </Button>
                                 </Col>
                                 <Col md={3} lg={3}>
-                                    <Button block>
+                                    <Button block onClick={() => this.notify("tr")}>
                                         Top Right
                                     </Button>
                                 </Col>
                             </Row>
                             <Row className="justify-content-center">
                                 <Col md={3} lg={3}>
-                                    <Button block>
+                                    <Button block onClick={() => this.notify("bl")}>
                                         Bottom Left
                                     </Button>
                                 </Col>
                                 <Col md={3} lg={3}>
-                                    <Button block>
+                                    <Button block onClick={() => this.notify("bc")}>
                                         Bottom Center
                                     </Button>
                                 </Col>
                                 <Col md={3} lg={3}>
-                                    <Button block>
+                                    <Button block onClick={() => this.notify("br")}>
                                         Bottom Right
                                     </Button>
                                 </Col>
