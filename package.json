@@ -1,6 +1,6 @@
 {
-  "name": "nud-react",
-  "version": "0.1.0",
+  "name": "Now Ui Dashboard React",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "bootstrap": "^4.0.0-beta",
