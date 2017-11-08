@@ -1,9 +1,18 @@
 .components{
     background-color: #fff;
 }
+.components .tim-row{
+    padding-top: 0px;
+}
+.components .section{
+    padding-top: 0px;
+}
 .components .nav-link {
     display: block;
     padding: 0.5rem 0rem;
+}
+.components .button-colors button{
+    padding: 0.5rem 0.75rem;
 }
 .components .navbar .navbar-brand img{
     width: auto;

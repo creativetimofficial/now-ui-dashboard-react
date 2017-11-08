@@ -24,7 +24,6 @@ class Documentation extends React.Component{
                                         <DocSidebar/>
                                     </Col>
                                     <Col md={{ size: 8, offset: 2 }}>
-                                        <div className="space-top"></div>
                                         <div className="components-panel">
                                             <Switch>
                                                 {

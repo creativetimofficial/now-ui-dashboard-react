@@ -13,7 +13,8 @@ const codeColors = `<Button>Default</Button>
 <Button color="danger">Danger</Button>
 <Button color="light">Light</Button>
 <Button color="dark">Dark</Button>
-<Button color="dark">Dark</Button>`;
+<Button color="dark">Dark</Button>
+<Button color="link">Link</Button>`;
 
 const codeSizes = `<Button color="primary" size="lg">Large</Button>
 <Button color="primary">Normal</Button>
@@ -22,8 +23,12 @@ const codeSizes = `<Button color="primary" size="lg">Large</Button>
 const codeStyles = `<Button color="primary">Default</Button>
 <Button color="primary" simple>Simple</Button>
 <Button color="primary" round>Rounded</Button>
-<Button color="primary" icon><i className="fa fa-facebook-square"></i></Button>
-<Button color="primary" iconMini></Button>
+<Button neutral icon round size="lg">
+    <i className="fa fa-twitter"></i>
+</Button>
+<Button round icon iconMini neutral color="info">
+    <i className="now-ui-icons ui-2_settings-90"></i>
+</Button>
 <Button color="primary" neutral>Neutral</Button>`;
 
 class ButtonsSection extends React.Component{
@@ -43,7 +48,7 @@ class ButtonsSection extends React.Component{
                     <p>
                         We worked over the original Bootstrap classes, choosing a different, slightly intenser color pallete:
                     </p>
-                    <p>
+                    <p className="button-colors">
                         <Button>Default</Button>
                         <Button color="primary">Primary</Button>
                         <Button color="info">Info</Button>
@@ -52,6 +57,7 @@ class ButtonsSection extends React.Component{
                         <Button color="danger">Danger</Button>
                         <Button color="light">Light</Button>
                         <Button color="dark">Dark</Button>
+                        <Button color="link">Link</Button>
                     </p>
                     <SyntaxHighlighter language="html" style={monokaiSublime}>
                         {codeColors}
@@ -70,17 +76,16 @@ class ButtonsSection extends React.Component{
 
                     <h4>Styles</h4>
                     <p>
-                        We added extra classes that can help you better customise the look.
-                        You can use regular buttons, filled buttons, right-pulled buttons,
-                        buttons that span over the entire given space or plain simple link like
-                        buttons. Let's see some examples:
+                        We added extra classes (defined by <code>props</code>) that can help you better customise the look. Let's see some examples:
                     </p>
                     <p>
                         <Button color="primary">Default</Button>
                         <Button color="primary" simple>Simple</Button>
                         <Button color="primary" round>Rounded</Button>
-                        <Button icon><i className="fa fa-facebook-square"></i></Button>
-                        <Button iconMini>
+                        <Button neutral icon round size="lg">
+                            <i className="fa fa-twitter"></i>
+                        </Button>
+                        <Button round icon iconMini neutral color="info">
                             <i className="now-ui-icons ui-2_settings-90"></i>
                         </Button>
                         <Button color="primary" neutral>Neutral</Button>
@@ -100,45 +105,46 @@ class ButtonsSection extends React.Component{
                         </thead>
                         <tbody>
                             <tr>
-                                <td><code>fill</code></td>
-                                <td>boolean</td>
-                                <td>false</td>
-                                <td>Use this flag to create filled buttons.</td>
-                            </tr>
-                            <tr>
                                 <td><code>simple</code></td>
                                 <td>boolean</td>
                                 <td>false</td>
-                                <td>Use this flag to create simple / link buttons.</td>
-                            </tr>
-                            <tr>
-                                <td><code>block</code></td>
-                                <td>boolean</td>
-                                <td>false</td>
-                                <td>Use this flag to create a button that spans the whole given space.    </td>
-                            </tr>
-                            <tr>
-                                <td><code>pullRight</code></td>
-                                <td>boolean</td>
-                                <td>false</td>
-                                <td>Use this to pull right the button.</td>
+                                <td>Use this flag to create outline buttons (buttons that have a small border).</td>
                             </tr>
                             <tr>
                                 <td><code>round</code></td>
                                 <td>boolean</td>
                                 <td>false</td>
-                                <td>Use this to make the buttons corners rounded.</td>
+                                <td>Use this to make the button corners rounded.</td>
                             </tr>
+                            <tr>
+                                <td><code>icon</code></td>
+                                <td>boolean</td>
+                                <td>false</td>
+                                <td>Use this flag to create beautiful buttons that have icons.</td>
+                            </tr>
+                            <tr>
+                                <td><code>iconMini</code></td>
+                                <td>boolean</td>
+                                <td>false</td>
+                                <td>Use this flag to create beautiful buttons that have icons.</td>
+                            </tr>
+                            <tr>
+                                <td><code>neutral</code></td>
+                                <td>boolean</td>
+                                <td>false</td>
+                                <td>Use this to create buttons with white <code>background-color</code> (they are mostly used on components that have a darker <code>background-color</code>).</td>
+                            </tr>
+
                         </tbody>
                     </Table>
                     <p>
                         Beside these props you can also reffer to{' '}
                         <a
-                            href="https://react-bootstrap.github.io/components.html#buttons-props"
+                            href="https://reactstrap.github.io/components/buttons"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            react-bootstrap documentation
+                            reactstrap documentation
                         </a>.
                     </p>
                 </div>
