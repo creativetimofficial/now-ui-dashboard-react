@@ -18,7 +18,7 @@ class CustomButton extends Component {
             'btn-round': round,
             'btn-icon': icon,
             'btn-neutral': neutral,
-            'btn-icon-mini': iconMini
+            'btn-icon btn-icon-mini': iconMini
         });
 
         return (
