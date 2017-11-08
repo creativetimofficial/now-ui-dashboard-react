@@ -14,20 +14,20 @@ import TableSection from 'containers/Documentation/sections/TableSection.jsx';
 import TooltipSection from 'containers/Documentation/sections/TooltipSection.jsx';
 
 const docRoutes = [
-    { path: "/documentation/tutorial", component: TutorialSection},
-    { path: "/documentation/buttons", component: ButtonsSection},
-    { path: "/documentation/cards", component: CardSection},
-    { path: "/documentation/charts", component: ChartsSection},
-    { path: "/documentation/checkboxes", component: CheckboxSection},
-    { path: "/documentation/dropdowns", component: DropdownSection},
-    { path: "/documentation/icons", component: IconsSection},
-    { path: "/documentation/maps", component: MapSection},
-    { path: "/documentation/navbars", component: NavbarsSection},
-    { path: "/documentation/notifications", component: NotificationsSection},
-    { path: "/documentation/radios", component: RadioSection},
-    { path: "/documentation/sidebars", component: SidebarSection},
-    { path: "/documentation/tables", component: TableSection},
-    { path: "/documentation/tooltips", component: TooltipSection},
+    { path: "/documentation/tutorial", name: "Tutorial", component: TutorialSection},
+    { path: "/documentation/buttons", name: "Buttons", component: ButtonsSection},
+    { path: "/documentation/cards", name: "Card", component: CardSection},
+    { path: "/documentation/charts", name: "Charts", component: ChartsSection},
+    { path: "/documentation/checkboxes", name: "Checkboxes", component: CheckboxSection},
+    { path: "/documentation/dropdowns", name: "Dropdowns", component: DropdownSection},
+    { path: "/documentation/icons", name: "Icons", component: IconsSection},
+    { path: "/documentation/maps", name: "Maps", component: MapSection},
+    { path: "/documentation/navbars", name: "Navbars", component: NavbarsSection},
+    { path: "/documentation/notifications", name: "Notifications", component: NotificationsSection},
+    { path: "/documentation/radios", name: "Radios", component: RadioSection},
+    { path: "/documentation/sidebars", name: "Sidebar", component: SidebarSection},
+    { path: "/documentation/tables", name: "Tables", component: TableSection},
+    { path: "/documentation/tooltips", name: "Tooltips", component: TooltipSection},
     { redirect: true, path: "/documentation", to: "/documentation/tutorial"}
 ];
 

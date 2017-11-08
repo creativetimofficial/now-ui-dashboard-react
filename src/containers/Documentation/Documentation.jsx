@@ -14,16 +14,16 @@ class Documentation extends React.Component{
     render(){
         return (
             <div className="components" ref="componentsPanel">
-                <DocHeader />
+                <DocHeader {...this.props}/>
                 <div className="wrapper">
                     <div className="main">
                         <div className="section">
                             <Container>
                                 <Row>
                                     <Col md={2}>
-                                        <DocSidebar />
+                                        <DocSidebar/>
                                     </Col>
-                                    <Col md={8} mdOffset={1}>
+                                    <Col md={{ size: 8, offset: 2 }}>
                                         <div className="space-top"></div>
                                         <div className="components-panel">
                                             <Switch>
@@ -31,7 +31,7 @@ class Documentation extends React.Component{
                                                     docRoutes.map((prop,key) => {
                                                         if(prop.redirect)
                                                             return (
-                                                                <Redirect from={prop.path} to={prop.pathTo} key={key}/>
+                                                                <Redirect from={prop.path} to={prop.to} key={key}/>
                                                             );
                                                         return (
                                                             <Route path={prop.path} component={prop.component} key={key}/>

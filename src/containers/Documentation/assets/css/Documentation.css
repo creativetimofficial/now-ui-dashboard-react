@@ -1,6 +1,19 @@
 .components{
     background-color: #fff;
 }
+.components .nav-link {
+    display: block;
+    padding: 0.5rem 0rem;
+}
+.components .navbar .navbar-brand img{
+    width: auto;
+    height: 30px;
+    margin-top: -1px;
+}
+.components .navbar{
+    margin-bottom: 0px;
+    width: 100%;
+}
 .components .tim-container .btn{
     margin: 2px;
 }
@@ -263,9 +276,7 @@
 }
 .components .copyright {
   color: #777777;
-  padding: 10px 15px;
   font-size: 14px;
-  margin: 15px 3px;
   line-height: 20px;
   text-align: center;
 }
