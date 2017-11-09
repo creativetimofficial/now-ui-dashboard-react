@@ -6,8 +6,8 @@ var Chartist = require('chartist');
 // ##############################
 // // // variables used to create animation on charts
 // #############################
-var seq = 0, delays = 80, durations = 500;
-var seq2 = 0, delays2 = 80, durations2 = 500;
+var delays = 80, durations = 500;
+var delays2 = 80, durations2 = 500;
 
 // ##############################
 // // // Email Statistics
@@ -71,10 +71,9 @@ const usersBehaviorChart = {
                     }
                 });
             } else if(data.type === 'point') {
-                seq++;
                 data.element.animate({
                     opacity: {
-                        begin: seq * delays,
+                        begin: (data.index + 1) * delays,
                         dur: durations,
                         from: 0,
                         to: 1,
@@ -118,10 +117,9 @@ const salesChart = {
     animation: {
         "draw" : function(data) {
             if(data.type === 'bar'){
-                seq2++;
                 data.element.animate({
                     opacity: {
-                        begin: seq2 * delays2,
+                        begin: (data.index + 1) * delays2,
                         dur: durations2,
                         from: 0,
                         to: 1,
