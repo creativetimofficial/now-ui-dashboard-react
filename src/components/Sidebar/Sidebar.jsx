@@ -3,8 +3,6 @@ import { NavLink } from 'react-router-dom';
 import { Nav } from 'reactstrap';
 
 
-import bgImage from 'assets/img/bg1.jpg';
-
 class Sidebar extends React.Component{
     constructor(props){
         super(props);
@@ -16,8 +14,10 @@ class Sidebar extends React.Component{
     }
     render(){
         return (
-            <div className="sidebar" data-color="orange" data-image={bgImage}>
-                <div className="sidebar-background" style={{backgroundImage: "url("+bgImage+")"}}></div>
+            <div className="sidebar" data-color={this.props.color} data-image={this.props.image}>
+                {
+                    this.props.hasImage ? (<div className="sidebar-background" style={{backgroundImage: "url("+this.props.image+")"}}></div>):""
+                }
                 {/*
                 Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
 
