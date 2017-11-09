@@ -6,7 +6,8 @@ import {
 
 import FormInputs from 'components/FormInputs/FormInputs';
 
-import UserCardAuthor from 'elements/CardElements/UserCardAuthor';
+import CardAuthor from 'elements/CardElements/CardAuthor';
+import CardSocials from 'elements/CardElements/CardSocials';
 import Button from 'elements/CustomButton/CustomButton';
 
 import userBackground from 'assets/img/bg5.jpg';
@@ -136,7 +137,7 @@ class User extends React.Component{
                         <Card className="card-user">
                             <CardImg top src={userBackground} alt="user avatar"/>
                             <CardBody>
-                                <UserCardAuthor
+                                <CardAuthor
                                     avatar={userAvatar}
                                     avatarAlt="..."
                                     title="Mike Andrew"
@@ -149,17 +150,23 @@ class User extends React.Component{
                                 </p>
                             </CardBody>
                             <hr />
-                            <div className="button-container">
-                                <Button neutral icon round size="lg">
-                                    <i className="fa fa-facebook-square"></i>
-                                </Button>
-                                <Button neutral icon round size="lg">
-                                    <i className="fa fa-twitter"></i>
-                                </Button>
-                                <Button neutral icon round size="lg">
-                                    <i className="fa fa-google-plus-square"></i>
-                                </Button>
-                            </div>
+                            <CardSocials
+                                size="lg"
+                                socials={[
+                                    {
+                                        icon: "fa fa-facebook-square",
+                                        href: "https://www.facebook.com/"
+                                    },
+                                    {
+                                        icon: "fa fa-twitter",
+                                        href: "https://www.facebook.com/"
+                                    },
+                                    {
+                                        icon: "fa fa-google-plus-square",
+                                        href: "https://plus.google.com/discover"
+                                    },
+                                ]}
+                            />
                         </Card>
                     </Col>
                 </Row>
