@@ -12,7 +12,6 @@ import CardStats from 'elements/CardElements/CardStats';
 import CardStatistics from 'elements/CardElements/CardStatistics';
 
 import {
-    startAnimationForBarChart,
     emailStatisticsChart,
     usersBehaviorChart,
     salesChart
