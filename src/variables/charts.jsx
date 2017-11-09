@@ -10,58 +10,6 @@ var seq = 0, delays = 80, durations = 500;
 var seq2 = 0, delays2 = 80, durations2 = 500;
 
 // ##############################
-// // // function for animation of line charts
-// #############################
-function startAnimationForLineChart(chart){
-    chart.on('draw', function(data) {
-        if(data.type === 'line' || data.type === 'area') {
-            data.element.animate({
-                d: {
-                    begin: 600,
-                    dur: 700,
-                    from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
-                    to: data.path.clone().stringify(),
-                    easing: Chartist.Svg.Easing.easeOutQuint
-                }
-            });
-        } else if(data.type === 'point') {
-            seq++;
-            data.element.animate({
-                opacity: {
-                    begin: seq * delays,
-                    dur: durations,
-                    from: 0,
-                    to: 1,
-                    easing: 'ease'
-                }
-            });
-        }
-    });
-    seq = 0;
-}
-
-// ##############################
-// // // function for animation of bar charts
-// #############################
-function startAnimationForBarChart (chart){
-    chart.on('draw', function(data) {
-        if(data.type === 'bar'){
-            seq2++;
-            data.element.animate({
-                opacity: {
-                    begin: seq2 * delays2,
-                    dur: durations2,
-                    from: 0,
-                    to: 1,
-                    easing: 'ease'
-                }
-            });
-        }
-    });
-    seq2 = 0;
-}
-
-// ##############################
 // // // Email Statistics
 // #############################
 const emailStatisticsChart = {
@@ -108,7 +56,34 @@ const usersBehaviorChart = {
                 }
             }
         }]
-    ]
+    ],
+    // for animation
+    animation : {
+        "draw" : function(data) {
+            if(data.type === 'line' || data.type === 'area') {
+                data.element.animate({
+                    d: {
+                        begin: 600,
+                        dur: 700,
+                        from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
+                        to: data.path.clone().stringify(),
+                        easing: Chartist.Svg.Easing.easeOutQuint
+                    }
+                });
+            } else if(data.type === 'point') {
+                seq++;
+                data.element.animate({
+                    opacity: {
+                        begin: seq * delays,
+                        dur: durations,
+                        from: 0,
+                        to: 1,
+                        easing: 'ease'
+                    }
+                });
+            }
+        }
+    }
 }
 
 // ##############################
@@ -118,8 +93,8 @@ const salesChart = {
     data: {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         series: [
-          [542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895],
-          [412, 243, 280, 580, 453, 353, 300, 364, 368, 410, 636, 695]
+            [542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895],
+            [412, 243, 280, 580, 453, 353, 300, 364, 368, 410, 636, 695]
         ]
     },
     options: {
@@ -131,20 +106,35 @@ const salesChart = {
     },
     responsiveOptions: [
         ['screen and (max-width: 640px)', {
-          seriesBarDistance: 5,
-          axisX: {
-            labelInterpolationFnc: function (value) {
-              return value[0];
+            seriesBarDistance: 5,
+            axisX: {
+                labelInterpolationFnc: function (value) {
+                    return value[0];
+                }
             }
-          }
         }]
-    ]
+    ],
+    // for animation
+    animation: {
+        "draw" : function(data) {
+            if(data.type === 'bar'){
+                seq2++;
+                data.element.animate({
+                    opacity: {
+                        begin: seq2 * delays2,
+                        dur: durations2,
+                        from: 0,
+                        to: 1,
+                        easing: 'ease'
+                    }
+                });
+            }
+        }
+    }
 }
 
 module.exports = {
-    emailStatisticsChart,
-    usersBehaviorChart,
-    salesChart,
-    startAnimationForLineChart,
-    startAnimationForBarChart
+    emailStatisticsChart, // Pie chart
+    usersBehaviorChart, // Line chart
+    salesChart // Bar chart
 }

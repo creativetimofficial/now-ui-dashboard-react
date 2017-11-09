@@ -8,7 +8,6 @@ import FormInputs from 'components/FormInputs/FormInputs';
 
 import CardAuthor from 'elements/CardElements/CardAuthor';
 import CardSocials from 'elements/CardElements/CardSocials';
-import Button from 'elements/CustomButton/CustomButton';
 
 import userBackground from 'assets/img/bg5.jpg';
 import userAvatar from 'assets/img/ryan.jpg';
