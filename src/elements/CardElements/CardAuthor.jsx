@@ -1,6 +1,6 @@
 import React from 'react';
 
-class UserCardAuthor extends React.Component{
+class CardAuthor extends React.Component{
     render(){
         return (
             <div className="author">
@@ -16,4 +16,4 @@ class UserCardAuthor extends React.Component{
     }
 }
 
-export default UserCardAuthor;
+export default CardAuthor;
