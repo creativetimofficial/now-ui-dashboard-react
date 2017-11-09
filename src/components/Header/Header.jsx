@@ -54,14 +54,29 @@ class Header extends React.Component{
         })
         return name;
     }
+    openSidebar(){
+        document.documentElement.classList.toggle('nav-open');
+        this.refs.sidebarToggle.classList.toggle('toggled');
+    }
     render(){
         return (
             <Navbar color="white" expand="lg">
                 <Container>
                     <div className="navbar-wrapper">
+                        <div className="navbar-minimize">
+            				<button type="button" ref="sidebarToggle" className="navbar-toggler" onClick={() => this.openSidebar()}>
+            					<span className="navbar-toggler-bar bar1"></span>
+            					<span className="navbar-toggler-bar bar2"></span>
+            					<span className="navbar-toggler-bar bar3"></span>
+            				</button>
+            			</div>
                         <NavbarBrand href="/">{this.getBrand()}</NavbarBrand>
                     </div>
-                    <NavbarToggler onClick={this.toggle} />
+                    <NavbarToggler onClick={this.toggle}>
+                        <span className="navbar-toggler-bar navbar-kebab"></span>
+                        <span className="navbar-toggler-bar navbar-kebab"></span>
+                        <span className="navbar-toggler-bar navbar-kebab"></span>
+                    </NavbarToggler>
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>

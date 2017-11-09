@@ -3,7 +3,7 @@ import {
     Card, CardHeader, CardBody, CardFooter, CardTitle, CardSubtitle,
     Container, Row, Col
 } from 'reactstrap';
-import Chartist from 'chartist';
+import ChartistGraph from 'react-chartist';
 
 import Task from 'components/Task/Task.jsx';
 
@@ -12,8 +12,6 @@ import CardStats from 'elements/CardElements/CardStats';
 import CardStatistics from 'elements/CardElements/CardStatistics';
 
 import {
-    startAnimationForLineChart,
-    startAnimationForBarChart,
     emailStatisticsChart,
     usersBehaviorChart,
     salesChart
@@ -21,13 +19,6 @@ import {
 import { tasks } from 'variables/general.jsx';
 
 class Dashboard extends React.Component{
-    componentDidMount(){
-        Chartist.Pie('#chartPreferences', emailStatisticsChart.data);
-        var chartHours = Chartist.Line('#chartHours', usersBehaviorChart.data, usersBehaviorChart.options, usersBehaviorChart.responsiveOptions);
-        startAnimationForLineChart(chartHours);
-        var chartActivity = Chartist.Bar('#chartSales', salesChart.data, salesChart.options, salesChart.responsiveOptions);
-        startAnimationForBarChart(chartActivity);
-    }
     render(){
         return (
             <Container fluid>
@@ -39,7 +30,11 @@ class Dashboard extends React.Component{
                                 <CardSubtitle>Last Campaign Performance</CardSubtitle>
                             </CardHeader>
                             <CardBody>
-                                <div id="chartPreferences" className="ct-chart ct-perfect-fourth"/>
+                                <ChartistGraph
+                                    className="ct-chart ct-perfect-fourth"
+                                    data={emailStatisticsChart.data}
+                                    type="Pie"
+                                />
                             </CardBody>
                             <CardFooter>
                                 <CardLegend>
@@ -72,7 +67,16 @@ class Dashboard extends React.Component{
                                     badgeIcon="now-ui-icons media-2_sound-wave"
                                     duration="1 Year"
                                 />
-                                <div className="ct-chart" id="chartHours"/>
+                                <ChartistGraph
+                                    className="ct-chart"
+                                    data={usersBehaviorChart.data}
+                                    type="Line"
+                                    options={usersBehaviorChart.options}
+                                    responsiveOptions={usersBehaviorChart.responsiveOptions}
+                                    listener={
+                                        usersBehaviorChart.animation
+                                    }
+                                />
                             </CardBody>
                             <CardFooter>
                                 <hr />
@@ -93,7 +97,16 @@ class Dashboard extends React.Component{
                                 <CardSubtitle>All Products Including Taxes</CardSubtitle>
                             </CardHeader>
                             <CardBody>
-                                <div id="chartSales" className="ct-chart"/>
+                                <ChartistGraph
+                                    className="ct-chart"
+                                    data={salesChart.data}
+                                    type="Bar"
+                                    options={salesChart.options}
+                                    responsiveOptions={salesChart.responsiveOptions}
+                                    listener={
+                                        salesChart.animation
+                                    }
+                                />
                             </CardBody>
                             <CardFooter>
                                 <CardLegend>

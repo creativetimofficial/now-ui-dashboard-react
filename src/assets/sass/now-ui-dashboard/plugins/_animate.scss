@@ -107,8 +107,6 @@ Copyright (c) 2015 Daniel Eden
   animation-name: shake;
 }
 
-
-
 @-webkit-keyframes fadeInDown {
   from {
     opacity: 0;
@@ -224,4 +222,74 @@ Copyright (c) 2015 Daniel Eden
 .fadeOutUp {
   -webkit-animation-name: fadeOutUp;
   animation-name: fadeOutUp;
+}
+
+// Added this animation for moving up notifications on deletion of another notification
+
+@-webkit-keyframes moveUp {
+  from {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+
+  }
+
+  to {
+
+      -webkit-transform: translate3d(0,calc( -100% - 19px), 0);
+      transform: translate3d(0,calc( -100% - 19px), 0);
+  }
+}
+
+@keyframes moveUp {
+  from {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+
+  }
+
+  to {
+
+      -webkit-transform: translate3d(0,calc( -100% - 19px), 0);
+      transform: translate3d(0,calc( -100% - 19px), 0);
+  }
+}
+
+.moveUp {
+  -webkit-animation-name: moveUp;
+  animation-name: moveUp;
+}
+
+// Added this animation for moving down notifications on deletion of another notification
+
+@-webkit-keyframes moveDown {
+  from {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+
+  }
+
+  to {
+
+      -webkit-transform: translate3d(0,calc( 100% + 19px), 0);
+      transform: translate3d(0,calc( 100% + 19px), 0);
+  }
+}
+
+@keyframes moveDown {
+  from {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+
+  }
+
+  to {
+
+      -webkit-transform: translate3d(0,calc( 100% + 19px), 0);
+      transform: translate3d(0,calc( 100% + 19px), 0);
+  }
+}
+
+.moveDown {
+  -webkit-animation-name: moveDown;
+  animation-name: moveDown;
 }

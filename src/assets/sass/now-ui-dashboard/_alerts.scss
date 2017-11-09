@@ -27,9 +27,19 @@
         background-color: lighten($primary-color, 5%);
     }
 
+    &.alert-light,
+    &.alert-secondary,
+    &.alert-dark,
+    &.alert-light button.close,
+    &.alert-dark button.close,
+    &.alert-secondary button.close{
+        color: $darker-gray;
+    }
+
 
     i.fa,
-    i.now-ui-icons{
+    i.now-ui-icons,
+    button.now-ui-icons{
         font-size: 20px;
     }
 
@@ -39,6 +49,7 @@
         text-shadow: none;
         line-height: 0;
         outline: 0;
+        cursor: pointer;
     }
 
     span[data-notify="icon"]{
@@ -58,6 +69,11 @@
         width: 25px;
         height: 25px;
         padding: 3px;
+
+        span{
+            display: none;
+        }
+
     }
 
     .close ~ span{
