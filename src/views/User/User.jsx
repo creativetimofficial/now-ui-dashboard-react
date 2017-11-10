@@ -17,7 +17,7 @@ class User extends React.Component{
         return (
             <Container fluid>
                 <Row>
-                    <Col md={8}>
+                    <Col md={8} xs={12}>
                         <Card>
                             <CardHeader>
                                 <CardTitle>Edit Profile</CardTitle>
@@ -132,7 +132,7 @@ class User extends React.Component{
                             </CardBody>
                         </Card>
                     </Col>
-                    <Col md={4}>
+                    <Col md={4}  xs={12}>
                         <Card className="card-user">
                             <CardImg top src={userBackground} alt="user avatar"/>
                             <CardBody>

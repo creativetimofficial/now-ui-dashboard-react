@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { FormGroup, Label, Input, InputGroup, InputGroupAddon } from 'reactstrap';
 
 function FieldGroup({ label,addonLeft,addonRight, formGroupProps, labelProps, inputProps, inputGroupProps, inputGroupAddonProps }) {
-    console.log(inputProps.type);
     if(addonLeft !== undefined || addonRight !== undefined)
         return (
             <InputGroup {...inputGroupProps}>
