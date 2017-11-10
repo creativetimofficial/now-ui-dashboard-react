@@ -6,12 +6,12 @@ const codeImport = ``;
 
 const codeExample = ``;
 
-class TooltipSection extends React.Component{
+class FormInputsSection extends React.Component{
     render(){
         return (
             <div className="tim-container">
                 <div className="tim-row">
-                    <h2>Tooltips</h2>
+                    <h2>Form Inputs</h2>
                     <legend></legend>
                     <SyntaxHighlighter language="javascript" style={monokaiSublime}>
                         {codeImport}
@@ -22,4 +22,4 @@ class TooltipSection extends React.Component{
     }
 }
 
-export default TooltipSection;
+export default FormInputsSection;
