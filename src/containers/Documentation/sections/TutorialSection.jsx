@@ -5,77 +5,83 @@ import { monokaiSublime } from 'react-syntax-highlighter/dist/styles';
 const fileStructure = `Now UI Dashboard React
 ├── CHANGELOG.md
 ├── Documentation
-│   └── tutorial-components.html
+│   └── tutorial-components.html
 ├── LICENSE.md
 ├── README.md
 ├── package.json
 ├── public
-│   ├── apple-icon.png
-│   ├── favicon.ico
-│   ├── index.html
-│   └── manifest.json
+│   ├── apple-icon.png
+│   ├── favicon.ico
+│   ├── index.html
+│   └── manifest.json
 └── src
     ├── assets
-    │   ├── css
-    │   │   └── demo.css
-    │   ├── fonts
-    │   ├── img
-    │   │   ├── flags
-    │   └── sass
-    │       ├── now-ui-dashboard
-    │       │   ├── mixins
-    │       │   └── plugins
-    │       └── now-ui-dashboard.scss
+    │   ├── css
+    │   │   └── demo.css
+    │   ├── fonts
+    │   │   └── ...
+    │   ├── img
+    │   │   ├── flags
+    │   │   │   └── ...
+    │   │   └── ...
+    │   └── sass
+    │       ├── now-ui-dashboard
+    │       │   ├── mixins
+    │       │   │   └── ...
+    │       │   ├── plugins
+    │       │   │   └── ...
+    │       │   └── ...
+    │       └── now-ui-dashboard.scss
     ├── components
-    │   ├── Card
-    │   │   └── Card.jsx
-    │   ├── Footer
-    │   │   └── Footer.jsx
-    │   ├── FormInputs
-    │   │   └── FormInputs.jsx
-    │   ├── Header
-    │   │   └── Header.jsx
-    │   ├── Sidebar
-    │   │   └── Sidebar.jsx
-    │   └── Task
-    │       └── Task.jsx
+    │   ├── Card
+    │   │   └── Card.jsx
+    │   ├── Footer
+    │   │   └── Footer.jsx
+    │   ├── FormInputs
+    │   │   └── FormInputs.jsx
+    │   ├── Header
+    │   │   └── Header.jsx
+    │   ├── Sidebar
+    │   │   └── Sidebar.jsx
+    │   └── Task
+    │       └── Task.jsx
     ├── containers
-    │   └── App
-    │       └── App.jsx
+    │   └── App
+    │       └── App.jsx
     ├── elements
-    │   ├── CardElements
-    │   │   ├── CardLegend.jsx
-    │   │   ├── CardStatistics.jsx
-    │   │   ├── CardStats.jsx
-    │   │   └── UserCardAuthor.jsx
-    │   ├── CustomButton
-    │   │   └── CustomButton.jsx
-    │   ├── CustomCheckbox
-    │   │   └── CustomCheckbox.jsx
-    │   └── CustomRadio
-    │       └── CustomRadio.jsx
+    │   ├── CardElements
+    │   │   ├── CardLegend.jsx
+    │   │   ├── CardStatistics.jsx
+    │   │   ├── CardStats.jsx
+    │   │   └── UserCardAuthor.jsx
+    │   ├── CustomButton
+    │   │   └── CustomButton.jsx
+    │   ├── CustomCheckbox
+    │   │   └── CustomCheckbox.jsx
+    │   └── CustomRadio
+    │       └── CustomRadio.jsx
     ├── index.js
     ├── routes
-    │   └── app.jsx
+    │   └── app.jsx
     ├── variables
-    │   ├── charts.jsx
-    │   ├── general.jsx
-    │   └── icons.jsx
+    │   ├── charts.jsx
+    │   ├── general.jsx
+    │   └── icons.jsx
     └── views
         ├── Dashboard
-        │   └── Dashboard.jsx
+        │   └── Dashboard.jsx
         ├── Icons
-        │   └── Icons.jsx
+        │   └── Icons.jsx
         ├── Maps
-        │   └── Maps.jsx
+        │   └── Maps.jsx
         ├── Notifications
-        │   ├── NotificationSystem
-        │   │   └── NotificationSystem.jsx
-        │   └── Notifications.jsx
+        │   ├── NotificationSystem
+        │   │   └── NotificationSystem.jsx
+        │   └── Notifications.jsx
         ├── Table
-        │   └── Tables.jsx
+        │   └── Tables.jsx
         ├── Typography
-        │   └── Typography.jsx
+        │   └── Typography.jsx
         └── User
             └── User.jsx`;
 
