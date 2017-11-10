@@ -4,8 +4,10 @@ import { Container } from 'reactstrap';
 class Footer extends React.Component{
     render(){
         return (
-            <footer className="footer" >
-                <Container>
+            <footer className={"footer"
+                + (this.props.default ? " footer-default":"")
+            }>
+                <Container fluid={this.props.fluid ? true:false}>
                     <nav>
                         <ul>
                             <li>
