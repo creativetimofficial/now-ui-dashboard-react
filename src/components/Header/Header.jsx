@@ -58,6 +58,12 @@ class Header extends React.Component{
         document.documentElement.classList.toggle('nav-open');
         this.refs.sidebarToggle.classList.toggle('toggled');
     }
+    componentDidUpdate(e){
+        if(window.innerWidth < 993 && e.history.location.pathname !== e.location.pathname && document.documentElement.className.indexOf('nav-open') !== -1){
+            document.documentElement.classList.toggle('nav-open');
+            this.refs.sidebarToggle.classList.toggle('toggled');
+        }
+    }
     render(){
         return (
             <Navbar color="white" expand="lg">
