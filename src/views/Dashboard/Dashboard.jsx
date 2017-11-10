@@ -5,7 +5,7 @@ import {
 } from 'reactstrap';
 import ChartistGraph from 'react-chartist';
 
-import Task from 'components/Task/Task.jsx';
+import Tasks from 'components/Tasks/Tasks.jsx';
 
 import CardLegend from 'elements/CardElements/CardLegend';
 import CardStats from 'elements/CardElements/CardStats';
@@ -15,7 +15,8 @@ import {
     emailStatisticsChart,
     usersBehaviorChart,
     salesChart
-} from 'variables/charts.jsx'
+} from 'variables/charts.jsx';
+
 import { tasks } from 'variables/general.jsx';
 
 class Dashboard extends React.Component{
@@ -131,9 +132,7 @@ class Dashboard extends React.Component{
                                 <CardSubtitle>Backend Development</CardSubtitle>
                             </CardHeader>
                             <CardBody>
-                                <Task
-                                    tasks={tasks}
-                                />
+                                <Tasks tasks={tasks}/>
                             </CardBody>
                             <CardFooter>
                                 <hr />

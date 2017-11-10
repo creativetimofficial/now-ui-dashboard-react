@@ -5,7 +5,7 @@ import Button from 'elements/CustomButton/CustomButton';
 
 class Task extends React.Component{
     render(){
-        var tasks = [];
+        var tasksList = [];
         var number;
         var edit;
         var remove;
@@ -13,7 +13,7 @@ class Task extends React.Component{
             number = "checkbox"+i;
             edit = "edit"+i;
             remove = "remove"+i;
-            tasks.push(
+            tasksList.push(
                 <tr key={i}>
                     <td>
                         <FormGroup check>
@@ -51,7 +51,7 @@ class Task extends React.Component{
             <div className="table-full-width table-responsive">
                 <table className="table">
                     <tbody>
-                        { tasks }
+                        { tasksList }
                     </tbody>
                 </table>
             </div>
