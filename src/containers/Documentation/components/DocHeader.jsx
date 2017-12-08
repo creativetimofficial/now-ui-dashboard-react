@@ -39,6 +39,9 @@ class Components extends Component {
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
     }
+    componentWillUnmount(){
+        window.removeEventListener('scroll', this.handleScroll);
+    }
     render() {
         return (
             <div className="header-wrapper" ref="navbarColorOnScroll">
