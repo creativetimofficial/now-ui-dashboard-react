@@ -1,7 +1,7 @@
 /*!
 
  =========================================================
- * Now UI Dashboard - v1.0.0
+ * Now UI Dashboard React - v1.0.0 based on Now UI Dashboard - v1.0.0
  =========================================================
 
  * Product Page: http://www.creative-tim.com/product/now-ui-dashboard
@@ -390,8 +390,6 @@ Copyright (c) 2015 Daniel Eden
   opacity: 0;
   visibility: hidden; }
 
-<<<<<<< HEAD
-=======
 /*
  * Container style
  */
@@ -491,7 +489,6 @@ Copyright (c) 2015 Daniel Eden
   .ps {
     overflow: auto !important; } }
 
->>>>>>> master
 .btn,
 .navbar .navbar-nav > a.btn {
   border-width: 2px;
