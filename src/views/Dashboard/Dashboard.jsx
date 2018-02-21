@@ -1,20 +1,20 @@
 import React from 'react';
 import {
-    Card, CardHeader, CardBody, CardFooter, CardTitle, CardSubtitle,
-    Container, Row, Col
+    Card, CardHeader, CardBody, CardFooter, CardTitle, Row, Col, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, Table,
 } from 'reactstrap';
-import ChartistGraph from 'react-chartist';
-
-import Tasks from 'components/Tasks/Tasks.jsx';
-
-import CardLegend from 'elements/CardElements/CardLegend';
-import CardStats from 'elements/CardElements/CardStats';
-import CardStatistics from 'elements/CardElements/CardStatistics';
+// react plugin used to create charts
+import { Line, Bar } from 'react-chartjs-2';
+// function that returns a color based on an interval of numbers
 
 import {
-    emailStatisticsChart,
-    usersBehaviorChart,
-    salesChart
+    PanelHeader, Stats, CardCategory, Tasks
+} from 'components';
+
+import {
+    dashboardPanelChart,
+    dashboardShippedProductsChart,
+    dashboardAllProductsChart,
+    dashboard24HoursPerformanceChart
 } from 'variables/charts.jsx';
 
 import { tasks } from 'variables/general.jsx';
@@ -22,130 +22,173 @@ import { tasks } from 'variables/general.jsx';
 class Dashboard extends React.Component{
     render(){
         return (
-            <Container fluid>
-                <Row>
-                    <Col xs="12" md="4">
-                        <Card>
-                            <CardHeader>
-                                <CardTitle>Email Statistics</CardTitle>
-                                <CardSubtitle>Last Campaign Performance</CardSubtitle>
-                            </CardHeader>
-                            <CardBody>
-                                <ChartistGraph
-                                    className="ct-chart ct-perfect-fourth"
-                                    data={emailStatisticsChart.data}
-                                    type="Pie"
-                                />
-                            </CardBody>
-                            <CardFooter>
-                                <CardLegend>
-                                    {[
-                                        { i: "fa fa-circle text-gray", t: "Open"},
-                                        { i: "fa fa-circle text-primary", t: "Bounce"},
-                                        { i: "fa fa-circle text-warning", t: "Unsubscribe"}
-                                    ]}
-                                </CardLegend>
-                                <hr />
-                                <CardStats>
-                                    {[
-                                        { i: "now-ui-icons ui-2_time-alarm", t: "Campaign sent 2 days ago"}
-                                    ]}
-                                </CardStats>
-                            </CardFooter>
-                        </Card>
-                    </Col>
-                    <Col xs="12" md="8">
-                        <Card>
-                            <CardHeader>
-                                <CardTitle>Users Behavior</CardTitle>
-                                <CardSubtitle>24 Hours Performance</CardSubtitle>
-                            </CardHeader>
-                            <CardBody>
-                                <CardStatistics
-                                    description="NASDAQ: AAPL"
-                                    stat="127.33"
-                                    date="OCT 2:16 PM EDT"
-                                    badgeIcon="now-ui-icons media-2_sound-wave"
-                                    duration="1 Year"
-                                />
-                                <ChartistGraph
-                                    className="ct-chart"
-                                    data={usersBehaviorChart.data}
-                                    type="Line"
-                                    options={usersBehaviorChart.options}
-                                    responsiveOptions={usersBehaviorChart.responsiveOptions}
-                                    listener={
-                                        usersBehaviorChart.animation
-                                    }
-                                />
-                            </CardBody>
-                            <CardFooter>
-                                <hr />
-                                <CardStats>
-                                    {[
-                                        { i: "now-ui-icons loader_refresh spin", t: "Updated 3 minutes ago"}
-                                    ]}
-                                </CardStats>
-                            </CardFooter>
-                        </Card>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col xs="12" md="6">
-                        <Card>
-                            <CardHeader>
-                                <CardTitle>2014 Sales</CardTitle>
-                                <CardSubtitle>All Products Including Taxes</CardSubtitle>
-                            </CardHeader>
-                            <CardBody>
-                                <ChartistGraph
-                                    className="ct-chart"
-                                    data={salesChart.data}
-                                    type="Bar"
-                                    options={salesChart.options}
-                                    responsiveOptions={salesChart.responsiveOptions}
-                                    listener={
-                                        salesChart.animation
-                                    }
-                                />
-                            </CardBody>
-                            <CardFooter>
-                                <CardLegend>
-                                    {[
-                                        { i: "fa fa-circle text-gray", t: "Tesla Model S"},
-                                        { i: "fa fa-circle text-primary", t: "BMW 5 Series"}
-                                    ]}
-                                </CardLegend>
-                                <hr />
-                                <CardStats>
-                                    {[
-                                        { i: "now-ui-icons ui-1_check", t: "Data information certified"}
-                                    ]}
-                                </CardStats>
-                            </CardFooter>
-                        </Card>
-                    </Col>
-                    <Col xs="12" md="6">
+            <div>
+                <PanelHeader
+                    size="lg"
+                    content={
+                        <Line data={dashboardPanelChart.data} options={dashboardPanelChart.options}/>
+                    }
+                />
+                <div className="content">
+                    <Row>
+                        <Col xs={12} md={4}>
+                            <Card className="card-chart">
+                                <CardHeader>
+                                    <CardCategory>Global Sales</CardCategory>
+                                    <CardTitle>Shipped Products</CardTitle>
+                                    <UncontrolledDropdown>
+                                        <DropdownToggle className="btn-round btn-simple btn-icon" color="default">
+                                            <i className="now-ui-icons loader_gear"></i>
+                                        </DropdownToggle>
+                                        <DropdownMenu right>
+                                            <DropdownItem>Action</DropdownItem>
+                                            <DropdownItem>Another Action</DropdownItem>
+                                            <DropdownItem>Something else here</DropdownItem>
+                                            <DropdownItem className="text-danger">Remove data</DropdownItem>
+                                        </DropdownMenu>
+                                    </UncontrolledDropdown>
+                                </CardHeader>
+                                <CardBody>
+                                    <div className="chart-area">
+                                        <Line data={dashboardShippedProductsChart.data} options={dashboardShippedProductsChart.options} />
+                                    </div>
+                                </CardBody>
+                                <CardFooter>
+                                    <Stats>
+                                        {[
+                                            { i: "now-ui-icons arrows-1_refresh-69", t: "Just Updated"}
+                                        ]}
+                                    </Stats>
+                                </CardFooter>
+                            </Card>
+                        </Col>
+                        <Col xs={12} md={4}>
+                            <Card className="card-chart">
+                                <CardHeader>
+                                    <CardCategory>2018 Sales</CardCategory>
+                                    <CardTitle>All products</CardTitle>
+                                    <UncontrolledDropdown>
+                                        <DropdownToggle className="btn-round btn-simple btn-icon" color="default">
+                                            <i className="now-ui-icons loader_gear"></i>
+                                        </DropdownToggle>
+                                        <DropdownMenu right>
+                                            <DropdownItem>Action</DropdownItem>
+                                            <DropdownItem>Another Action</DropdownItem>
+                                            <DropdownItem>Something else here</DropdownItem>
+                                            <DropdownItem className="text-danger">Remove data</DropdownItem>
+                                        </DropdownMenu>
+                                    </UncontrolledDropdown>
+                                </CardHeader>
+                                <CardBody>
+                                    <div className="chart-area">
+                                        <Line data={dashboardAllProductsChart.data} options={dashboardAllProductsChart.options} />
+                                    </div>
+                                </CardBody>
+                                <CardFooter>
+                                    <Stats>
+                                        {[
+                                            { i: "now-ui-icons arrows-1_refresh-69", t: "Just Updated"}
+                                        ]}
+                                    </Stats>
+                                </CardFooter>
+                            </Card>
+                        </Col>
+                        <Col xs={12} md={4}>
+                            <Card className="card-chart">
+                                <CardHeader>
+                                    <CardCategory>Email Statistics</CardCategory>
+                                    <CardTitle>24 Hours Performance</CardTitle>
+                                </CardHeader>
+                                <CardBody>
+                                    <div className="chart-area">
+                                        <Bar data={dashboard24HoursPerformanceChart.data} options={dashboard24HoursPerformanceChart.options} />
+                                    </div>
+                                </CardBody>
+                                <CardFooter>
+                                    <Stats>
+                                        {[
+                                            { i: "now-ui-icons ui-2_time-alarm", t: "Last 7 days"}
+                                        ]}
+                                    </Stats>
+                                </CardFooter>
+                            </Card>
+                        </Col>
+                    </Row>
+                    <Row>
+                      <Col xs={12} md={6}>
                         <Card className="card-tasks">
-                            <CardHeader>
-                                <CardTitle>Tasks</CardTitle>
-                                <CardSubtitle>Backend Development</CardSubtitle>
-                            </CardHeader>
-                            <CardBody>
-                                <Tasks tasks={tasks}/>
-                            </CardBody>
-                            <CardFooter>
-                                <hr />
-                                <CardStats>
-                                    {[
-                                        { i: "now-ui-icons loader_refresh spin", t: "Updated 3 minutes ago"}
-                                    ]}
-                                </CardStats>
-                            </CardFooter>
+                          <CardHeader>
+                            <CardTitle>Tasks</CardTitle>
+                            <p className="category">Backend Development</p>
+                          </CardHeader>
+                          <CardBody>
+                            <Tasks tasks={tasks}/>
+                          </CardBody>
+                          <CardFooter>
+                            <hr />
+                            <Stats>
+                                {[
+                                    { i: "now-ui-icons loader_refresh spin", t: "Updated 3 minutes ago"}
+                                ]}
+                            </Stats>
+                          </CardFooter>
                         </Card>
-                    </Col>
-                </Row>
-            </Container>
+                      </Col>
+                      <Col xs={12} md={6}>
+                        <Card>
+                          <CardHeader>
+                            <CardTitle>Employees Stats</CardTitle>
+                            <p className="category">All Persons List</p>
+                          </CardHeader>
+                          <CardBody>
+                            <Table responsive>
+                              <thead className=" text-primary">
+                                <tr>
+                                  <th>Name</th>
+                                <th>Country</th>
+                                <th>City</th>
+                                <th className="text-right">Salary</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Dakota Rice</td>
+                                  <td>Niger</td>
+                                  <td>Oud-Turnhout</td>
+                                  <td className="text-right">$36,738</td>
+                                </tr>
+                                <tr>
+                                  <td>Minerva Hooper</td>
+                                  <td>Curaçao</td>
+                                  <td>Sinaai-Waas</td>
+                                  <td className="text-right">$23,789</td>
+                                </tr>
+                                <tr>
+                                  <td>Sage Rodriguez</td>
+                                  <td>Netherlands</td>
+                                  <td>Baileux</td>
+                                  <td className="text-right">$56,142</td>
+                                </tr>
+                                <tr>
+                                  <td>Doris Greene</td>
+                                  <td>Malawi</td>
+                                  <td>Feldkirchen in Kärnten</td>
+                                  <td className="text-right">$63,542</td>
+                                </tr>
+                                <tr>
+                                  <td>Mason Porter</td>
+                                  <td>Chile</td>
+                                  <td>Gloucester</td>
+                                  <td className="text-right">$78,615</td>
+                                </tr>
+                              </tbody>
+                            </Table>
+                          </CardBody>
+                        </Card>
+                      </Col>
+                    </Row>
+                </div>
+            </div>
         );
     }
 }

@@ -1,9 +1,9 @@
-import App from 'containers/App/App.jsx';
-import Documentation from 'containers/Documentation/Documentation.jsx';
+import Dashboard from 'layouts/Dashboard/Dashboard.jsx';
+import Documentation from 'documentation/Components.jsx';
 
-const indexRoutes = [
-    { path: "/documentation", component: Documentation },
-    { path: "/", component: App }
+var indexRoutes = [
+  { path: "/documentation", name: "Documentation", component: Documentation },
+  { path: "/", name: "Home", component: Dashboard }
 ];
 
 export default indexRoutes;

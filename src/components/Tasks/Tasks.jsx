@@ -1,7 +1,9 @@
 import React from 'react';
-import { UncontrolledTooltip, FormGroup, Label, Input } from 'reactstrap';
+import { UncontrolledTooltip } from 'reactstrap';
+// used for making the prop types of this component
+import PropTypes from 'prop-types';
 
-import Button from 'elements/CustomButton/CustomButton';
+import { Button, Checkbox } from 'components';
 
 class Task extends React.Component{
     render(){
@@ -16,15 +18,10 @@ class Task extends React.Component{
             tasksList.push(
                 <tr key={i}>
                     <td>
-                        <FormGroup check>
-                            <Label check>
-                                <Input type="checkbox" value={number}/>
-                                <span className="form-check-sign"></span>
-                            </Label>
-                        </FormGroup>
+                        <Checkbox inputProps={{value: number, defaultChecked: this.props.tasks[i].checked}}/>
                     </td>
-                    <td>
-                        { this.props.tasks[i] }
+                    <td className="text-left">
+                        { this.props.tasks[i].text }
                     </td>
                     <td className="td-actions text-right">
                         <Button
@@ -57,6 +54,10 @@ class Task extends React.Component{
             </div>
         );
     }
+}
+
+Task.propTypes = {
+    tasks: PropTypes.arrayOf(PropTypes.object)
 }
 
 export default Task;

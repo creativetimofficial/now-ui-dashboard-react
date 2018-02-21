@@ -1,40 +1,72 @@
-import ButtonsSection from 'containers/Documentation/sections/ButtonsSection.jsx';
-import CardSection from 'containers/Documentation/sections/CardSection.jsx';
-import ChartsSection from 'containers/Documentation/sections/ChartsSection.jsx';
-import CheckboxSection from 'containers/Documentation/sections/CheckboxSection.jsx';
-import DropdownSection from 'containers/Documentation/sections/DropdownSection.jsx';
-import FooterSection from 'containers/Documentation/sections/FooterSection.jsx';
-import FormInputsSection from 'containers/Documentation/sections/FormInputsSection.jsx'
-import TutorialSection from 'containers/Documentation/sections/TutorialSection.jsx';
-import IconsSection from 'containers/Documentation/sections/IconsSection.jsx';
-import MapSection from 'containers/Documentation/sections/MapSection.jsx';
-import NavbarsSection from 'containers/Documentation/sections/NavbarsSection.jsx';
-import NotificationsSection from 'containers/Documentation/sections/NotificationsSection.jsx';
-import RadioSection from 'containers/Documentation/sections/RadioSection.jsx';
-import SidebarSection from 'containers/Documentation/sections/SidebarSection.jsx';
-import TableSection from 'containers/Documentation/sections/TableSection.jsx';
-import TasksSection from 'containers/Documentation/sections/TasksSection.jsx';
-import TooltipSection from 'containers/Documentation/sections/TooltipSection.jsx';
+import Tutorial from "documentation/Sections/Tutorial.jsx";
+import RoutingSystem from "documentation/Sections/RoutingSystem.jsx";
+import Alerts from "documentation/Sections/Alerts.jsx";
+import Breadcrumb from "documentation/Sections/Breadcrumb.jsx";
+import Buttons from "documentation/Sections/Buttons.jsx";
+import CardElements from "documentation/Sections/CardElements.jsx";
+import Cards from "documentation/Sections/Cards.jsx";
+import Charts from "documentation/Sections/Charts.jsx";
+import CheckboxRadio from "documentation/Sections/CheckboxRadio.jsx";
+import Dropdown from "documentation/Sections/Dropdown.jsx";
+import Footers from "documentation/Sections/Footers.jsx";
+import FormInputs from "documentation/Sections/FormInputs.jsx";
+import GoogleMaps from "documentation/Sections/GoogleMaps.jsx";
+import Icons from "documentation/Sections/Icons.jsx";
+import Navigation from "documentation/Sections/Navigation.jsx";
+import Navs from "documentation/Sections/Navs.jsx";
+import Notifications from "documentation/Sections/Notifications.jsx";
+import PerfectScrollbar from "documentation/Sections/PerfectScrollbar.jsx";
+import Sidebar from "documentation/Sections/Sidebar.jsx";
+import Stats from "documentation/Sections/Stats.jsx";
+import Switch from "documentation/Sections/Switch.jsx";
+import Tables from "documentation/Sections/Tables.jsx";
+import Tasks from "documentation/Sections/Tasks.jsx";
+import Textarea from "documentation/Sections/Textarea.jsx";
+import Tooltips from "documentation/Sections/Tooltips.jsx";
+import Typography from "documentation/Sections/Typography.jsx";
+import Variables from "documentation/Sections/Variables.jsx";
 
-const docRoutes = [
-    { path: "/documentation/tutorial", name: "Tutorial", component: TutorialSection},
-    { path: "/documentation/buttons", name: "Buttons", component: ButtonsSection},
-    { path: "/documentation/cards", name: "Card", component: CardSection},
-    { path: "/documentation/charts", name: "Charts", component: ChartsSection},
-    { path: "/documentation/checkboxes", name: "Checkboxes", component: CheckboxSection},
-    { path: "/documentation/dropdowns", name: "Dropdowns", component: DropdownSection},
-    { path: "/documentation/footers", name: "Footers", component: FooterSection},
-    { path: "/documentation/form-inputs", name: "Form Inputs", component: FormInputsSection},
-    { path: "/documentation/icons", name: "Icons", component: IconsSection},
-    { path: "/documentation/maps", name: "Maps", component: MapSection},
-    { path: "/documentation/navbars", name: "Navbars", component: NavbarsSection},
-    { path: "/documentation/notifications", name: "Notifications", component: NotificationsSection},
-    { path: "/documentation/radios", name: "Radios", component: RadioSection},
-    { path: "/documentation/sidebars", name: "Sidebar", component: SidebarSection},
-    { path: "/documentation/tables", name: "Tables", component: TableSection},
-    { path: "/documentation/tasks", name: "Tasks", component: TasksSection},
-    { path: "/documentation/tooltips", name: "Tooltips", component: TooltipSection},
-    { redirect: true, path: "/documentation", to: "/documentation/tutorial"}
+var componentsRoutes = [
+    {
+        name: 'Getting started', path: "/documentation/tutorial", routes: [
+            { path: "/documentation/tutorial", component:  Tutorial, name: "Tutorial" },
+            { path: "/documentation/routing-system", component:  RoutingSystem, name: "Routing System" },
+            { path: "/documentation/variables", component:  Variables, name: "Variables" },
+        ]
+    },
+    {
+        name: 'Components', path: "/documentation/accordion" , routes: [
+            { path: "/documentation/alerts", component:  Alerts, name: "Alerts" },
+            { path: "/documentation/breadcrumb", component:  Breadcrumb, name: "Breadcrumb" },
+            { path: "/documentation/buttons", component:  Buttons, name: "Buttons" },
+            { path: "/documentation/cards", component:  Cards, name: "Cards" },
+            { path: "/documentation/card-elements", component:  CardElements, name: "Card Elements" },
+            { path: "/documentation/checkbox-radio-switch", component:  CheckboxRadio, name: "Checkbox Radio" },
+            { path: "/documentation/dropdown", component:  Dropdown, name: "Dropdown" },
+            { path: "/documentation/footers", component:  Footers, name: "Footers" },
+            { path: "/documentation/form-inputs", component:  FormInputs, name: "Form Inputs" },
+            { path: "/documentation/navbars", component:  Navigation, name: "Navbars" },
+            { path: "/documentation/navs", component:  Navs, name: "Navs" },
+            { path: "/documentation/icons", component:  Icons, name: "Nucleo Icons" },
+            { path: "/documentation/sidebar", component:  Sidebar, name: "Sidebar" },
+            { path: "/documentation/stats", component:  Stats, name: "Stats" },
+            { path: "/documentation/tables", component:  Tables, name: "Tables" },
+            { path: "/documentation/tasks", component:  Tasks, name: "Tasks" },
+            { path: "/documentation/textarea", component:  Textarea, name: "Textarea" },
+            { path: "/documentation/tooltips", component:  Tooltips, name: "Tooltips" },
+            { path: "/documentation/typography", component:  Typography, name: "Typography" },
+        ]
+    },
+    {
+        name: 'Plugins', path: '/documentation/charts', routes: [
+            { path: "/documentation/charts", component:  Charts, name: "Charts" },
+            { path: "/documentation/google-maps", component:  GoogleMaps, name: "GoogleMaps" },
+            { path: "/documentation/notifications", component:  Notifications, name: "Notifications" },
+            { path: "/documentation/perfect-scrollbar", component:  PerfectScrollbar, name: "PerfectScrollbar" },
+            { path: "/documentation/switch", component: Switch, name: "Switch" },
+        ]
+    },
+    { redirect: true, path: "/documentation", pathTo: "/documentation/tutorial" }
 ];
 
-export default docRoutes;
+export default componentsRoutes;
