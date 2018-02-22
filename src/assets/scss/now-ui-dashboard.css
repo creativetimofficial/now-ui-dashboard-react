@@ -3677,7 +3677,8 @@ Created using IcoMoon - icomoon.io
   .navbar .navbar-nav .nav-item:not(:last-child) {
     margin-bottom: 10px; }
   .navbar .dropdown.show .dropdown-menu {
-    display: block; }
+    display: block;
+    position: static !important; }
   .navbar .dropdown .dropdown-menu {
     display: none; }
   .navbar .dropdown.show .dropdown-menu,

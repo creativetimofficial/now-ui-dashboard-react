@@ -35,6 +35,7 @@
 
         .dropdown.show .dropdown-menu{
             display: block;
+            position: static!important;
         }
 
         .dropdown .dropdown-menu{
