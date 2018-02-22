@@ -38,6 +38,12 @@ class Dashboard extends React.Component{
           document.body.classList.toggle("perfect-scrollbar-on");
       }
   }
+  componentDidUpdate(e) {
+    if(e.history.action === "PUSH"){
+      this.refs.mainPanel.scrollTop = 0;
+      document.scrollingElement.scrollTop = 0;
+    }
+  }
   render(){
     return (
       <div className="wrapper">
