@@ -21,7 +21,7 @@ ReactPixel.init('111649226022273');
 ReactPixel.pageView();
 ReactPixel.fbq('track', 'PageView');
 
-ReactGA.initialize('UA-46172202-12');
+ReactGA.initialize('UA-46172202-1');
 ReactGA.set({ page: window.location.pathname + window.location.search });
 ReactGA.pageview(window.location.pathname + window.location.search);
 
