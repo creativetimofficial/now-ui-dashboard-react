@@ -14,7 +14,7 @@ class Header extends React.Component {
                         <NavLink href="#" className="p-2">1.0.0</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="https://github.com/creativetimofficial/now-ui-dashboard-pro-react" className="p-2"><i className="fab fa-github"></i></NavLink>
+                        <NavLink href="https://github.com/creativetimofficial/now-ui-dashboard-react" className="p-2" target="_blank"><i className="fab fa-github"></i></NavLink>
                     </NavItem>
                     <NavItem>
                         <NavLink href="https://twitter.com/CreativeTim" className="p-2"><i className="fab fa-twitter"></i></NavLink>
@@ -26,7 +26,7 @@ class Header extends React.Component {
                             <Link to="/" className="nav-link"><i className="now-ui-icons design_bullet-list-67"></i> Back to Dashboard</Link>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="https://github.com/creativetimofficial/now-ui-dashboard-pro-react/issues"><i className="now-ui-icons health_ambulance"></i> Report a bug</NavLink>
+                            <NavLink href="https://github.com/creativetimofficial/now-ui-dashboard-react/issues"  target="_blank"><i className="now-ui-icons health_ambulance"></i> Report a bug</NavLink>
                         </NavItem>
                     </Nav>
                 </div>
