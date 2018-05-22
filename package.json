@@ -1,8 +1,8 @@
 {
   "name": "nud-react",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "private": true,
-  "homepage": "https://timcreative.github.io/now-ui-dashboard-react",
+  "homepage": "https://creativetimofficial.github.io/now-ui-dashboard-react/#/dashboard",
   "dependencies": {
     "bootstrap": "4.0.0-beta",
     "chart.js": "2.7.1",
