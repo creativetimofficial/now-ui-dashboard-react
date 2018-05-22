@@ -1,5 +1,10 @@
 # Change Log
 
+## [1.0.2] 2018-05-22
+### Bug fixing
+- Changed live preview and live documentation links
+- Changed links from `http` to `https`
+
 ## [1.0.1] 2018-03-28
 ### Bug fixing
 - Changed live preview and live documentation links
