@@ -83,7 +83,7 @@ class Tutorial extends React.Component{
             <div>
                 <h1 className="bd-title" id="content">Short Description and Usage</h1>
                 <p className="bd-lead">
-                    <b>Now UI Dashboard React</b> is a beautiful resource built over <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">Bootstrap 4 beta 2</a>, <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">React</a> and <a href="https://reactstrap.github.io/" target="_blank" rel="noopener noreferrer">reactstrap</a> to allow you to create powerful and beautiful dashboards. We have redesigned all the usual components in Bootstrap to make it look flat, minimalist and easy to use.
+                    <b>Now UI Dashboard React</b> is a beautiful resource built over <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">Bootstrap 4 beta 2</a>, <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">React</a> (<a href="https://github.com/facebook/create-react-app" target="_blank" rel="noopener noreferrer">create-react-app</a>) and <a href="https://reactstrap.github.io/" target="_blank" rel="noopener noreferrer">reactstrap</a> to allow you to create powerful and beautiful dashboards. We have redesigned all the usual components in Bootstrap to make it look flat, minimalist and easy to use.
                 </p>
                 <p>
                     Using the dashboard is very simple, but it does require you to understand basic JavaScript functions, react and reactstrap. To get the desired effect you will need to integrate react components and JS plugins that take a little bit more effort. Down below we list all the files you need to include inside the application to get going.
@@ -121,6 +121,50 @@ class Tutorial extends React.Component{
                     <li>Go to your file project (where you've unzipped the product)</li>
                     <li>Run in terminal <SyntaxHighlighter language="jsx" style={prism}>{`npm install`}</SyntaxHighlighter></li>
                     <li>Then run <SyntaxHighlighter language="jsx" style={prism}>{`npm start`}</SyntaxHighlighter></li>
+                    <li>You can also run instead of the above commands <SyntaxHighlighter language="jsx" style={prism}>{`npm install:clean`}</SyntaxHighlighter> which will delete the <code>node_modules</code> and <code>package_lock.json</code> from your project and make a clean install of them</li>
+                    <li>
+                      If you have an error something containing
+                      <SyntaxHighlighter
+                        language="jsx"
+                        style={prism}
+                      >{`Module not found`}</SyntaxHighlighter>
+                      you need to do the following
+                      <SyntaxHighlighter
+                        language="jsx"
+                        style={prism}
+                      >{`npm install --g cross-env`}</SyntaxHighlighter>
+                      then change the script, for example the start script from
+                      <SyntaxHighlighter
+                        language="jsx"
+                        style={prism}
+                      >{`"start": "npm-run-all -p watch-css start-js",`}</SyntaxHighlighter>
+                      to
+                      <SyntaxHighlighter
+                        language="jsx"
+                        style={prism}
+                      >{`"start": "NODE_PATH=./src npm-run-all -p watch-css start-js",`}</SyntaxHighlighter>
+                      <b>
+                        The same should be done with any other script that has the above
+                        error.
+                      </b>
+                    </li>
+                    <li>
+                      If you have an error containing{" "}
+                      <SyntaxHighlighter
+                        language="jsx"
+                        style={prism}
+                      >{`props.history of undefined`}</SyntaxHighlighter>{" "}
+                      (this can happen when you integrate our project with another one)
+                      then you need to make the changes found{" "}
+                      <a
+                        href="https://github.com/creativetimofficial/ct-material-dashboard-pro-react/issues/70"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {" "}
+                        here
+                      </a>
+                    </li>
                     <li>
                         (Optional) You can create a new react application like this
                         <ul>

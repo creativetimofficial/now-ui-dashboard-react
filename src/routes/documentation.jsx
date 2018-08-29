@@ -1,30 +1,31 @@
-import Tutorial from "documentation/Sections/Tutorial.jsx";
-import RoutingSystem from "documentation/Sections/RoutingSystem.jsx";
-import Alerts from "documentation/Sections/Alerts.jsx";
-import Breadcrumb from "documentation/Sections/Breadcrumb.jsx";
-import Buttons from "documentation/Sections/Buttons.jsx";
-import CardElements from "documentation/Sections/CardElements.jsx";
-import Cards from "documentation/Sections/Cards.jsx";
-import Charts from "documentation/Sections/Charts.jsx";
-import CheckboxRadio from "documentation/Sections/CheckboxRadio.jsx";
-import Dropdown from "documentation/Sections/Dropdown.jsx";
-import Footers from "documentation/Sections/Footers.jsx";
-import FormInputs from "documentation/Sections/FormInputs.jsx";
-import GoogleMaps from "documentation/Sections/GoogleMaps.jsx";
-import Icons from "documentation/Sections/Icons.jsx";
-import Navigation from "documentation/Sections/Navigation.jsx";
-import Navs from "documentation/Sections/Navs.jsx";
-import Notifications from "documentation/Sections/Notifications.jsx";
-import PerfectScrollbar from "documentation/Sections/PerfectScrollbar.jsx";
-import Sidebar from "documentation/Sections/Sidebar.jsx";
-import Stats from "documentation/Sections/Stats.jsx";
-import Switch from "documentation/Sections/Switch.jsx";
-import Tables from "documentation/Sections/Tables.jsx";
-import Tasks from "documentation/Sections/Tasks.jsx";
-import Textarea from "documentation/Sections/Textarea.jsx";
-import Tooltips from "documentation/Sections/Tooltips.jsx";
-import Typography from "documentation/Sections/Typography.jsx";
-import Variables from "documentation/Sections/Variables.jsx";
+import Tutorial from "layouts/Documentation/Sections/Tutorial.jsx";
+import RoutingSystem from "layouts/Documentation/Sections/RoutingSystem.jsx";
+import Variables from "layouts/Documentation/Sections/Variables.jsx";
+import LintCommands from "layouts/Documentation/Sections/LintCommands.jsx";
+import Alerts from "layouts/Documentation/Sections/Alerts.jsx";
+import Breadcrumb from "layouts/Documentation/Sections/Breadcrumb.jsx";
+import Buttons from "layouts/Documentation/Sections/Buttons.jsx";
+import CardElements from "layouts/Documentation/Sections/CardElements.jsx";
+import Cards from "layouts/Documentation/Sections/Cards.jsx";
+import Charts from "layouts/Documentation/Sections/Charts.jsx";
+import CheckboxRadio from "layouts/Documentation/Sections/CheckboxRadio.jsx";
+import Dropdown from "layouts/Documentation/Sections/Dropdown.jsx";
+import Footers from "layouts/Documentation/Sections/Footers.jsx";
+import FormInputs from "layouts/Documentation/Sections/FormInputs.jsx";
+import GoogleMaps from "layouts/Documentation/Sections/GoogleMaps.jsx";
+import Icons from "layouts/Documentation/Sections/Icons.jsx";
+import Navigation from "layouts/Documentation/Sections/Navigation.jsx";
+import Navs from "layouts/Documentation/Sections/Navs.jsx";
+import Notifications from "layouts/Documentation/Sections/Notifications.jsx";
+import PerfectScrollbar from "layouts/Documentation/Sections/PerfectScrollbar.jsx";
+import Sidebar from "layouts/Documentation/Sections/Sidebar.jsx";
+import Stats from "layouts/Documentation/Sections/Stats.jsx";
+import Switch from "layouts/Documentation/Sections/Switch.jsx";
+import Tables from "layouts/Documentation/Sections/Tables.jsx";
+import Tasks from "layouts/Documentation/Sections/Tasks.jsx";
+import Textarea from "layouts/Documentation/Sections/Textarea.jsx";
+import Tooltips from "layouts/Documentation/Sections/Tooltips.jsx";
+import Typography from "layouts/Documentation/Sections/Typography.jsx";
 
 var componentsRoutes = [
     {
@@ -32,6 +33,7 @@ var componentsRoutes = [
             { path: "/documentation/tutorial", component:  Tutorial, name: "Tutorial" },
             { path: "/documentation/routing-system", component:  RoutingSystem, name: "Routing System" },
             { path: "/documentation/variables", component:  Variables, name: "Variables" },
+            { path: "/documentation/lint", component:  LintCommands, name: "Lint" },
         ]
     },
     {
