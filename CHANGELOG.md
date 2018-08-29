@@ -6,9 +6,10 @@
   - https://github.com/creativetimofficial/now-ui-dashboard-react/issues/1
   - https://github.com/creativetimofficial/now-ui-dashboard-react/issues/4
 - Added lint commands
+- Added commands for creating a npmjs library
 ### Deleted dependencies
 ### Added dependencies
-- `ajv v6.5.3` (to stop warning: **npm WARN ajv-keywords@3.2.0 requires a peer of ajv@^6.0.0 but none is installed. You must install peer dependencies yourself.**)
+- `ajv v5.0.0` (to stop warning: **npm WARN ajv-keywords@2.1.1 requires a peer of ajv@^5.0.0 but none is installed. You must install peer dependencies yourself.**)
 - `@types/googlemaps v3.30.12` (to stop warning: **npm WARN react-google-maps@9.4.5 requires a peer of @types/googlemaps@^3.0.0 but none is installed. You must install peer dependencies yourself.**)
 - `@types/markerclustererplus v2.1.33` (to stop warning: **npm WARN react-google-maps@9.4.5 requires a peer of @types/markerclustererplus@^2.1.29 but none is installed. You must install peer dependencies yourself.**)
 - `@types/react v16.4.12` (to stop warning: **npm WARN react-google-maps@9.4.5 requires a peer of @types/react@^15.0.0 || ^16.0.0 but none is installed. You must install peer dependencies yourself.**)
