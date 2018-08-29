@@ -4,18 +4,15 @@
 
     &:hover,
     &:focus,
-    &:active,
-    &.active,
-    &:active:focus,
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    &:not(:disabled):not(.disabled):active:focus,
+    &:not(:disabled):not(.disabled).active:focus,
     &:active:hover,
-    &.active:focus,
     &.active:hover,
     .show > &.dropdown-toggle,
     .show > &.dropdown-toggle:focus,
-    .show > &.dropdown-toggle:hover,
-    .show > &.btn[aria-haspopup="true"],
-    .show > &.btn[aria-haspopup="true"]:focus,
-    .show > &.btn[aria-haspopup="true"]:hover {
+    .show > &.dropdown-toggle:hover {
         background-color: $btn-states-color;
         color: $white-color;
         box-shadow: none;

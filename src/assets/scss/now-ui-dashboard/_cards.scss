@@ -23,23 +23,12 @@
       padding: 15px 15px 0;
       border: 0;
 
-
-
-        .card-title{
-            margin-top: 10px;
-        }
-    }
-
-    &.card-wizard{
-      .card-header{
-        padding-left: 0;
-        padding-right: 0;
-        padding-bottom: 40px;
+      .card-title{
+          margin-top: 10px;
       }
     }
 
     .map{
-        height: 500px;
         border-radius: $border-radius-small;
 
         &.map-big{
@@ -91,22 +80,10 @@
         margin-bottom: 15px;
     }
 
-    .info-area{
-        padding: 40px 0 40px;
-        text-align: center;
-        position: relative;
-        z-index: 2;
-
-    }
-
     label{
         font-size: $font-size-small;
         margin-bottom: 5px;
         color: $dark-gray;
-    }
-
-    .ct-chart{
-        margin: 30px 0 30px;
     }
 
     .card-footer{
@@ -126,102 +103,4 @@
             margin: 0;
         }
     }
-}
-
-.card-user{
-    .image{
-        height: 120px;
-    }
-
-    .author{
-        text-align: center;
-        text-transform: none;
-        margin-top: -77px;
-
-        a +  p.description{
-            margin-top: -7px;
-        }
-    }
-
-    .avatar{
-        width: 124px;
-        height: 124px;
-        border: 1px solid $white-color;
-        position: relative;
-    }
-
-    .card-body{
-        min-height: 240px;
-    }
-
-    hr{
-        margin: 5px 15px;
-    }
-
-    .button-container{
-        margin-bottom: 6px;
-        text-align: center;
-    }
-}
-
-.card-plain{
-    background: transparent;
-    box-shadow: none;
-
-    .card-header,
-    .card-footer{
-        margin-left: 0;
-        margin-right: 0;
-        background-color: transparent;
-    }
-
-    &:not(.card-subcategories).card-body{
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-
-.card-chart {
-  .card-header{
-    .card-title{
-      margin-top: 10px;
-      margin-bottom: 0;
-    }
-    .card-category{
-      margin-bottom: 5px;
-    }
-  }
-
-  .table{
-    margin-bottom: 0;
-
-    td{
-      border-top: none;
-      border-bottom: 1px solid #e9ecef;
-    }
-  }
-
-  .chart-area {
-    height: 190px;
-    width: calc(100% + 30px);
-    margin-left: -15px;
-    margin-right: -15px;
-  }
-  .card-footer {
-    margin-top: 15px;
-
-    .stats{
-      color: $dark-gray;
-    }
-  }
-
-  .dropdown{
-    position: absolute;
-    right: 20px;
-    top: 20px;
-
-    .btn{
-      margin: 0;
-    }
-  }
 }
