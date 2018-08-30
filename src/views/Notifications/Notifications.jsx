@@ -147,7 +147,8 @@ class Notifications extends React.Component {
                     toggle={this.onDismiss}
                   >
                     <span>
-                      <b> Primary - </b> This is a regular notification made with color="primary"
+                      <b> Primary - </b> This is a regular notification made
+                      with color="primary"
                     </span>
                   </Alert>
                   <Alert
@@ -156,7 +157,8 @@ class Notifications extends React.Component {
                     toggle={this.onDismiss}
                   >
                     <span>
-                      <b> Info - </b> This is a regular notification made with color="info"
+                      <b> Info - </b> This is a regular notification made with
+                      color="info"
                     </span>
                   </Alert>
                   <Alert
@@ -165,7 +167,8 @@ class Notifications extends React.Component {
                     toggle={this.onDismiss}
                   >
                     <span>
-                      <b> Success - </b> This is a regular notification made with color="success"
+                      <b> Success - </b> This is a regular notification made
+                      with color="success"
                     </span>
                   </Alert>
                   <Alert
@@ -174,7 +177,8 @@ class Notifications extends React.Component {
                     toggle={this.onDismiss}
                   >
                     <span>
-                      <b> Warning - </b> This is a regular notification made with color="warning"
+                      <b> Warning - </b> This is a regular notification made
+                      with color="warning"
                     </span>
                   </Alert>
                   <Alert
@@ -183,7 +187,8 @@ class Notifications extends React.Component {
                     toggle={this.onDismiss}
                   >
                     <span>
-                      <b> Danger - </b> This is a regular notification made with color="danger"
+                      <b> Danger - </b> This is a regular notification made with
+                      color="danger"
                     </span>
                   </Alert>
                 </CardBody>
