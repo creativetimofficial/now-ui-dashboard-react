@@ -2646,10 +2646,20 @@ Created using IcoMoon - icomoon.io
 .wrapper {
   position: relative;
   top: 0;
-  height: 100vh; }
+  height: 100vh;
+  overflow: hidden; }
   .wrapper.wrapper-full-page {
     min-height: 100vh;
     height: auto; }
+
+.sidebar .sidebar-wrapper,
+.main-panel {
+  overflow: auto; }
+
+.sidebar,
+.main-panel {
+  height: 100%;
+  max-height: 100; }
 
 .sidebar,
 .off-canvas-sidebar {
