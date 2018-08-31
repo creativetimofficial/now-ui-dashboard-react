@@ -51,7 +51,7 @@ It comes with 6 filter colors for the sidebar (`black`, `blue`, `green`, `orange
 
 Quick start options:
 
-- `npm i now-ui-dashboard-react`
+- `npm i now-ui-dashboard-react` (you will need to import from the dist folder our components)
 - Clone the repo: `git clone https://github.com/creativetimofficial/now-ui-dashboard-react.git`.
 - [Download from Github](https://github.com/creativetimofficial/now-ui-dashboard-react/archive/master.zip).
 - [Download from Creative Tim](https://www.creative-tim.com/product/now-ui-dashboard-react).
