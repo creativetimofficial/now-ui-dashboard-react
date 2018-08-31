@@ -1,6 +1,6 @@
 # Change Log
 
-## [1.1.0] 2018-08-xx
+## [1.1.0] 2018-08-31
 ### Bug fixing
 - Github issues
   - https://github.com/creativetimofficial/now-ui-dashboard-react/issues/1

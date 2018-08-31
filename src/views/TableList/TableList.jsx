@@ -23,7 +23,7 @@ class RegularTables extends React.Component {
             <Col xs={12}>
               <Card>
                 <CardHeader>
-                  <CardTitle>Simple Table</CardTitle>
+                  <CardTitle tag="h4">Simple Table</CardTitle>
                 </CardHeader>
                 <CardBody>
                   <Table responsive>
@@ -64,7 +64,7 @@ class RegularTables extends React.Component {
             <Col xs={12}>
               <Card className="card-plain">
                 <CardHeader>
-                  <CardTitle>Table on Plain Background</CardTitle>
+                  <CardTitle tag="h4">Table on Plain Background</CardTitle>
                   <p className="category"> Here is a subtitle for this table</p>
                 </CardHeader>
                 <CardBody>

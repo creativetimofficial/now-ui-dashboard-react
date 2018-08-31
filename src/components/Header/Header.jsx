@@ -13,6 +13,7 @@ import {
   DropdownItem,
   Container,
   InputGroup,
+  InputGroupText,
   InputGroupAddon,
   Input
 } from "reactstrap";
@@ -149,8 +150,10 @@ class Header extends React.Component {
             <form>
               <InputGroup className="no-border">
                 <Input placeholder="Search..." />
-                <InputGroupAddon>
-                  <i className="now-ui-icons ui-1_zoom-bold" />
+                <InputGroupAddon addonType="append">
+                  <InputGroupText>
+                    <i className="now-ui-icons ui-1_zoom-bold" />
+                  </InputGroupText>
                 </InputGroupAddon>
               </InputGroup>
             </form>

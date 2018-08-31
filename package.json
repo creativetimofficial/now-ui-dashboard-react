@@ -1,7 +1,8 @@
 {
-  "name": "nud-react",
-  "version": "1.0.2",
+  "name": "now-ui-dashboard-react",
+  "version": "1.1.0",
   "private": true,
+  "main": "dist/index.js",
   "homepage": "https://creativetimofficial.github.io/now-ui-dashboard-react/#/dashboard",
   "dependencies": {
     "@types/googlemaps": "3.30.12",
@@ -44,7 +45,7 @@
     "lint:check": "eslint . --ext=js,jsx;  exit 0",
     "lint:fix": "eslint . --ext=js,jsx --fix;  exit 0",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
-    "build-package-css": "node-sass-chokidar src/assets/scss/material-kit-react.scss dist/material-kit-react.css",
+    "build-package-css": "node-sass-chokidar src/assets/scss/now-ui-dashboard.scss dist/now-ui-dashboard.css",
     "build-package": "npm run build-package-css && babel src --out-dir dist"
   },
   "devDependencies": {

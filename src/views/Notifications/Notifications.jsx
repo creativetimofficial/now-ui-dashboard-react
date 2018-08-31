@@ -88,7 +88,7 @@ class Notifications extends React.Component {
             <Col md={6} xs={12}>
               <Card>
                 <CardHeader>
-                  <CardTitle>Notifications Style</CardTitle>
+                  <CardTitle tag="h4">Notifications Style</CardTitle>
                 </CardHeader>
                 <CardBody>
                   <Alert color="info">
@@ -138,7 +138,7 @@ class Notifications extends React.Component {
             <Col md={6} xs={12}>
               <Card>
                 <CardHeader>
-                  <CardTitle>Notification states</CardTitle>
+                  <CardTitle tag="h4">Notification states</CardTitle>
                 </CardHeader>
                 <CardBody>
                   <Alert
@@ -148,7 +148,7 @@ class Notifications extends React.Component {
                   >
                     <span>
                       <b> Primary - </b> This is a regular notification made
-                      with <code>color="primary"</code>
+                      with color="primary"
                     </span>
                   </Alert>
                   <Alert
@@ -157,8 +157,8 @@ class Notifications extends React.Component {
                     toggle={this.onDismiss}
                   >
                     <span>
-                      <b> Info - </b> This is a regular notification made with{" "}
-                      <code>color="info"</code>
+                      <b> Info - </b> This is a regular notification made with
+                      color="info"
                     </span>
                   </Alert>
                   <Alert
@@ -168,7 +168,7 @@ class Notifications extends React.Component {
                   >
                     <span>
                       <b> Success - </b> This is a regular notification made
-                      with <code>color="success"</code>
+                      with color="success"
                     </span>
                   </Alert>
                   <Alert
@@ -178,7 +178,7 @@ class Notifications extends React.Component {
                   >
                     <span>
                       <b> Warning - </b> This is a regular notification made
-                      with <code>color="warning"</code>
+                      with color="warning"
                     </span>
                   </Alert>
                   <Alert
@@ -187,8 +187,8 @@ class Notifications extends React.Component {
                     toggle={this.onDismiss}
                   >
                     <span>
-                      <b> Danger - </b> This is a regular notification made with{" "}
-                      <code>color="danger"</code>
+                      <b> Danger - </b> This is a regular notification made with
+                      color="danger"
                     </span>
                   </Alert>
                 </CardBody>

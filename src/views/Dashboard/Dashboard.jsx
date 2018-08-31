@@ -47,7 +47,7 @@ class Dashboard extends React.Component {
               <Card className="card-chart">
                 <CardHeader>
                   <CardCategory>Global Sales</CardCategory>
-                  <CardTitle>Shipped Products</CardTitle>
+                  <CardTitle tag="h4">Shipped Products</CardTitle>
                   <UncontrolledDropdown>
                     <DropdownToggle
                       className="btn-round btn-simple btn-icon"
@@ -89,7 +89,7 @@ class Dashboard extends React.Component {
               <Card className="card-chart">
                 <CardHeader>
                   <CardCategory>2018 Sales</CardCategory>
-                  <CardTitle>All products</CardTitle>
+                  <CardTitle tag="h4">All products</CardTitle>
                   <UncontrolledDropdown>
                     <DropdownToggle
                       className="btn-round btn-simple btn-icon"
@@ -131,7 +131,7 @@ class Dashboard extends React.Component {
               <Card className="card-chart">
                 <CardHeader>
                   <CardCategory>Email Statistics</CardCategory>
-                  <CardTitle>24 Hours Performance</CardTitle>
+                  <CardTitle tag="h4">24 Hours Performance</CardTitle>
                 </CardHeader>
                 <CardBody>
                   <div className="chart-area">
@@ -153,8 +153,8 @@ class Dashboard extends React.Component {
             <Col xs={12} md={6}>
               <Card className="card-tasks">
                 <CardHeader>
-                  <CardTitle>Tasks</CardTitle>
-                  <p className="category">Backend Development</p>
+                  <CardCategory>Backend Development</CardCategory>
+                  <CardTitle tag="h4">Tasks</CardTitle>
                 </CardHeader>
                 <CardBody>
                   <Tasks tasks={tasks} />
@@ -175,8 +175,8 @@ class Dashboard extends React.Component {
             <Col xs={12} md={6}>
               <Card>
                 <CardHeader>
-                  <CardTitle>Employees Stats</CardTitle>
-                  <p className="category">All Persons List</p>
+                  <CardCategory>All Persons List</CardCategory>
+                  <CardTitle tag="h4">Employees Stats</CardTitle>
                 </CardHeader>
                 <CardBody>
                   <Table responsive>
