@@ -35,7 +35,7 @@ It comes with 6 filter colors for the sidebar (`black`, `blue`, `green`, `orange
 
 
 | HTML | React | Angular |
-| --- | --- | --- | --- |
+| --- | --- | --- |
 | [![Now UI Dashboard HTML](https://s3.amazonaws.com/creativetim_bucket/products/75/original/opt_nud_thumbnail.jpg)](https://www.creative-tim.com/product/now-ui-dashboard) | [![Now UI Dashboard React](https://s3.amazonaws.com/creativetim_bucket/products/76/original/opt_nud_react_thumbnail.jpg)](https://www.creative-tim.com/product/now-ui-dashboard-react) | [![Now UI Dashboard Angular](https://s3.amazonaws.com/creativetim_bucket/products/85/original/opt_nud_angular_thumbnail.jpg)](https://www.creative-tim.com/product/now-ui-dashboard-angular2)
 
 ## Demo
