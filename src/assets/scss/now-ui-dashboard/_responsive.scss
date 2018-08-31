@@ -31,6 +31,9 @@
             .nav-item:not(:last-child){
                 margin-bottom: 10px;
             }
+            .dropdown-menu {
+              position: static !important;
+            }
         }
 
         .dropdown.show .dropdown-menu{

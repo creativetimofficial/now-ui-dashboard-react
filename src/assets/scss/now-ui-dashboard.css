@@ -3417,6 +3417,8 @@ Created using IcoMoon - icomoon.io
     margin-top: 10px; }
   .navbar .navbar-nav .nav-item:not(:last-child) {
     margin-bottom: 10px; }
+  .navbar .navbar-nav .dropdown-menu {
+    position: static !important; }
   .navbar .dropdown.show .dropdown-menu {
     display: block; }
   .navbar .dropdown .dropdown-menu {
