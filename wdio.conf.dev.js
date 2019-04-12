@@ -46,8 +46,6 @@ let localConfig = Object.assign(prodConfig, {
     }),
     viewportChangePause: 300,
     viewports: [
-      { width: 375, height: 667 }, // Iphone 6/7/8
-      { width: 414, height: 736 }, // Iphone 6/7/8 +
       { width: 1280, height: 720 }
     ],
     orientations: ["landscape", "portrait"]
@@ -62,12 +60,12 @@ let localConfig = Object.assign(prodConfig, {
       webhook: process.env.SLACK_WEBHOOK,
       notifyOnlyOnFailure: true,
       username: "Running Tests Report",
-      message: "Black Dashboard Free React"
+      message: "Now UI React Dashboard Free React"
     }
   },
   onPrepare: function(config, capabilities) {
     notifier.notify({
-      title: "Now UI React Dashboard",
+      title: "Now UI React Dashboard FREE",
       message: "Test run started"
     });
   },
@@ -75,7 +73,7 @@ let localConfig = Object.assign(prodConfig, {
   afterTest(test) {},
   onComplete: function(exitCode) {
     notifier.notify({
-      title: "Now UI React Dashboard",
+      title: "Now UI React Dashboard FREE",
       message: "Tests finished running."
     });
   }

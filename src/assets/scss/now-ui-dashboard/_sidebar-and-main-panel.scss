@@ -1,11 +1,11 @@
 .wrapper{
     position: relative;
     top: 0;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
 
     &.wrapper-full-page{
-        min-height: 100vh;
+        min-height: 100%;
         height: auto;
     }
 }
@@ -33,7 +33,7 @@
 
     .sidebar-wrapper{
         position: relative;
-        height: calc(100vh - 75px);
+        height: calc(100% - 75px);
         overflow: auto;
         width: 260px;
         z-index: 4;
@@ -351,7 +351,7 @@
 
     div > .content{
         padding: 0 30px 30px;
-        min-height: calc(100vh - 123px);
+        min-height: calc(100% - 123px);
         margin-top: -30px;
     }
 

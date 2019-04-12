@@ -1733,7 +1733,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
   background-color: #FFFFFF !important; }
 
 .page-header {
-  min-height: 100vh;
+  min-height: 100%;
   max-height: 999px;
   padding: 0;
   color: #FFFFFF;
@@ -2646,10 +2646,10 @@ Created using IcoMoon - icomoon.io
 .wrapper {
   position: relative;
   top: 0;
-  height: 100vh;
+  height: 100%;
   overflow: hidden; }
   .wrapper.wrapper-full-page {
-    min-height: 100vh;
+    min-height: 100%;
     height: auto; }
 
 .sidebar .sidebar-wrapper,
@@ -2673,7 +2673,7 @@ Created using IcoMoon - icomoon.io
   .sidebar .sidebar-wrapper,
   .off-canvas-sidebar .sidebar-wrapper {
     position: relative;
-    height: calc(100vh - 75px);
+    height: calc(100% - 75px);
     overflow: auto;
     width: 260px;
     z-index: 4;
@@ -2977,7 +2977,7 @@ Created using IcoMoon - icomoon.io
   transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1); }
   .main-panel div > .content {
     padding: 0 30px 30px;
-    min-height: calc(100vh - 123px);
+    min-height: calc(100% - 123px);
     margin-top: -30px; }
   .main-panel > .navbar {
     margin-bottom: 0; }
