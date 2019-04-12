@@ -67,7 +67,7 @@ let localConfig = Object.assign(prodConfig, {
   },
   onPrepare: function(config, capabilities) {
     notifier.notify({
-      title: "Material Kit React",
+      title: "Now UI React Dashboard",
       message: "Test run started"
     });
   },
@@ -75,7 +75,7 @@ let localConfig = Object.assign(prodConfig, {
   afterTest(test) {},
   onComplete: function(exitCode) {
     notifier.notify({
-      title:"Black Dashboard Free React",
+      title: "Now UI React Dashboard",
       message: "Tests finished running."
     });
   }
