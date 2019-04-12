@@ -23,3 +23,9 @@ yarn-error.log*
 
 package-lock.json
 /src/assets/sass/now-ui-dashboard.css
+
+# WebdriverIO Specific Files
+errorShots/
+screenshots/
+.reg
+reg.json
