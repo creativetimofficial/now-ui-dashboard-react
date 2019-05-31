@@ -18,20 +18,16 @@ import {
   Input
 } from "reactstrap";
 
-import dashboardRoutes from "routes/dashboard.jsx";
+import routes from "routes.js";
 
 class Header extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isOpen: false,
-      dropdownOpen: false,
-      color: "transparent"
-    };
-    this.toggle = this.toggle.bind(this);
-    this.dropdownToggle = this.dropdownToggle.bind(this);
-  }
-  toggle() {
+  state = {
+    isOpen: false,
+    dropdownOpen: false,
+    color: "transparent"
+  };
+  sidebarToggle = React.createRef();
+  toggle() => {
     if (this.state.isOpen) {
       this.setState({
         color: "transparent"
@@ -45,14 +41,14 @@ class Header extends React.Component {
       isOpen: !this.state.isOpen
     });
   }
-  dropdownToggle(e) {
+  dropdownToggle(e) => {
     this.setState({
       dropdownOpen: !this.state.dropdownOpen
     });
   }
-  getBrand() {
+  getBrand() => {
     var name;
-    dashboardRoutes.map((prop, key) => {
+      routes.map((prop, key) => {
       if (prop.collapse) {
         prop.views.map((prop, key) => {
           if (prop.path === this.props.location.pathname) {
@@ -75,12 +71,12 @@ class Header extends React.Component {
     });
     return name;
   }
-  openSidebar() {
+  openSidebar() => {
     document.documentElement.classList.toggle("nav-open");
-    this.refs.sidebarToggle.classList.toggle("toggled");
+    this.sidebarToggle.current.classList.toggle("toggled");
   }
   // function that adds color white/transparent to the navbar on resize (this is for the collapse)
-  updateColor() {
+  updateColor() => {
     if (window.innerWidth < 993 && this.state.isOpen) {
       this.setState({
         color: "white"
@@ -101,7 +97,7 @@ class Header extends React.Component {
       document.documentElement.className.indexOf("nav-open") !== -1
     ) {
       document.documentElement.classList.toggle("nav-open");
-      this.refs.sidebarToggle.classList.toggle("toggled");
+      this.sidebarToggle.current.classList.toggle("toggled");
     }
   }
   render() {
@@ -126,7 +122,7 @@ class Header extends React.Component {
             <div className="navbar-toggle">
               <button
                 type="button"
-                ref="sidebarToggle"
+                ref={this.sidebarToggle}
                 className="navbar-toggler"
                 onClick={() => this.openSidebar()}
               >

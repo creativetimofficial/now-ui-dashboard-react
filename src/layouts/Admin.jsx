@@ -5,14 +5,15 @@ import { Route, Switch, Redirect } from "react-router-dom";
 
 import { Header, Footer, Sidebar } from "components";
 
-import dashboardRoutes from "routes/dashboard.jsx";
+import routes from "routes.js";
 
 var ps;
 
 class Dashboard extends React.Component {
+  mainPanel = React.createRef();
   componentDidMount() {
     if (navigator.platform.indexOf("Win") > -1) {
-      ps = new PerfectScrollbar(this.refs.mainPanel);
+      ps = new PerfectScrollbar(this.mainPanel.current);
       document.body.classList.toggle("perfect-scrollbar-on");
     }
   }
@@ -24,18 +25,18 @@ class Dashboard extends React.Component {
   }
   componentDidUpdate(e) {
     if (e.history.action === "PUSH") {
-      this.refs.mainPanel.scrollTop = 0;
+      this.mainPanel.current.scrollTop = 0;
       document.scrollingElement.scrollTop = 0;
     }
   }
   render() {
     return (
       <div className="wrapper">
-        <Sidebar {...this.props} routes={dashboardRoutes} />
-        <div className="main-panel" ref="mainPanel">
+        <Sidebar {...this.props} routes={routes} />
+        <div className="main-panel" ref={this.mainPanel}>
           <Header {...this.props} />
           <Switch>
-            {dashboardRoutes.map((prop, key) => {
+            {routes.map((prop, key) => {
               if (prop.collapse) {
                 return prop.views.map((prop2, key2) => {
                   return (
