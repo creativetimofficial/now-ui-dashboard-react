@@ -342,7 +342,7 @@
 .main-panel{
     position: relative;
     float: right;
-    width: $sidebar-width;
+    // width: $sidebar-width;
     // width: 100%;
     background-color: $light-gray;
     background-color: #ebecf1;
@@ -420,4 +420,10 @@
 
 .panel-header-lg{
   height: 380px
+}
+
+.sidebar,
+.main-panel,
+.sidebar-wrapper{
+  -webkit-overflow-scrolling: touch;
 }

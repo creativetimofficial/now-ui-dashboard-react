@@ -2,6 +2,10 @@
 
 ## [1.2.0] 2019-06-12
 ### Major changes
+- Solved https://github.com/creativetimofficial/now-ui-dashboard-react/issues/1
+- Solved https://github.com/creativetimofficial/now-ui-dashboard-react/issues/3
+- Solved https://github.com/creativetimofficial/now-ui-dashboard-react/issues/4
+- Solved https://github.com/creativetimofficial/now-ui-dashboard-react/issues/7
 - Almost all of the styles inside `src/scss` have been changed
 - We've removed `src/routes/*` files and replaced them with just one file (`src/routes.js`)
 - We've renamed `src/layouts/Dashboard/Dashboard.jsx` to `src/layouts/Admin.jsx`
