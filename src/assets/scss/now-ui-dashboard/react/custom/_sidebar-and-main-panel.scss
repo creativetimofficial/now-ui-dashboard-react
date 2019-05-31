@@ -2,11 +2,23 @@
     position: relative;
     top: 0;
     height: 100vh;
+    overflow: hidden;
 
     &.wrapper-full-page{
         min-height: 100vh;
         height: auto;
     }
+}
+
+.sidebar .sidebar-wrapper,
+.main-panel{
+    overflow: auto;
+}
+
+.sidebar,
+.main-panel{
+    height: 100%;
+    max-height: 100;
 }
 
 .sidebar,
@@ -17,7 +29,7 @@
     bottom: 0;
     width: 260px;
     left: 0;
-    z-index: 1030;
+    z-index: 1031;
 
     .sidebar-wrapper{
         position: relative;
@@ -33,6 +45,22 @@
 
         .navbar-form{
             border: none;
+        }
+
+        > .nav,
+        .user .info{
+          [data-toggle="collapse"] ~ div > ul > li > a{
+              span{
+                display: inline-block;
+                @extend .animation-transition-general;
+              }
+
+              i{
+                font-size: 17px;
+                line-height: 20px;
+                width: 26px;
+              }
+            }
         }
     }
 
@@ -74,7 +102,9 @@
                 margin-top: 7px;
             }
 
-            > a{
+            > a,
+            > a:not([href]):not([tabindex]):focus,
+            > a:not([href]):not([tabindex]):hover{
                 margin: 10px 15px 0;
                 border-radius: $btn-round-radius;
                 color: $white-color;
@@ -95,15 +125,42 @@
             &:hover:not(.active) > a,
             &:focus:not(.active) > a{
                 background-color: $opacity-1;
-
-                i{
-                  color: $white-color;
-                }
             }
 
-            &.active > a{
-              background-color: $white-color;
-              box-shadow: $box-shadow;
+            &:hover:not(.active) > a i,
+            &:focus:not(.active) > a i{
+                color: $white-color;
+            }
+
+            &.active > a:not([data-toggle="collapse"]){
+                background-color: $white-color;
+                box-shadow: $box-shadow;
+            }
+
+            &.active > a[data-toggle="collapse"]{
+              background-color: $opacity-1;
+              box-shadow: none;
+              color: $white-color;
+
+              i{
+                color: $white-color;
+              }
+
+              & + div .nav .active a{
+                &:after{
+                  content: "";
+                  position: absolute;
+                  background-color: $white-color;
+                  border-radius: 30px;
+                  box-shadow: $box-shadow;
+                  color: $primary-color;
+                  height: 44px;
+                  width: calc(100% - 5px);
+                  top: 0;
+                  left: 2px;
+                  z-index: 0;
+                }
+              }
             }
         }
 
@@ -114,7 +171,7 @@
             display: block;
             height: auto;
             white-space: nowrap;
-            @extend .animation-transition-general;
+            transition: transform 300ms ease 0s, opacity 300ms ease 0s;
         }
 
         i{
@@ -258,6 +315,7 @@
     &[data-color="yellow"]{
       @include sidebar-color($warning-color);
     }
+
 }
 
 .visible-on-sidebar-regular{
@@ -291,7 +349,7 @@
 
     @include transition (0.50s, cubic-bezier(0.685, 0.0473, 0.346, 1));
 
-    > .content{
+    div > .content{
         padding: 0 30px 30px;
         min-height: calc(100vh - 123px);
         margin-top: -30px;
@@ -318,21 +376,26 @@
 
 
 @media (min-width: 991px) {
-  .sidebar{
-    display: block;
-    box-shadow: $sidebar-box-shadow;
-  }
+    .sidebar,
+    .main-panel,
+    .sidebar-wrapper{
+        -webkit-transition-property: top,bottom,width;
+        transition-property: top,bottom, width;
+        -webkit-transition-duration: .2s,.2s, .35s;
+        transition-duration: .2s,.2s, .35s;
+        -webkit-transition-timing-function: linear,linear,ease;
+        transition-timing-function: linear,linear,ease;
+        -webkit-overflow-scrolling: touch;
+    }
+
 }
 
 .panel-header {
   height: 260px;
   padding-top: 80px;
   padding-bottom: 45px;
-  background: #141E30;  /* fallback for old browsers */
-  background: -webkit-gradient(linear, left top, right top, from(#0c2646), color-stop(60%, #204065), to(#2a5788));
-  background: linear-gradient(to right, #0c2646 0%, #204065 60%, #2a5788 100%);
   position: relative;
-  overflow: hidden;
+  @include panel-gradient($black-color);
 
   .header{
     .title{
