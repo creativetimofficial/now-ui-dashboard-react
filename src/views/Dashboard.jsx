@@ -55,7 +55,7 @@ class Dashboard extends React.Component {
                   <CardTitle tag="h4">Shipped Products</CardTitle>
                   <UncontrolledDropdown>
                     <DropdownToggle
-                      className="btn-round btn-outline btn-icon"
+                      className="btn-round btn-outline-default btn-icon"
                       color="default"
                     >
                       <i className="now-ui-icons loader_gear" />
@@ -93,7 +93,7 @@ class Dashboard extends React.Component {
                   <CardTitle tag="h4">All products</CardTitle>
                   <UncontrolledDropdown>
                     <DropdownToggle
-                      className="btn-round btn-outline btn-icon"
+                      className="btn-round btn-outline-default btn-icon"
                       color="default"
                     >
                       <i className="now-ui-icons loader_gear" />
