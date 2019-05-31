@@ -15,8 +15,20 @@ var dashRoutes = [
     component: Dashboard,
     layout: "/admin"
   },
-  { path: "/icons", name: "Icons", icon: "design_image", component: Icons,layout: "/admin" },
-  { path: "/maps", name: "Maps", icon: "location_map-big", component: Maps,layout: "/admin" },
+  {
+    path: "/icons",
+    name: "Icons",
+    icon: "design_image",
+    component: Icons,
+    layout: "/admin"
+  },
+  {
+    path: "/maps",
+    name: "Maps",
+    icon: "location_map-big",
+    component: Maps,
+    layout: "/admin"
+  },
   {
     path: "/notifications",
     name: "Notifications",

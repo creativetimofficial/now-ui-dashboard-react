@@ -1,9 +1,14 @@
 import React from "react";
 // javascript plugin used to create scrollbars on windows
 import PerfectScrollbar from "perfect-scrollbar";
-import { Route, Switch, Redirect } from "react-router-dom";
 
-import { Header, Footer, Sidebar } from "components";
+// reactstrap components
+import { Route, Switch } from "react-router-dom";
+
+// core components
+import DemoNavbar from "components/Navbars/DemoNavbar.jsx";
+import Footer from "components/Footer/Footer.jsx";
+import Sidebar from "components/Sidebar/Sidebar.jsx";
 
 import routes from "routes.js";
 
@@ -34,24 +39,15 @@ class Dashboard extends React.Component {
       <div className="wrapper">
         <Sidebar {...this.props} routes={routes} />
         <div className="main-panel" ref={this.mainPanel}>
-          <Header {...this.props} />
+          <DemoNavbar {...this.props} />
           <Switch>
             {routes.map((prop, key) => {
-              if (prop.collapse) {
-                return prop.views.map((prop2, key2) => {
-                  return (
-                    <Route
-                      path={prop2.path}
-                      component={prop2.component}
-                      key={key2}
-                    />
-                  );
-                });
-              }
-              if (prop.redirect)
-                return <Redirect from={prop.path} to={prop.pathTo} key={key} />;
               return (
-                <Route path={prop.path} component={prop.component} key={key} />
+                <Route
+                  path={prop.layout + prop.path}
+                  component={prop.component}
+                  key={key}
+                />
               );
             })}
           </Switch>

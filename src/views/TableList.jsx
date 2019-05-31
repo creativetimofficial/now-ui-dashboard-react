@@ -1,4 +1,6 @@
 import React from "react";
+
+// reactstrap components
 import {
   Card,
   CardBody,
@@ -9,14 +11,15 @@ import {
   Col
 } from "reactstrap";
 
-import { PanelHeader } from "components";
+// core components
+import PanelHeader from "components/PanelHeader/PanelHeader.jsx";
 
 import { thead, tbody } from "variables/general";
 
 class RegularTables extends React.Component {
   render() {
     return (
-      <div>
+      <>
         <PanelHeader size="sm" />
         <div className="content">
           <Row>
@@ -105,7 +108,7 @@ class RegularTables extends React.Component {
             </Col>
           </Row>
         </div>
-      </div>
+      </>
     );
   }
 }

@@ -1,4 +1,8 @@
 import React from "react";
+// react plugin used to create charts
+import { Line, Bar } from "react-chartjs-2";
+
+// reactstrap components
 import {
   Card,
   CardHeader,
@@ -11,13 +15,16 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  Table
+  Table,
+  Button,
+  Label,
+  FormGroup,
+  Input,
+  UncontrolledTooltip
 } from "reactstrap";
-// react plugin used to create charts
-import { Line, Bar } from "react-chartjs-2";
-// function that returns a color based on an interval of numbers
 
-import { PanelHeader, Stats, CardCategory, Tasks } from "components";
+// core components
+import PanelHeader from "components/PanelHeader/PanelHeader.jsx";
 
 import {
   dashboardPanelChart,
@@ -26,12 +33,10 @@ import {
   dashboard24HoursPerformanceChart
 } from "variables/charts.jsx";
 
-import { tasks } from "variables/general.jsx";
-
 class Dashboard extends React.Component {
   render() {
     return (
-      <div>
+      <>
         <PanelHeader
           size="lg"
           content={
@@ -46,7 +51,7 @@ class Dashboard extends React.Component {
             <Col xs={12} md={4}>
               <Card className="card-chart">
                 <CardHeader>
-                  <CardCategory>Global Sales</CardCategory>
+                  <h5 className="card-category">Global Sales</h5>
                   <CardTitle tag="h4">Shipped Products</CardTitle>
                   <UncontrolledDropdown>
                     <DropdownToggle
@@ -74,21 +79,17 @@ class Dashboard extends React.Component {
                   </div>
                 </CardBody>
                 <CardFooter>
-                  <Stats>
-                    {[
-                      {
-                        i: "now-ui-icons arrows-1_refresh-69",
-                        t: "Just Updated"
-                      }
-                    ]}
-                  </Stats>
+                  <div className="stats">
+                    <i className="now-ui-icons arrows-1_refresh-69" /> Just
+                    Updated
+                  </div>
                 </CardFooter>
               </Card>
             </Col>
             <Col xs={12} md={4}>
               <Card className="card-chart">
                 <CardHeader>
-                  <CardCategory>2018 Sales</CardCategory>
+                  <h5 className="card-category">2018 Sales</h5>
                   <CardTitle tag="h4">All products</CardTitle>
                   <UncontrolledDropdown>
                     <DropdownToggle
@@ -116,21 +117,17 @@ class Dashboard extends React.Component {
                   </div>
                 </CardBody>
                 <CardFooter>
-                  <Stats>
-                    {[
-                      {
-                        i: "now-ui-icons arrows-1_refresh-69",
-                        t: "Just Updated"
-                      }
-                    ]}
-                  </Stats>
+                  <div className="stats">
+                    <i className="now-ui-icons arrows-1_refresh-69" /> Just
+                    Updated
+                  </div>
                 </CardFooter>
               </Card>
             </Col>
             <Col xs={12} md={4}>
               <Card className="card-chart">
                 <CardHeader>
-                  <CardCategory>Email Statistics</CardCategory>
+                  <h5 className="card-category">Email Statistics</h5>
                   <CardTitle tag="h4">24 Hours Performance</CardTitle>
                 </CardHeader>
                 <CardBody>
@@ -142,9 +139,9 @@ class Dashboard extends React.Component {
                   </div>
                 </CardBody>
                 <CardFooter>
-                  <Stats>
-                    {[{ i: "now-ui-icons ui-2_time-alarm", t: "Last 7 days" }]}
-                  </Stats>
+                  <div className="stats">
+                    <i className="now-ui-icons ui-2_time-alarm" /> Last 7 days
+                  </div>
                 </CardFooter>
               </Card>
             </Col>
@@ -153,34 +150,168 @@ class Dashboard extends React.Component {
             <Col xs={12} md={6}>
               <Card className="card-tasks">
                 <CardHeader>
-                  <CardCategory>Backend Development</CardCategory>
+                  <h5 className="card-category">Backend Development</h5>
                   <CardTitle tag="h4">Tasks</CardTitle>
                 </CardHeader>
                 <CardBody>
-                  <Tasks tasks={tasks} />
+                  <div className="table-full-width table-responsive">
+                    <Table>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <FormGroup check>
+                              <Label check>
+                                <Input defaultChecked type="checkbox" />
+                                <span className="form-check-sign" />
+                              </Label>
+                            </FormGroup>
+                          </td>
+                          <td className="text-left">
+                            Sign contract for "What are conference organizers
+                            afraid of?"
+                          </td>
+                          <td className="td-actions text-right">
+                            <Button
+                              className="btn-round btn-icon btn-icon-mini btn-neutral"
+                              color="info"
+                              id="tooltip731609871"
+                              type="button"
+                            >
+                              <i className="now-ui-icons ui-2_settings-90" />
+                            </Button>
+                            <UncontrolledTooltip
+                              delay={0}
+                              target="tooltip731609871"
+                            >
+                              Edit Task
+                            </UncontrolledTooltip>
+                            <Button
+                              className="btn-round btn-icon btn-icon-mini btn-neutral"
+                              color="danger"
+                              id="tooltip923217206"
+                              type="button"
+                            >
+                              <i className="now-ui-icons ui-1_simple-remove" />
+                            </Button>
+                            <UncontrolledTooltip
+                              delay={0}
+                              target="tooltip923217206"
+                            >
+                              Remove
+                            </UncontrolledTooltip>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <FormGroup check>
+                              <Label check>
+                                <Input type="checkbox" />
+                                <span className="form-check-sign" />
+                              </Label>
+                            </FormGroup>
+                          </td>
+                          <td className="text-left">
+                            Lines From Great Russian Literature? Or E-mails From
+                            My Boss?
+                          </td>
+                          <td className="td-actions text-right">
+                            <Button
+                              className="btn-round btn-icon btn-icon-mini btn-neutral"
+                              color="info"
+                              id="tooltip907509347"
+                              type="button"
+                            >
+                              <i className="now-ui-icons ui-2_settings-90" />
+                            </Button>
+                            <UncontrolledTooltip
+                              delay={0}
+                              target="tooltip907509347"
+                            >
+                              Edit Task
+                            </UncontrolledTooltip>
+                            <Button
+                              className="btn-round btn-icon btn-icon-mini btn-neutral"
+                              color="danger"
+                              id="tooltip496353037"
+                              type="button"
+                            >
+                              <i className="now-ui-icons ui-1_simple-remove" />
+                            </Button>
+                            <UncontrolledTooltip
+                              delay={0}
+                              target="tooltip496353037"
+                            >
+                              Remove
+                            </UncontrolledTooltip>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <FormGroup check>
+                              <Label check>
+                                <Input defaultChecked type="checkbox" />
+                                <span className="form-check-sign" />
+                              </Label>
+                            </FormGroup>
+                          </td>
+                          <td className="text-left">
+                            Flooded: One year later, assessing what was lost and
+                            what was found when a ravaging rain swept through
+                            metro Detroit
+                          </td>
+                          <td className="td-actions text-right">
+                            <Button
+                              className="btn-round btn-icon btn-icon-mini btn-neutral"
+                              color="info"
+                              id="tooltip326247652"
+                              type="button"
+                            >
+                              <i className="now-ui-icons ui-2_settings-90" />
+                            </Button>
+                            <UncontrolledTooltip
+                              delay={0}
+                              target="tooltip326247652"
+                            >
+                              Edit Task
+                            </UncontrolledTooltip>
+                            <Button
+                              className="btn-round btn-icon btn-icon-mini btn-neutral"
+                              color="danger"
+                              id="tooltip389516969"
+                              type="button"
+                            >
+                              <i className="now-ui-icons ui-1_simple-remove" />
+                            </Button>
+                            <UncontrolledTooltip
+                              delay={0}
+                              target="tooltip389516969"
+                            >
+                              Remove
+                            </UncontrolledTooltip>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </Table>
+                  </div>
                 </CardBody>
                 <CardFooter>
                   <hr />
-                  <Stats>
-                    {[
-                      {
-                        i: "now-ui-icons loader_refresh spin",
-                        t: "Updated 3 minutes ago"
-                      }
-                    ]}
-                  </Stats>
+                  <div className="stats">
+                    <i className="now-ui-icons loader_refresh spin" /> Updated 3
+                    minutes ago
+                  </div>
                 </CardFooter>
               </Card>
             </Col>
             <Col xs={12} md={6}>
               <Card>
                 <CardHeader>
-                  <CardCategory>All Persons List</CardCategory>
+                  <h5 className="card-category">All Persons List</h5>
                   <CardTitle tag="h4">Employees Stats</CardTitle>
                 </CardHeader>
                 <CardBody>
                   <Table responsive>
-                    <thead className=" text-primary">
+                    <thead className="text-primary">
                       <tr>
                         <th>Name</th>
                         <th>Country</th>
@@ -226,7 +357,7 @@ class Dashboard extends React.Component {
             </Col>
           </Row>
         </div>
-      </div>
+      </>
     );
   }
 }

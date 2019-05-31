@@ -13,7 +13,7 @@
 - We've renamed `src/views/Notifications/Notifications.jsx` to `src/views/Notifications.jsx`
 - We've renamed `src/views/TableList/TableList.jsx` to `src/views/TableList.jsx`
 - We've renamed `src/views/Typography/Typography.jsx` to `src/views/Typography.jsx`
-- We've renamed `src/views/UserPage/UserPage.jsx` to `src/views/User.jsx`
+- We've renamed `src/views/UserPage/UserPage.jsx` to `src/views/UserPage.jsx`
 ### Dropped components
 - `src/components/CardElements/*` (replaced with simple HTML/React/Reactstrap syntax)
 - `src/components/CustomButton/CustomButton.jsx` (replaced with simple HTML/React/Reactstrap syntax)

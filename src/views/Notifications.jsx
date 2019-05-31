@@ -1,4 +1,8 @@
 import React from "react";
+// react plugin for creating notifications over the dashboard
+import NotificationAlert from "react-notification-alert";
+
+// reactstrap components
 import {
   Alert,
   Card,
@@ -6,12 +10,12 @@ import {
   CardBody,
   CardHeader,
   Row,
-  Col
+  Col,
+  Button
 } from "reactstrap";
-// react plugin for creating notifications over the dashboard
-import NotificationAlert from "react-notification-alert";
 
-import { PanelHeader, Button } from "components";
+// core components
+import PanelHeader from "components/PanelHeader/PanelHeader.jsx";
 
 class Notifications extends React.Component {
   constructor(props) {
@@ -64,7 +68,7 @@ class Notifications extends React.Component {
   }
   render() {
     return (
-      <div>
+      <>
         <PanelHeader
           content={
             <div className="header text-center">
@@ -77,7 +81,8 @@ class Notifications extends React.Component {
                   rel="noopener noreferrer"
                 >
                   The Full Documentation
-                </a>.
+                </a>
+                .
               </p>
             </div>
           }
@@ -280,7 +285,7 @@ class Notifications extends React.Component {
             </Col>
           </Row>
         </div>
-      </div>
+      </>
     );
   }
 }

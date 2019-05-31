@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+
+// reactstrap components
 import {
   Table,
   Row,
@@ -6,15 +8,17 @@ import {
   Card,
   CardBody,
   CardHeader,
-  CardTitle
+  CardTitle,
+  Button
 } from "reactstrap";
 
-import { Button, PanelHeader } from "components";
+// core components
+import PanelHeader from "components/PanelHeader/PanelHeader.jsx";
 
 class Upgrade extends Component {
   render() {
     return (
-      <div>
+      <>
         <PanelHeader size="sm" />
         <div className="content">
           <Row>
@@ -125,7 +129,7 @@ class Upgrade extends Component {
             </Col>
           </Row>
         </div>
-      </div>
+      </>
     );
   }
 }

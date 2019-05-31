@@ -1,14 +1,17 @@
 import React from "react";
+
+// reactstrap components
 import { Card, CardHeader, CardBody, Row, Col } from "reactstrap";
 
-import { PanelHeader } from "components";
+// core components
+import PanelHeader from "components/PanelHeader/PanelHeader.jsx";
 
 import icons from "variables/icons";
 
 class Icons extends React.Component {
   render() {
     return (
-      <div>
+      <>
         <PanelHeader size="sm" />
         <div className="content">
           <Row>
@@ -46,7 +49,7 @@ class Icons extends React.Component {
             </Col>
           </Row>
         </div>
-      </div>
+      </>
     );
   }
 }

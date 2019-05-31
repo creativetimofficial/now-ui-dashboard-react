@@ -27,7 +27,7 @@ class Header extends React.Component {
     color: "transparent"
   };
   sidebarToggle = React.createRef();
-  toggle() => {
+  toggle = () => {
     if (this.state.isOpen) {
       this.setState({
         color: "transparent"
@@ -40,15 +40,15 @@ class Header extends React.Component {
     this.setState({
       isOpen: !this.state.isOpen
     });
-  }
-  dropdownToggle(e) => {
+  };
+  dropdownToggle = e => {
     this.setState({
       dropdownOpen: !this.state.dropdownOpen
     });
-  }
-  getBrand() => {
+  };
+  getBrand = () => {
     var name;
-      routes.map((prop, key) => {
+    routes.map((prop, key) => {
       if (prop.collapse) {
         prop.views.map((prop, key) => {
           if (prop.path === this.props.location.pathname) {
@@ -70,13 +70,13 @@ class Header extends React.Component {
       return null;
     });
     return name;
-  }
-  openSidebar() => {
+  };
+  openSidebar = () => {
     document.documentElement.classList.toggle("nav-open");
     this.sidebarToggle.current.classList.toggle("toggled");
-  }
+  };
   // function that adds color white/transparent to the navbar on resize (this is for the collapse)
-  updateColor() => {
+  updateColor = () => {
     if (window.innerWidth < 993 && this.state.isOpen) {
       this.setState({
         color: "white"
@@ -86,7 +86,7 @@ class Header extends React.Component {
         color: "transparent"
       });
     }
-  }
+  };
   componentDidMount() {
     window.addEventListener("resize", this.updateColor.bind(this));
   }

@@ -1,5 +1,4 @@
 import React from "react";
-import { Row, Col, Card, CardHeader, CardBody } from "reactstrap";
 // react plugin used to create google maps
 import {
   withScriptjs,
@@ -8,7 +7,11 @@ import {
   Marker
 } from "react-google-maps";
 
-import { PanelHeader } from "components";
+// reactstrap components
+import { Row, Col, Card, CardHeader, CardBody } from "reactstrap";
+
+// core components
+import PanelHeader from "components/PanelHeader/PanelHeader.jsx";
 
 const MapWrapper = withScriptjs(
   withGoogleMap(props => (
@@ -101,7 +104,7 @@ const MapWrapper = withScriptjs(
 class FullScreenMap extends React.Component {
   render() {
     return (
-      <div>
+      <>
         <PanelHeader size="sm" />
         <div className="content">
           <Row>
@@ -126,7 +129,7 @@ class FullScreenMap extends React.Component {
             </Col>
           </Row>
         </div>
-      </div>
+      </>
     );
   }
 }
