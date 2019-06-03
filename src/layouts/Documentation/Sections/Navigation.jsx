@@ -824,7 +824,7 @@ class Navigation extends React.Component {
           <strong>
             <code className="highlighter-rouge">.sticky-top</code> uses{" "}
             <code className="highlighter-rouge">position: sticky</code>, which{" "}
-            <a href="https://caniuse.com/#feat=css-sticky">
+            <a target="_blank" href="https://caniuse.com/#feat=css-sticky">
               isn’t fully supported in every browser
             </a>
           </strong>

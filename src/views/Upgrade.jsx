@@ -102,10 +102,8 @@ class Upgrade extends Component {
                         <td className="text-center">
                           <Button
                             href="#"
-                            round
-                            fill
-                            disabled
-                            bsStyle="default"
+                            color="default"
+                            className="btn-round"
                           >
                             Current Version
                           </Button>
@@ -113,10 +111,9 @@ class Upgrade extends Component {
                         <td className="text-center">
                           <Button
                             target="_blank"
-                            href="https://www.creative-tim.com/product/now-ui-dashboard-pro-react/?ref=nud-react-free"
-                            round
-                            fill
-                            bsStyle="info"
+                            href="https://www.creative-tim.com/product/now-ui-dashboard-pro-react/?ref=nudr-upgrade"
+                            color="info"
+                            className="btn-round"
                           >
                             Upgrade to PRO
                           </Button>

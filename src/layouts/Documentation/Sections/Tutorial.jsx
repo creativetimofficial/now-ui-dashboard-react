@@ -95,24 +95,24 @@ class Tutorial extends React.Component {
           </a>
           ,{" "}
           <a
-            href="https://reactjs.org/"
             target="_blank"
+            href="https://reactjs.org/"
             rel="noopener noreferrer"
           >
             React
           </a>{" "}
           (
           <a
-            href="https://github.com/facebook/create-react-app"
             target="_blank"
+            href="https://github.com/facebook/create-react-app"
             rel="noopener noreferrer"
           >
             create-react-app
           </a>
           ) and{" "}
           <a
-            href="https://reactstrap.github.io/"
             target="_blank"
+            href="https://reactstrap.github.io/"
             rel="noopener noreferrer"
           >
             reactstrap
@@ -135,7 +135,7 @@ class Tutorial extends React.Component {
           <b>MIT LICENSE</b>
           <br />
           Copyright (c) {1900 + new Date().getYear()}{" "}
-          <a href="https://creative-tim.com/" target="_blank">
+          <a target="_blank" href="https://creative-tim.com/">
             Creative Tim
           </a>
           .
@@ -330,6 +330,7 @@ class Tutorial extends React.Component {
           <li>
             Navigate to{" "}
             <a
+              target="_blank"
               href="https://localhost:3000"
               target="_blank"
               rel="noopener noreferrer"

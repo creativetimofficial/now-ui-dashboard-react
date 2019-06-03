@@ -9,16 +9,37 @@ class Footer extends React.Component {
           <nav>
             <ul>
               <li>
-                <a href="https://www.creative-tim.com">Creative Tim</a>
+                <a
+                  target="_blank"
+                  href="https://www.creative-tim.com?ref=nudr-docs-footer"
+                  target="_blank"
+                >
+                  Creative Tim
+                </a>
               </li>
               <li>
-                <a href="https://presentation.creative-tim.com">About Us</a>
+                <a
+                  target="_blank"
+                  href="https://presentation.creative-tim.com?ref=nudr-docs-footer"
+                  target="_blank"
+                >
+                  About Us
+                </a>
               </li>
               <li>
-                <a href="https://blog.creative-tim.com">Blog</a>
+                <a
+                  target="_blank"
+                  href="https://blog.creative-tim.com?ref=nudr-docs-footer"
+                  target="_blank"
+                >
+                  Blog
+                </a>
               </li>
               <li>
-                <a href="https://github.com/creativetimofficial/now-ui-dashboard-pro-react/blob/master/LICENSE.md">
+                <a
+                  target="_blank"
+                  href="https://github.com/creativetimofficial/now-ui-dashboard-pro-react/blob/master/LICENSE.md"
+                >
                   MIT License
                 </a>
               </li>
@@ -27,6 +48,7 @@ class Footer extends React.Component {
           <div className="copyright">
             &copy; {new Date().getFullYear()}, Designed by{" "}
             <a
+              target="_blank"
               href="https://www.invisionapp.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -35,7 +57,8 @@ class Footer extends React.Component {
             </a>
             . Coded by{" "}
             <a
-              href="https://www.creative-tim.com"
+              target="_blank"
+              href="https://www.creative-tim.com?ref=nudr-docs-footer"
               target="_blank"
               rel="noopener noreferrer"
             >

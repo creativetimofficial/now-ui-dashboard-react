@@ -31,11 +31,17 @@ class Breadcrumbs extends React.Component {
         <h2>Overview</h2>
         <p>
           Separators are automatically added in CSS through
-          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::before">
+          <a
+            target="_blank"
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/::before"
+          >
             <code className="highlighter-rouge">::before</code>
           </a>
           and
-          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/content">
+          <a
+            target="_blank"
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/content"
+          >
             <code className="highlighter-rouge">content</code>
           </a>
           .
