@@ -9,12 +9,16 @@ import { Route, Switch } from "react-router-dom";
 import DemoNavbar from "components/Navbars/DemoNavbar.jsx";
 import Footer from "components/Footer/Footer.jsx";
 import Sidebar from "components/Sidebar/Sidebar.jsx";
+import FixedPlugin from "components/FixedPlugin/FixedPlugin.jsx";
 
 import routes from "routes.js";
 
 var ps;
 
 class Dashboard extends React.Component {
+  state = {
+    backgroundColor: "blue"
+  };
   mainPanel = React.createRef();
   componentDidMount() {
     if (navigator.platform.indexOf("Win") > -1) {
@@ -34,10 +38,17 @@ class Dashboard extends React.Component {
       document.scrollingElement.scrollTop = 0;
     }
   }
+  handleColorClick = color => {
+    this.setState({ backgroundColor: color });
+  };
   render() {
     return (
       <div className="wrapper">
-        <Sidebar {...this.props} routes={routes} />
+        <Sidebar
+          {...this.props}
+          routes={routes}
+          backgroundColor={this.state.backgroundColor}
+        />
         <div className="main-panel" ref={this.mainPanel}>
           <DemoNavbar {...this.props} />
           <Switch>
@@ -53,6 +64,10 @@ class Dashboard extends React.Component {
           </Switch>
           <Footer fluid />
         </div>
+        <FixedPlugin
+          bgColor={this.state.backgroundColor}
+          handleColorClick={this.handleColorClick}
+        />
       </div>
     );
   }
