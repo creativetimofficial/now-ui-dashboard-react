@@ -1,7 +1,6 @@
 {
   "name": "now-ui-dashboard-react",
   "version": "1.2.0",
-  "private": true,
   "main": "dist/index.js",
   "homepage": "https://creativetimofficial.github.io/now-ui-dashboard-react/#/dashboard",
   "dependencies": {
