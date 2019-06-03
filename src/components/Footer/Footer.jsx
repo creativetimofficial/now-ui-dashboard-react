@@ -1,3 +1,4 @@
+/*eslint-disable*/
 import React from "react";
 import { Container } from "reactstrap";
 // used for making the prop types of this component
