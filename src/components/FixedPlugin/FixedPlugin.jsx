@@ -87,21 +87,21 @@ class FixedPlugin extends Component {
 
             <li className="button-container">
               <a
-                href="https://www.creative-tim.com/product/now-ui-dashboard-pro-react"
+                href="https://www.creative-tim.com/product/now-ui-dashboard-pro-react?ref=nudr-fixed-plugin"
                 target="_blank"
                 className="btn btn-primary btn-block btn-round"
               >
                 Buy pro
               </a>
               <a
-                href="https://www.creative-tim.com/product/now-ui-dashboard-react"
+                href="https://www.creative-tim.com/product/now-ui-dashboard-react?ref=nudr-fixed-plugin"
                 target="_blank"
                 className="btn btn-warning btn-block btn-round"
               >
                 Download free
               </a>
               <a
-                href="https://demos.creative-tim.com/now-ui-dashboard-react/#/documentation/tutorial"
+                href="https://demos.creative-tim.com/now-ui-dashboard-react/#/documentation/tutorial?ref=nudr-fixed-plugin"
                 className="btn btn-block btn-round btn-info"
               >
                 Documentation
