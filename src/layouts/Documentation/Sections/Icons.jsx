@@ -1,6 +1,6 @@
 import React from "react";
-import SyntaxHighlighter from "react-syntax-highlighter/prism";
-import { prism } from "react-syntax-highlighter/styles/prism";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { prism } from "react-syntax-highlighter/dist/styles/prism";
 import { Row, Col, Card, CardBody } from "reactstrap";
 
 import icons from "variables/icons";
@@ -34,7 +34,8 @@ class Icons extends React.Component {
           our friends from{" "}
           <a href="https://nucleoapp.com/?ref=1712" target="_blank">
             NucleoApp
-          </a>.
+          </a>
+          .
         </p>
         <p>
           You will find all these icons in <code>src/variables/icons.jsx</code>.

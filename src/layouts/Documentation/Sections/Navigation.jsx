@@ -1,6 +1,6 @@
 import React from "react";
-import SyntaxHighlighter from "react-syntax-highlighter/prism";
-import { prism } from "react-syntax-highlighter/styles/prism";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { prism } from "react-syntax-highlighter/dist/styles/prism";
 import {
   Container,
   Collapse,
@@ -19,7 +19,7 @@ import {
   Input
 } from "reactstrap";
 
-import { Button } from "components";
+import { Button } from "reactstrap";
 
 const colors = [
   "dark",
@@ -827,7 +827,8 @@ class Navigation extends React.Component {
             <a href="https://caniuse.com/#feat=css-sticky">
               isn’t fully supported in every browser
             </a>
-          </strong>.
+          </strong>
+          .
         </p>
         <div className="bd-example" data-example-id="">
           <Navbar expand="lg" color={"primary"} light>
@@ -1004,7 +1005,8 @@ class Navigation extends React.Component {
             rel="noopener noreferrer"
           >
             reactstrap navbar documentation
-          </a>.
+          </a>
+          .
         </p>
       </div>
     );

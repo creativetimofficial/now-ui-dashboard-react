@@ -1,6 +1,6 @@
 import React from "react";
-import SyntaxHighlighter from "react-syntax-highlighter/prism";
-import { prism } from "react-syntax-highlighter/styles/prism";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { prism } from "react-syntax-highlighter/dist/styles/prism";
 import { Table } from "reactstrap";
 
 const codeSimpleExample = `<Table responsive>
@@ -199,7 +199,8 @@ class Tables extends React.Component {
             rel="noopener noreferrer"
           >
             here
-          </a>.
+          </a>
+          .
         </p>
       </div>
     );

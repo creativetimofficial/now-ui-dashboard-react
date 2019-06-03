@@ -1,6 +1,6 @@
 import React from "react";
-import SyntaxHighlighter from "react-syntax-highlighter/prism";
-import { prism } from "react-syntax-highlighter/styles/prism";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { prism } from "react-syntax-highlighter/dist/styles/prism";
 
 const code = `// for Dashboard
 import PerfectScrollbar from 'perfect-scrollbar';
@@ -72,7 +72,8 @@ class PerfectScrollbar extends React.Component {
             >
               Full Documentation
             </a>
-          </strong>.
+          </strong>
+          .
         </p>
         <SyntaxHighlighter language="jsx" style={prism}>
           {code}

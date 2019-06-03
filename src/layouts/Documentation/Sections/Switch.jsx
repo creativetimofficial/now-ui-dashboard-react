@@ -1,6 +1,6 @@
 import React from "react";
-import SyntaxHighlighter from "react-syntax-highlighter/prism";
-import { prism } from "react-syntax-highlighter/styles/prism";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { prism } from "react-syntax-highlighter/dist/styles/prism";
 import Switch from "react-bootstrap-switch";
 import { Col, CardSubtitle } from "reactstrap";
 
@@ -51,7 +51,8 @@ class Switches extends React.Component {
             rel="noopener noreferrer"
           >
             react-bootstrap-switch
-          </a>.
+          </a>
+          .
         </p>
         <p>To use it, you'll need the following import:</p>
         <SyntaxHighlighter
@@ -86,7 +87,8 @@ class Switches extends React.Component {
             rel="noopener noreferrer"
           >
             official react-bootstrap-switch documentation
-          </a>.
+          </a>
+          .
         </p>
       </div>
     );

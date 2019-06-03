@@ -41,7 +41,7 @@ const gradientChartOptionsConfiguration = {
         display: 0,
         ticks: {
           display: false,
-          maxTicksLimit: 7,
+          maxTicksLimit: 7
         },
         gridLines: {
           zeroLineColor: "transparent",
@@ -94,8 +94,8 @@ var gradientChartOptionsConfigurationWithNumbersAndGrid = {
           drawBorder: false
         },
         ticks: {
-          maxTicksLimit: 7,
-        },
+          maxTicksLimit: 7
+        }
       }
     ],
     xAxes: [
@@ -376,7 +376,7 @@ const dashboard24HoursPerformanceChart = {
       yAxes: [
         {
           ticks: {
-            maxTicksLimit: 7,
+            maxTicksLimit: 7
           },
           gridLines: {
             zeroLineColor: "transparent",

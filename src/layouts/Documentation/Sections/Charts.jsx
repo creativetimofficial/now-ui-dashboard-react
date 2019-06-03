@@ -1,6 +1,6 @@
 import React from "react";
-import SyntaxHighlighter from "react-syntax-highlighter/prism";
-import { prism } from "react-syntax-highlighter/styles/prism";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { prism } from "react-syntax-highlighter/dist/styles/prism";
 import { Line } from "react-chartjs-2";
 
 const codeExample = `import React from 'react';
@@ -223,7 +223,8 @@ class Charts extends React.Component {
             rel="noopener noreferrer"
           >
             react-chartjs-2 full documentation
-          </a>.
+          </a>
+          .
         </p>
         <div className="bd-example">
           <Line data={data} options={options} />

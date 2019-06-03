@@ -1,10 +1,10 @@
 import React from "react";
-import SyntaxHighlighter from "react-syntax-highlighter/prism";
-import { prism } from "react-syntax-highlighter/styles/prism";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { prism } from "react-syntax-highlighter/dist/styles/prism";
 import { Alert, Row, Col } from "reactstrap";
 import Notify from "react-notification-alert";
 
-import { Button } from "components";
+import { Button } from "reactstrap";
 
 const codeExampleImport = `import { Alert } from 'reactstrap';`;
 const codeExampleConstruct = `constructor(props) {
@@ -431,7 +431,8 @@ class Notifications extends React.Component {
             rel="noopener noreferrer"
           >
             react-notification-alert documentation
-          </a>.
+          </a>
+          .
         </p>
         <h2>Props for Alerts</h2>
         <p>
@@ -442,7 +443,8 @@ class Notifications extends React.Component {
             rel="noopener noreferrer"
           >
             reactstrap alerts documentation
-          </a>.
+          </a>
+          .
         </p>
       </div>
     );

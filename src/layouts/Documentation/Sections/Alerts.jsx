@@ -1,6 +1,6 @@
 import React from "react";
-import SyntaxHighlighter from "react-syntax-highlighter/prism";
-import { prism } from "react-syntax-highlighter/styles/prism";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { prism } from "react-syntax-highlighter/dist/styles/prism";
 import { UncontrolledAlert, Alert } from "reactstrap";
 
 const codeExamplesImport = `import { Alert } from 'reactstrap';`;
@@ -132,7 +132,8 @@ class Alerts extends React.Component {
               onClick={e => e.preventDefault()}
             >
               an example link
-            </a>. Give it a click if you like.
+            </a>
+            . Give it a click if you like.
           </Alert>
           <Alert color="secondary">
             This is a secondary alert with{" "}
@@ -142,7 +143,8 @@ class Alerts extends React.Component {
               onClick={e => e.preventDefault()}
             >
               an example link
-            </a>. Give it a click if you like.
+            </a>
+            . Give it a click if you like.
           </Alert>
           <Alert color="success">
             This is a success alert with{" "}
@@ -152,7 +154,8 @@ class Alerts extends React.Component {
               onClick={e => e.preventDefault()}
             >
               an example link
-            </a>. Give it a click if you like.
+            </a>
+            . Give it a click if you like.
           </Alert>
           <Alert color="danger">
             This is a danger alert with{" "}
@@ -162,7 +165,8 @@ class Alerts extends React.Component {
               onClick={e => e.preventDefault()}
             >
               an example link
-            </a>. Give it a click if you like.
+            </a>
+            . Give it a click if you like.
           </Alert>
           <Alert color="warning">
             This is a warning alert with{" "}
@@ -172,7 +176,8 @@ class Alerts extends React.Component {
               onClick={e => e.preventDefault()}
             >
               an example link
-            </a>. Give it a click if you like.
+            </a>
+            . Give it a click if you like.
           </Alert>
           <Alert color="info">
             This is a info alert with{" "}
@@ -182,7 +187,8 @@ class Alerts extends React.Component {
               onClick={e => e.preventDefault()}
             >
               an example link
-            </a>. Give it a click if you like.
+            </a>
+            . Give it a click if you like.
           </Alert>
           <Alert color="light">
             This is a light alert with{" "}
@@ -192,7 +198,8 @@ class Alerts extends React.Component {
               onClick={e => e.preventDefault()}
             >
               an example link
-            </a>. Give it a click if you like.
+            </a>
+            . Give it a click if you like.
           </Alert>
           <Alert color="dark">
             This is a dark alert with{" "}
@@ -202,7 +209,8 @@ class Alerts extends React.Component {
               onClick={e => e.preventDefault()}
             >
               an example link
-            </a>. Give it a click if you like.
+            </a>
+            . Give it a click if you like.
           </Alert>
         </div>
         <SyntaxHighlighter language="jsx" style={prism}>
@@ -262,7 +270,8 @@ class Alerts extends React.Component {
             rel="noopener noreferrer"
           >
             reactstrap alerts documentation
-          </a>.
+          </a>
+          .
         </p>
       </div>
     );

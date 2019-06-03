@@ -1,8 +1,8 @@
 import React from "react";
-import SyntaxHighlighter from "react-syntax-highlighter/prism";
-import { prism } from "react-syntax-highlighter/styles/prism";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { prism } from "react-syntax-highlighter/dist/styles/prism";
 
-import { Footer } from "components";
+import Footer from "components/Footer/Footer.jsx";
 
 const codeImport = `import Footer from 'components/Footer/Footer.jsx';`;
 

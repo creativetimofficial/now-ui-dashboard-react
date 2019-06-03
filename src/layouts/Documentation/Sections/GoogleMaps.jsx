@@ -1,6 +1,6 @@
 import React from "react";
-import SyntaxHighlighter from "react-syntax-highlighter/prism";
-import { prism } from "react-syntax-highlighter/styles/prism";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { prism } from "react-syntax-highlighter/dist/styles/prism";
 import {
   withScriptjs,
   withGoogleMap,
@@ -141,7 +141,8 @@ class GoogleMaps extends React.Component {
             rel="noopener noreferrer"
           >
             react-google-maps
-          </a>.
+          </a>
+          .
         </p>
         <h2>Google API KEY</h2>
         <p>For this component to work, you will need a google maps API key</p>
@@ -155,7 +156,8 @@ class GoogleMaps extends React.Component {
               rel="noopener noreferrer"
             >
               Google API Console
-            </a>.
+            </a>
+            .
           </li>
           <li>Create or select a project.</li>
           <li>Click Continue to enable the API and any related services.</li>
@@ -221,7 +223,8 @@ class GoogleMaps extends React.Component {
             rel="noopener noreferrer"
           >
             react-google-maps documentation
-          </a>.
+          </a>
+          .
         </p>
       </div>
     );

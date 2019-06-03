@@ -10,6 +10,7 @@ import "assets/scss/now-ui-dashboard.scss?v1.2.0";
 import "assets/css/demo.css";
 
 import AdminLayout from "layouts/Admin.jsx";
+import DocumentationLayout from "layouts/Documentation/Documentation.jsx";
 
 const hist = createHashHistory();
 
@@ -33,6 +34,10 @@ ReactDOM.render(
   <Router history={hist}>
     <Switch>
       <Route path="/admin" render={props => <AdminLayout {...props} />} />
+      <Route
+        path="/documentation"
+        render={props => <DocumentationLayout {...props} />}
+      />
       <Redirect to="/admin/dashboard" />
     </Switch>
   </Router>,

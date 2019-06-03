@@ -1,6 +1,6 @@
 import React from "react";
-import SyntaxHighlighter from "react-syntax-highlighter/prism";
-import { prism } from "react-syntax-highlighter/styles/prism";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { prism } from "react-syntax-highlighter/dist/styles/prism";
 import { FormGroup, Label, Input } from "reactstrap";
 
 const codeExample = `<FormGroup>
@@ -52,7 +52,8 @@ class Textarea extends React.Component {
             rel="noopener noreferrer"
           >
             reactstrap's full documentation
-          </a>.
+          </a>
+          .
         </p>
       </div>
     );

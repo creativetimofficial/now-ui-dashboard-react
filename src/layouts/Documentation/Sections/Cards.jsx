@@ -1,6 +1,6 @@
 import React from "react";
-import SyntaxHighlighter from "react-syntax-highlighter/prism";
-import { prism } from "react-syntax-highlighter/styles/prism";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { prism } from "react-syntax-highlighter/dist/styles/prism";
 import {
   Card,
   CardBody,
@@ -18,7 +18,7 @@ import {
   CardImgOverlay
 } from "reactstrap";
 
-import { Button } from "components";
+import { Button } from "reactstrap";
 
 const codeExample = `<Card style={{width: '20rem'}}>
     <CardImg top src="img-src" alt="..."/>
@@ -371,7 +371,8 @@ class Cards extends React.Component {
             rel="noopener noreferrer"
           >
             reactstrap's nav components
-          </a>.
+          </a>
+          .
         </p>
         <div className="bd-example">
           <Card className="text-center">
@@ -547,7 +548,8 @@ class Cards extends React.Component {
             rel="noopener noreferrer"
           >
             official reactstrap documentation
-          </a>.
+          </a>
+          .
         </p>
       </div>
     );

@@ -1,9 +1,9 @@
 import React from "react";
-import SyntaxHighlighter from "react-syntax-highlighter/prism";
-import { prism } from "react-syntax-highlighter/styles/prism";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { prism } from "react-syntax-highlighter/dist/styles/prism";
 import { UncontrolledTooltip } from "reactstrap";
 
-import { Button } from "components";
+import { Button } from "reactstrap";
 
 const codeImport = `import { UncontrolledTooltip } from 'reactstrap';`;
 
@@ -90,7 +90,8 @@ class TooltipSection extends React.Component {
             mcsweeney's cleanse vegan chambray. A really ironic artisan{" "}
             <a href="#pablo" id="whatever">
               whatever keytar
-            </a>, scenester farm-to-table banksy Austin{" "}
+            </a>
+            , scenester farm-to-table banksy Austin{" "}
             <a href="#pablo" id="twitter">
               twitter handle
             </a>{" "}
@@ -161,7 +162,8 @@ class TooltipSection extends React.Component {
           rel="noopener noreferrer"
         >
           reactstrap documentation
-        </a>.
+        </a>
+        .
       </div>
     );
   }
