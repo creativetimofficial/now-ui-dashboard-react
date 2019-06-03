@@ -7,6 +7,12 @@
     margin-bottom: 20px;
     box-shadow: $box-shadow;
 
+    [data-notify="container"].alert {
+      min-width: auto;
+      left: unset !important;
+      right: unset !important;
+    }
+
     .card-body{
         padding: 15px 15px 10px 15px;
 

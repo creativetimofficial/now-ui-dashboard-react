@@ -6,10 +6,11 @@
     border-radius: $btn-round-radius;
     color: $black-color;
     line-height: normal;
+    height: auto;
     font-size: $font-size-small;
     @include transition-input-focus-color();
     @include box-shadow(none);
-    height: unset;
+
 
 
     &:focus{

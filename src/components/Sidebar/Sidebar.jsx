@@ -56,13 +56,13 @@ class Sidebar extends React.Component {
               return (
                 <li
                   className={
-                    this.activeRoute(prop.path) +
+                    this.activeRoute(prop.layout + prop.path) +
                     (prop.pro ? " active active-pro" : "")
                   }
                   key={key}
                 >
                   <NavLink
-                    to={prop.path}
+                    to={prop.layout + prop.path}
                     className="nav-link"
                     activeClassName="active"
                   >

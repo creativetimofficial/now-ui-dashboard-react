@@ -65,7 +65,7 @@
     background: $color;
   }
 
-  .nav li.active > a:not([data-toggle="collapse"]){
+  .nav li.active > a{
     color: $color;
 
     i{
@@ -187,4 +187,10 @@
   -ms-transform: scale($horiz, $vert);
   -o-transform: scale($horiz, $vert);
   transform: scale($horiz, $vert);
+}
+
+@mixin panel-gradient($color) {
+  background: $color;  /* fallback for old browsers */
+  background: linear-gradient(160deg, $color 0%, darken($black-color,5) 100%);
+  background-size: 105%;
 }

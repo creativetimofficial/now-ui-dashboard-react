@@ -1,5 +1,55 @@
 # Change Log
 
+## [1.2.0] 2019-06-12
+### Major changes
+- Solved https://github.com/creativetimofficial/now-ui-dashboard-react/issues/1
+- Solved https://github.com/creativetimofficial/now-ui-dashboard-react/issues/3
+- Solved https://github.com/creativetimofficial/now-ui-dashboard-react/issues/4
+- Solved https://github.com/creativetimofficial/now-ui-dashboard-react/issues/7
+- Almost all of the styles inside `src/scss` have been changed
+- We've removed `src/routes/*` files and replaced them with just one file (`src/routes.js`)
+- We've renamed `src/layouts/Dashboard/Dashboard.jsx` to `src/layouts/Admin.jsx`
+- We've dropped the usage of `NODE_PATH=./src` and the file `.env` with the `jsconfig.json` file for using absolute paths
+- We've renamed `src/components/Header/Header.jsx` to `src/components/Navbars/DemoNavbar.jsx`
+- We've renamed `src/views/Dashboard/Dashboard.jsx` to `src/views/Dashboard.jsx`
+- We've renamed `src/views/Icons/Icons.jsx` to `src/views/Icons.jsx`
+- We've renamed `src/views/Maps/Maps.jsx` to `src/views/Map.jsx`
+- We've renamed `src/views/Notifications/Notifications.jsx` to `src/views/Notifications.jsx`
+- We've renamed `src/views/TableList/TableList.jsx` to `src/views/TableList.jsx`
+- We've renamed `src/views/Typography/Typography.jsx` to `src/views/Typography.jsx`
+- We've renamed `src/views/UserPage/UserPage.jsx` to `src/views/UserPage.jsx`
+### Dropped components
+- `src/components/CardElements/*` (replaced with simple HTML/React/Reactstrap syntax)
+- `src/components/CustomButton/CustomButton.jsx` (replaced with simple HTML/React/Reactstrap syntax)
+- `src/components/CustomCheckbox/SimpleCheckbox.jsx` (replaced with simple HTML/React/Reactstrap syntax)
+- `src/components/CustomRadio/CustomRadio.jsx` (replaced with simple HTML/React/Reactstrap syntax)
+- `src/components/FormInputs/FormInputs.jsx` (replaced with simple HTML/React/Reactstrap syntax)
+- `src/components/Stats/Stats.jsx` (replaced with simple HTML/React/Reactstrap syntax)
+- `src/components/Tasks/Tasks.jsx` (replaced with simple HTML/React/Reactstrap syntax)
+### Added components
+### Deleted dependencies
+- All the optional and dev dependencies and replaced them with the Added dependencies, as optional ones
+### Added dependencies
++ jquery@3.4.1
++ @types/googlemaps@3.36.2
++ @types/react@16.8.19
++ typescript@3.5.1
++ @types/markerclustererplus@2.1.33
+### Updated dependencies
+```
+bootstrap                   4.1.3   →    4.3.1
+chart.js                    2.7.1   →    2.8.0
+history                     4.7.2   →    4.9.0
+node-sass                   4.9.3   →   4.12.0
+react                      16.4.2   →   16.8.6
+react-chartjs-2             2.7.4   →    2.7.6
+react-dom                  16.4.2   →   16.8.6
+react-notification-alert    0.0.8   →   0.0.12
+react-router-dom            4.3.1   →    5.0.0
+react-scripts               1.1.5   →    3.0.1
+reactstrap                  6.4.0   →    8.0.0
+```
+
 ## [1.1.0] 2018-08-31
 ### Bug fixing
 - Github issues
@@ -7,7 +57,6 @@
   - https://github.com/creativetimofficial/now-ui-dashboard-react/issues/4
 - Added lint commands
 - Added commands for creating a npmjs library
-### Deleted dependencies
 ### Added dependencies
 - `ajv v5.0.0` (to stop warning: **npm WARN ajv-keywords@2.1.1 requires a peer of ajv@^5.0.0 but none is installed. You must install peer dependencies yourself.**)
 - `@types/googlemaps v3.30.12` (to stop warning: **npm WARN react-google-maps@9.4.5 requires a peer of @types/googlemaps@^3.0.0 but none is installed. You must install peer dependencies yourself.**)
