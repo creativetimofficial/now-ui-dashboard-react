@@ -5,18 +5,20 @@ import { Table } from "reactstrap";
 
 const codeSimpleExample = `<Table responsive>
   <thead className=" text-primary">
-    <th>
-      Name
-    </th>
-    <th>
-      Country
-    </th>
-    <th>
-      City
-    </th>
-    <th className="text-right">
-      Salary
-    </th>
+    <tr>
+      <th>
+        Name
+      </th>
+      <th>
+        Country
+      </th>
+      <th>
+        City
+      </th>
+      <th className="text-right">
+        Salary
+      </th>
+    </tr>
   </thead>
   <tbody>
     <tr>
@@ -135,10 +137,12 @@ class Tables extends React.Component {
         <div className="bd-example" data-example-id="">
           <Table responsive>
             <thead className=" text-primary">
-              <th>Name</th>
-              <th>Country</th>
-              <th>City</th>
-              <th className="text-right">Salary</th>
+              <tr>
+                <th>Name</th>
+                <th>Country</th>
+                <th>City</th>
+                <th className="text-right">Salary</th>
+              </tr>
             </thead>
             <tbody>
               <tr>

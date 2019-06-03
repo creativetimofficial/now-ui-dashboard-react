@@ -200,7 +200,7 @@ class Example extends React.Component{
                             <FormGroup className="no-border">
                                 <Input type="text" placeholder="Search"/>
                             </FormGroup>
-                            <Button color="neutral" icon round>
+                            <Button color="neutral" className="btn-icon btn-round">
                                 <i className="now-ui-icons ui-1_zoom-bold"></i>
                             </Button>
                         </Form>
@@ -369,7 +369,7 @@ class Example extends React.Component{
                             <FormGroup className={"no-border"}>
                                 <Input type="text" placeholder="Search"/>
                             </FormGroup>
-                            <Button color="neutral" icon round>
+                            <Button color="neutral" className="btn-icon btn-round">
                                 <i className="now-ui-icons ui-1_zoom-bold"></i>
                             </Button>
                         </Form>
@@ -423,7 +423,7 @@ class Example extends React.Component{
                             <FormGroup className={"no-border"}>
                                 <Input type="text" placeholder="Search"/>
                             </FormGroup>
-                            <Button color="neutral" icon round>
+                            <Button color="neutral" className="btn-icon btn-round">
                                 <i className="now-ui-icons ui-1_zoom-bold"></i>
                             </Button>
                         </Form>
@@ -477,7 +477,7 @@ class Example extends React.Component{
                             <FormGroup className={"no-border"}>
                                 <Input type="text" placeholder="Search"/>
                             </FormGroup>
-                            <Button color="neutral" icon round>
+                            <Button color="neutral" className="btn-icon btn-round">
                                 <i className="now-ui-icons ui-1_zoom-bold"></i>
                             </Button>
                         </Form>
@@ -676,7 +676,7 @@ class Navigation extends React.Component {
                   <FormGroup className="no-border">
                     <Input type="text" placeholder="Search" />
                   </FormGroup>
-                  <Button color="neutral" icon round>
+                  <Button color="neutral" className="btn-icon btn-round">
                     <i className="now-ui-icons ui-1_zoom-bold" />
                   </Button>
                 </Form>
@@ -776,7 +776,7 @@ class Navigation extends React.Component {
                       >
                         <Input type="text" placeholder="Search" />
                       </FormGroup>
-                      <Button color="neutral" icon round>
+                      <Button color="neutral" className="btn-icon btn-round">
                         <i className="now-ui-icons ui-1_zoom-bold" />
                       </Button>
                     </Form>
@@ -917,7 +917,7 @@ class Navigation extends React.Component {
                   <FormGroup className={"no-border"}>
                     <Input type="text" placeholder="Search" />
                   </FormGroup>
-                  <Button color="neutral" icon round>
+                  <Button color="neutral" className="btn-icon btn-round">
                     <i className="now-ui-icons ui-1_zoom-bold" />
                   </Button>
                 </Form>
@@ -951,7 +951,7 @@ class Navigation extends React.Component {
                   <FormGroup className={"no-border"}>
                     <Input type="text" placeholder="Search" />
                   </FormGroup>
-                  <Button color="neutral" icon round>
+                  <Button color="neutral" className="btn-icon btn-round">
                     <i className="now-ui-icons ui-1_zoom-bold" />
                   </Button>
                 </Form>
@@ -985,7 +985,7 @@ class Navigation extends React.Component {
                   <FormGroup className={"no-border"}>
                     <Input type="text" placeholder="Search" />
                   </FormGroup>
-                  <Button color="neutral" icon round>
+                  <Button color="neutral" className="btn-icon btn-round">
                     <i className="now-ui-icons ui-1_zoom-bold" />
                   </Button>
                 </Form>

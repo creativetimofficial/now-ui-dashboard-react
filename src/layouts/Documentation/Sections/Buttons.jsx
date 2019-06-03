@@ -19,37 +19,25 @@ const codeSizesExample = `<Button color="primary" size="lg">Large</Button>
 <Button color="primary" size="sm">Small</Button>`;
 
 const codeStylesExample = `<Button color="primary">Default</Button>
-<Button color="primary" wd>Min width 140px</Button>
-<Button color="primary" simple>Simple</Button>
-<Button color="primary" round>Rounded</Button>
-<Button color="primary" round>
+<Button color="primary" className="btn-wd">Min width 140px</Button>
+<Button color="primary" outline>Simple</Button>
+<Button color="primary" className="btn-round">Rounded</Button>
+<Button color="primary" className="btn-round">
     <i className="now-ui-icons ui-2_favourite-28"></i> With icon
 </Button>
-<Button neutral icon round size="lg">
+<Button size="lg" className="btn-round btn-neutral btn-icon">
     <i className="fab fa-twitter"></i>
 </Button>
-<Button round icon iconMini neutral color="info">
+<Button color="info" className="btn-round btn-icon btn-icon-mini btn-neutral">
     <i className="now-ui-icons ui-2_settings-90"></i>
 </Button>
-<Button color="primary" neutral>Neutral</Button>`;
+<Button color="primary" className="btn-neutral">Neutral</Button>`;
 
 const codeDisabledButtons = `<Button color="primary" size="lg" disabled>Primary button</Button>
 <Button color="secondary" size="lg" disabled>Button</Button>`;
 
 const codeDisabledA = `<Button href="#" color="primary" size="lg" disabled>Primary link</Button>
 <Button href="#" color="secondary" size="lg" disabled>Link</Button>`;
-
-const codeProps = `CustomButton.propTypes = {
-    leftLabel: PropTypes.node,
-    rightLabel: PropTypes.node,
-    simple: PropTypes.bool,
-    round: PropTypes.bool,
-    icon: PropTypes.bool,
-    neutral: PropTypes.bool,
-    iconMini: PropTypes.bool,
-    // min width 140 px
-    wd: PropTypes.bool,
-}`;
 
 class Buttons extends React.Component {
   render() {
@@ -70,7 +58,7 @@ class Buttons extends React.Component {
         <SyntaxHighlighter
           language="jsx"
           style={prism}
-        >{`import Button from 'elements/CustomButton/CustomButton.jsx';`}</SyntaxHighlighter>
+        >{`import { Button } from "reactstrap";`}</SyntaxHighlighter>
         <h2>Examples</h2>
         <p>
           Now UI Dashboard has changed the predefined button styles from
@@ -94,29 +82,32 @@ class Buttons extends React.Component {
         <h2>Style buttons</h2>
         <p>
           We added extra classes (defined by <code>props</code>) that can help
-          you better customise the look. Let's see some examples:
+          you better customise the look. Let{"'"}s see some examples:
         </p>
         <div className="bd-example">
           <Button color="primary">Default</Button>
-          <Button color="primary" wd>
+          <Button color="primary" className="btn-wd">
             Min width 140px
           </Button>
-          <Button color="primary" simple>
+          <Button color="primary" outline>
             Simple
           </Button>
-          <Button color="primary" round>
+          <Button color="primary" className="btn-round">
             Rounded
           </Button>
-          <Button color="primary" round>
+          <Button color="primary" className="btn-round">
             <i className="now-ui-icons ui-2_favourite-28" /> With icon
           </Button>
-          <Button neutral icon round size="lg">
+          <Button size="lg" className="btn-round btn-icon btn-neutral">
             <i className="fab fa-twitter" />
           </Button>
-          <Button round icon iconMini neutral color="info">
+          <Button
+            color="info"
+            className="btn-round btn-icon btn-icon-mini btn-neutral"
+          >
             <i className="now-ui-icons ui-2_settings-90" />
           </Button>
-          <Button color="primary" neutral>
+          <Button color="primary" className="btn-neutral">
             Neutral
           </Button>
         </div>
@@ -173,9 +164,6 @@ class Buttons extends React.Component {
           </SyntaxHighlighter>
         </div>
         <h2>Props</h2>
-        <SyntaxHighlighter language="jsx" style={prism}>
-          {codeProps}
-        </SyntaxHighlighter>
         <p>
           You can refer to{" "}
           <a
