@@ -3,7 +3,7 @@ import React from "react";
 import PerfectScrollbar from "perfect-scrollbar";
 
 // reactstrap components
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 
 // core components
 import DemoNavbar from "components/Navbars/DemoNavbar.jsx";
@@ -61,6 +61,7 @@ class Dashboard extends React.Component {
                 />
               );
             })}
+            <Redirect from="/admin" to="/admin/dashboard" />
           </Switch>
           <Footer fluid />
         </div>

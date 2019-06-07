@@ -27,6 +27,7 @@
 - `src/components/Stats/Stats.jsx` (replaced with simple HTML/React/Reactstrap syntax)
 - `src/components/Tasks/Tasks.jsx` (replaced with simple HTML/React/Reactstrap syntax)
 ### Added components
+- `src/components/FixedPlugin/FixedPlugin.jsx`
 ### Deleted dependencies
 - All the optional and dev dependencies and replaced them with the Added dependencies, as optional ones
 ### Added dependencies
