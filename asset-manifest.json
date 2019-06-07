@@ -1,14 +1,21 @@
 {
-  "main.css": "static/css/main.de1e6d3e.css",
-  "main.css.map": "static/css/main.de1e6d3e.css.map",
-  "main.js": "static/js/main.5ff31f4a.js",
-  "main.js.map": "static/js/main.5ff31f4a.js.map",
-  "static/media/bg5.jpg": "static/media/bg5.056eb058.jpg",
-  "static/media/logo-white.svg": "static/media/logo-white.eec7c7f6.svg",
-  "static/media/mike.jpg": "static/media/mike.aab414f7.jpg",
-  "static/media/nucleo-outline.eot": "static/media/nucleo-outline.53a1bed7.eot",
-  "static/media/nucleo-outline.ttf": "static/media/nucleo-outline.22a0bffe.ttf",
-  "static/media/nucleo-outline.woff": "static/media/nucleo-outline.24e2d6b4.woff",
-  "static/media/nucleo-outline.woff2": "static/media/nucleo-outline.8ebec31f.woff2",
-  "static/media/ryan.jpg": "static/media/ryan.f217f346.jpg"
+  "files": {
+    "main.css": "/now-ui-dashboard-react/static/css/main.3075f6f8.chunk.css",
+    "main.js": "/now-ui-dashboard-react/static/js/main.fec0b486.chunk.js",
+    "main.js.map": "/now-ui-dashboard-react/static/js/main.fec0b486.chunk.js.map",
+    "runtime~main.js": "/now-ui-dashboard-react/static/js/runtime~main.6231c9ca.js",
+    "runtime~main.js.map": "/now-ui-dashboard-react/static/js/runtime~main.6231c9ca.js.map",
+    "static/css/2.22a7d4ef.chunk.css": "/now-ui-dashboard-react/static/css/2.22a7d4ef.chunk.css",
+    "static/js/2.1afb7660.chunk.js": "/now-ui-dashboard-react/static/js/2.1afb7660.chunk.js",
+    "static/js/2.1afb7660.chunk.js.map": "/now-ui-dashboard-react/static/js/2.1afb7660.chunk.js.map",
+    "index.html": "/now-ui-dashboard-react/index.html",
+    "precache-manifest.6b2a43d2378f506609e92eefb604e565.js": "/now-ui-dashboard-react/precache-manifest.6b2a43d2378f506609e92eefb604e565.js",
+    "service-worker.js": "/now-ui-dashboard-react/service-worker.js",
+    "static/css/2.22a7d4ef.chunk.css.map": "/now-ui-dashboard-react/static/css/2.22a7d4ef.chunk.css.map",
+    "static/css/main.3075f6f8.chunk.css.map": "/now-ui-dashboard-react/static/css/main.3075f6f8.chunk.css.map",
+    "static/media/bg5.jpg": "/now-ui-dashboard-react/static/media/bg5.056eb058.jpg",
+    "static/media/logo-white.svg": "/now-ui-dashboard-react/static/media/logo-white.eec7c7f6.svg",
+    "static/media/mike.jpg": "/now-ui-dashboard-react/static/media/mike.aab414f7.jpg",
+    "static/media/now-ui-dashboard.scss?v1.2.0": "/now-ui-dashboard-react/static/media/nucleo-outline.8ebec31f.woff2"
+  }
 }
