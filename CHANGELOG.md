@@ -1,6 +1,6 @@
 # Change Log
 
-## [1.2.0] 2019-06-12
+## [1.2.0] 2019-06-07
 ### Major changes
 - Solved https://github.com/creativetimofficial/now-ui-dashboard-react/issues/1
 - Solved https://github.com/creativetimofficial/now-ui-dashboard-react/issues/3
