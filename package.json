@@ -2,7 +2,8 @@
   "name": "now-ui-dashboard-react",
   "version": "1.2.0",
   "main": "dist/index.js",
-  "homepage": "https://creativetimofficial.github.io/now-ui-dashboard-react/#/dashboard",
+  "private": true,
+  "homepage": "https://demos.creative-tim.com/now-ui-dashboard-react/#/",
   "dependencies": {
     "bootstrap": "4.3.1",
     "chart.js": "2.8.0",
