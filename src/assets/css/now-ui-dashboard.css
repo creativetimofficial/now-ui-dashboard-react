@@ -4159,6 +4159,11 @@ Created using IcoMoon - icomoon.io
 .navbar .navbar-nav .nav-link i.now-ui-icons + p {
   margin-left: 6px; }
 
+@media screen and (max-width: 991px) {
+  .navbar .dropdown.show .dropdown-menu,
+  .navbar .dropdown .dropdown-menu {
+    position: static !important; } }
+
 .wrapper {
   position: relative;
   top: 0;
@@ -4679,5 +4684,3 @@ Created using IcoMoon - icomoon.io
 
 #tables .table-responsive {
   margin-bottom: 30px; }
-
-/*# sourceMappingURL=now-ui-dashboard.css.map */
