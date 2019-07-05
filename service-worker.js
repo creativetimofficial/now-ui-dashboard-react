@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/now-ui-dashboard-react/precache-manifest.6b2a43d2378f506609e92eefb604e565.js"
+  "/now-ui-dashboard-react/precache-manifest.5fe1b86085c0f3e5bcf407250020ec04.js"
 );
 
 self.addEventListener('message', (event) => {
