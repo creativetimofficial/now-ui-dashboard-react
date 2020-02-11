@@ -59,6 +59,11 @@ class Header extends React.Component {
         <div className="navbar-nav-scroll ml-md-auto">
           <Nav className="bd-navbar-nav flex-row" navbar>
             <NavItem>
+              <NavLink href="https://www.creative-tim.com/product/now-ui-dashboard-pro-react?ref=nudr-docs-navbar-upgrade-pro" target="_blank">
+                <i className="now-ui-icons arrows-1_cloud-upload-94" /> Upgrade to PRO
+              </NavLink>
+            </NavItem>
+            <NavItem>
               <Link to="/" className="nav-link">
                 <i className="now-ui-icons design_bullet-list-67" /> Back to
                 Dashboard
