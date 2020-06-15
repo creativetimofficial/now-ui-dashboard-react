@@ -8,6 +8,8 @@
     "bootstrap": "4.5.0",
     "chart.js": "2.9.3",
     "gh-pages": "3.0.0",
+    "gulp": "4.0.2",
+    "gulp-append-prepend": "1.0.8",
     "history": "5.0.0",
     "node-sass": "4.14.1",
     "perfect-scrollbar": "1.5.0",
