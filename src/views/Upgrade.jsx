@@ -112,7 +112,7 @@ class Upgrade extends Component {
                       <tr>
                         <td />
                         <td className="text-center">Free</td>
-                        <td className="text-center">Just $59</td>
+                        <td className="text-center">From $59</td>
                       </tr>
                       <tr>
                         <td />
