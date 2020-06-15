@@ -17,7 +17,7 @@
 */
 /*eslint-disable*/
 import React from "react";
-import { Table } from "reactstrap";
+import { Table, Alert } from "reactstrap";
 class BuildTools extends React.Component {
   render() {
     return (
@@ -99,6 +99,11 @@ class BuildTools extends React.Component {
                 <td className="text-left">
                   This will create a build directory with a production build of
                   your app.
+                  <Alert color="warning">
+                    The build may not work at first, and you may need to delete
+                    the <code>homepage prop</code> from inside the{" "}
+                    <code>package.json</code> file.
+                  </Alert>
                 </td>
                 <td className="text-right">
                   <a

@@ -19,6 +19,8 @@ import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/dist/styles/prism";
 
+import { Alert } from "reactstrap";
+
 const fileStructure = `now-ui-dashboad-react
 │
 ├── CHANGELOG.md
@@ -108,7 +110,7 @@ class Tutorial extends React.Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Bootstrap 4 beta 2
+            Bootstrap 4
           </a>
           ,{" "}
           <a
@@ -191,8 +193,8 @@ class Tutorial extends React.Component {
           >
             reactstrap
           </a>{" "}
-          (Bootstrap 4 beta), so you can safely use it on your existing or new
-          Reactstrap project. No line of code from Bootstrap 4 beta was changed,
+          (Bootstrap 4), so you can safely use it on your existing or new
+          Reactstrap project. No line of code from Bootstrap 4 was changed,
           so you don't have to worry about undesired effects in your work.
         </p>
         <p>
@@ -366,6 +368,20 @@ class Tutorial extends React.Component {
             </a>
           </li>
         </ul>
+        <h1 className="bd-title" id="content">
+          Live Production
+        </h1>
+        <Alert color="warning">
+          Creative Tim cannot help with deploying application to any server. We
+          only have experience on deploying <code>create-react-app</code>{" "}
+          applications to <code>Github Pages</code>.
+        </Alert>
+        <Alert color="warning">
+          Note that we have set inside the <code>package.json</code> file a
+          homepage prop that when building this product, it will append that
+          link to all links from the build folder so you might need to delete
+          it.
+        </Alert>
         <h1 className="bd-title" id="content">
           File structure
         </h1>
