@@ -115,7 +115,7 @@ const icons = [
   "ui-2_time-alarm",
   "ui-1_email-85",
   "users_circle-08",
-  "users_single-02"
+  "users_single-02",
 ];
 
 export default icons;

@@ -26,7 +26,7 @@ import {
   CardBody,
   CardHeader,
   CardTitle,
-  Button
+  Button,
 } from "reactstrap";
 
 // core components

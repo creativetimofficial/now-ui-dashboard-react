@@ -24,7 +24,7 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  UncontrolledButtonDropdown
+  UncontrolledButtonDropdown,
 } from "reactstrap";
 
 import { Button } from "reactstrap";
@@ -89,7 +89,7 @@ class Dropdown extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isOpen: false
+      isOpen: false,
     };
     this.toggle = this.toggle.bind(this);
   }

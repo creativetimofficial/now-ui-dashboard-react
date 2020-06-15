@@ -96,7 +96,7 @@ class Alerts extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      visible: true
+      visible: true,
     };
     this.onDismiss = this.onDismiss.bind(this);
   }
@@ -146,7 +146,7 @@ class Alerts extends React.Component {
             <a
               href="/#/"
               className="alert-link"
-              onClick={e => e.preventDefault()}
+              onClick={(e) => e.preventDefault()}
             >
               an example link
             </a>
@@ -157,7 +157,7 @@ class Alerts extends React.Component {
             <a
               href="#/"
               className="alert-link"
-              onClick={e => e.preventDefault()}
+              onClick={(e) => e.preventDefault()}
             >
               an example link
             </a>
@@ -168,7 +168,7 @@ class Alerts extends React.Component {
             <a
               href="#/"
               className="alert-link"
-              onClick={e => e.preventDefault()}
+              onClick={(e) => e.preventDefault()}
             >
               an example link
             </a>
@@ -179,7 +179,7 @@ class Alerts extends React.Component {
             <a
               href="#/"
               className="alert-link"
-              onClick={e => e.preventDefault()}
+              onClick={(e) => e.preventDefault()}
             >
               an example link
             </a>
@@ -190,7 +190,7 @@ class Alerts extends React.Component {
             <a
               href="#/"
               className="alert-link"
-              onClick={e => e.preventDefault()}
+              onClick={(e) => e.preventDefault()}
             >
               an example link
             </a>
@@ -201,7 +201,7 @@ class Alerts extends React.Component {
             <a
               href="#/"
               className="alert-link"
-              onClick={e => e.preventDefault()}
+              onClick={(e) => e.preventDefault()}
             >
               an example link
             </a>
@@ -212,7 +212,7 @@ class Alerts extends React.Component {
             <a
               href="#/"
               className="alert-link"
-              onClick={e => e.preventDefault()}
+              onClick={(e) => e.preventDefault()}
             >
               an example link
             </a>
@@ -223,7 +223,7 @@ class Alerts extends React.Component {
             <a
               href="#/"
               className="alert-link"
-              onClick={e => e.preventDefault()}
+              onClick={(e) => e.preventDefault()}
             >
               an example link
             </a>

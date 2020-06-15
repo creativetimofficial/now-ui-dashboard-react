@@ -71,13 +71,13 @@ class PerfectScrollbar extends React.Component {
         <p>
           !IMPORTANT Perfect Scrollbar is applied on the{" "}
           <code className="highlighter-rouge">.main-panel</code> and{" "}
-          <code className="highlighter-rouge">.sidebar .sidebar-wrapper</code> so we
-          will have a nice scrollbar that is visible only when you actually
-          scroll. Since it is changing the overflows of the CSS it is also
-          affecting the child elements which have a scroll so please make sure
-          that you add the class{" "}
-          <code className="highlighter-rouge">.ps-child</code> to any element that
-          should have scroll.
+          <code className="highlighter-rouge">.sidebar .sidebar-wrapper</code>{" "}
+          so we will have a nice scrollbar that is visible only when you
+          actually scroll. Since it is changing the overflows of the CSS it is
+          also affecting the child elements which have a scroll so please make
+          sure that you add the class{" "}
+          <code className="highlighter-rouge">.ps-child</code> to any element
+          that should have scroll.
         </p>
         <p>
           For more information please check{" "}

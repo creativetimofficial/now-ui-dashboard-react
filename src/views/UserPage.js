@@ -27,7 +27,7 @@ import {
   Form,
   Input,
   Row,
-  Col
+  Col,
 } from "reactstrap";
 
 // core components
@@ -166,7 +166,7 @@ class User extends React.Component {
                 </div>
                 <CardBody>
                   <div className="author">
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                    <a href="#pablo" onClick={(e) => e.preventDefault()}>
                       <img
                         alt="..."
                         className="avatar border-gray"
@@ -188,7 +188,7 @@ class User extends React.Component {
                     className="btn-neutral btn-icon btn-round"
                     color="default"
                     href="#pablo"
-                    onClick={e => e.preventDefault()}
+                    onClick={(e) => e.preventDefault()}
                     size="lg"
                   >
                     <i className="fab fa-facebook-f" />
@@ -197,7 +197,7 @@ class User extends React.Component {
                     className="btn-neutral btn-icon btn-round"
                     color="default"
                     href="#pablo"
-                    onClick={e => e.preventDefault()}
+                    onClick={(e) => e.preventDefault()}
                     size="lg"
                   >
                     <i className="fab fa-twitter" />
@@ -206,7 +206,7 @@ class User extends React.Component {
                     className="btn-neutral btn-icon btn-round"
                     color="default"
                     href="#pablo"
-                    onClick={e => e.preventDefault()}
+                    onClick={(e) => e.preventDefault()}
                     size="lg"
                   >
                     <i className="fab fa-google-plus-g" />

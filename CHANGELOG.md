@@ -3,6 +3,7 @@
 ## [1.4.0] date
 ### Bug fixing
 - Changed all `jsx` files to `js` ones
+- Run prettier on all files, so there might be changes due to this
 - Other Now UI React products:
   - https://github.com/creativetimofficial/ct-now-ui-dashboard-pro-react/issues/31 (changed the fonts import to `~assets/fonts` and also added assets path inside `jsconfig.json` file)
   - https://github.com/creativetimofficial/ct-now-ui-dashboard-pro-react/issues/10 (add `scrollTop` inside the `Admin` layout)

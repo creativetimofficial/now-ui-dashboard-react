@@ -49,24 +49,24 @@ var componentsRoutes = [
       {
         path: "/documentation/tutorial",
         component: Tutorial,
-        name: "Tutorial"
+        name: "Tutorial",
       },
       {
         path: "/documentation/routing-system",
         component: RoutingSystem,
-        name: "Routing System"
+        name: "Routing System",
       },
       {
         path: "/documentation/variables",
         component: Variables,
-        name: "Variables"
+        name: "Variables",
       },
       {
         path: "/documentation/build-tools",
         component: BuildTools,
-        name: "Build Tools"
-      }
-    ]
+        name: "Build Tools",
+      },
+    ],
   },
   {
     name: "Components",
@@ -76,20 +76,20 @@ var componentsRoutes = [
       {
         path: "/documentation/breadcrumb",
         component: Breadcrumb,
-        name: "Breadcrumb"
+        name: "Breadcrumb",
       },
       { path: "/documentation/buttons", component: Buttons, name: "Buttons" },
       { path: "/documentation/cards", component: Cards, name: "Cards" },
       {
         path: "/documentation/dropdown",
         component: Dropdown,
-        name: "Dropdown"
+        name: "Dropdown",
       },
       { path: "/documentation/footers", component: Footers, name: "Footers" },
       {
         path: "/documentation/navbars",
         component: Navigation,
-        name: "Navbars"
+        name: "Navbars",
       },
       { path: "/documentation/navs", component: Navs, name: "Navs" },
       { path: "/documentation/icons", component: Icons, name: "Nucleo Icons" },
@@ -98,14 +98,14 @@ var componentsRoutes = [
       {
         path: "/documentation/tooltips",
         component: Tooltips,
-        name: "Tooltips"
+        name: "Tooltips",
       },
       {
         path: "/documentation/typography",
         component: Typography,
-        name: "Typography"
-      }
-    ]
+        name: "Typography",
+      },
+    ],
   },
   {
     name: "Plugins",
@@ -115,22 +115,22 @@ var componentsRoutes = [
       {
         path: "/documentation/google-maps",
         component: GoogleMaps,
-        name: "GoogleMaps"
+        name: "GoogleMaps",
       },
       {
         path: "/documentation/notifications",
         component: Notifications,
-        name: "Notifications"
+        name: "Notifications",
       },
       {
         path: "/documentation/perfect-scrollbar",
         component: PerfectScrollbar,
-        name: "PerfectScrollbar"
+        name: "PerfectScrollbar",
       },
-      { path: "/documentation/switch", component: Switch, name: "Switch" }
-    ]
+      { path: "/documentation/switch", component: Switch, name: "Switch" },
+    ],
   },
-  { redirect: true, path: "/documentation", pathTo: "/documentation/tutorial" }
+  { redirect: true, path: "/documentation", pathTo: "/documentation/tutorial" },
 ];
 
 export default componentsRoutes;

@@ -22,7 +22,7 @@ import {
   FacebookShareButton,
   TwitterShareButton,
   FacebookIcon,
-  TwitterIcon
+  TwitterIcon,
 } from "react-share";
 import GitHubButton from "react-github-button";
 
@@ -30,7 +30,7 @@ class FixedPlugin extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      classes: "dropdown show"
+      classes: "dropdown show",
     };
     this.handleClick = this.handleClick.bind(this);
   }
