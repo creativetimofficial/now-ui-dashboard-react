@@ -16,30 +16,30 @@
 
 */
 // getting started
-import Tutorial from "layouts/Documentation/Sections/Tutorial.jsx";
-import RoutingSystem from "layouts/Documentation/Sections/RoutingSystem.jsx";
-import Variables from "layouts/Documentation/Sections/Variables.jsx";
-import BuildTools from "layouts/Documentation/Sections/BuildTools.jsx";
+import Tutorial from "layouts/Documentation/Sections/Tutorial.js";
+import RoutingSystem from "layouts/Documentation/Sections/RoutingSystem.js";
+import Variables from "layouts/Documentation/Sections/Variables.js";
+import BuildTools from "layouts/Documentation/Sections/BuildTools.js";
 // components
-import Alerts from "layouts/Documentation/Sections/Alerts.jsx";
-import Breadcrumb from "layouts/Documentation/Sections/Breadcrumb.jsx";
-import Buttons from "layouts/Documentation/Sections/Buttons.jsx";
-import Cards from "layouts/Documentation/Sections/Cards.jsx";
-import Dropdown from "layouts/Documentation/Sections/Dropdown.jsx";
-import Footers from "layouts/Documentation/Sections/Footers.jsx";
-import Icons from "layouts/Documentation/Sections/Icons.jsx";
-import Navigation from "layouts/Documentation/Sections/Navigation.jsx";
-import Navs from "layouts/Documentation/Sections/Navs.jsx";
-import Notifications from "layouts/Documentation/Sections/Notifications.jsx";
-import Sidebar from "layouts/Documentation/Sections/Sidebar.jsx";
-import Tables from "layouts/Documentation/Sections/Tables.jsx";
-import Tooltips from "layouts/Documentation/Sections/Tooltips.jsx";
-import Typography from "layouts/Documentation/Sections/Typography.jsx";
+import Alerts from "layouts/Documentation/Sections/Alerts.js";
+import Breadcrumb from "layouts/Documentation/Sections/Breadcrumb.js";
+import Buttons from "layouts/Documentation/Sections/Buttons.js";
+import Cards from "layouts/Documentation/Sections/Cards.js";
+import Dropdown from "layouts/Documentation/Sections/Dropdown.js";
+import Footers from "layouts/Documentation/Sections/Footers.js";
+import Icons from "layouts/Documentation/Sections/Icons.js";
+import Navigation from "layouts/Documentation/Sections/Navigation.js";
+import Navs from "layouts/Documentation/Sections/Navs.js";
+import Notifications from "layouts/Documentation/Sections/Notifications.js";
+import Sidebar from "layouts/Documentation/Sections/Sidebar.js";
+import Tables from "layouts/Documentation/Sections/Tables.js";
+import Tooltips from "layouts/Documentation/Sections/Tooltips.js";
+import Typography from "layouts/Documentation/Sections/Typography.js";
 // plugins
-import Charts from "layouts/Documentation/Sections/Charts.jsx";
-import GoogleMaps from "layouts/Documentation/Sections/GoogleMaps.jsx";
-import PerfectScrollbar from "layouts/Documentation/Sections/PerfectScrollbar.jsx";
-import Switch from "layouts/Documentation/Sections/Switch.jsx";
+import Charts from "layouts/Documentation/Sections/Charts.js";
+import GoogleMaps from "layouts/Documentation/Sections/GoogleMaps.js";
+import PerfectScrollbar from "layouts/Documentation/Sections/PerfectScrollbar.js";
+import Switch from "layouts/Documentation/Sections/Switch.js";
 
 var componentsRoutes = [
   {

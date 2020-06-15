@@ -34,10 +34,10 @@ class Variables extends React.Component {
         </p>
         <p>
           You will find all the nucleo icons in{" "}
-          <code>src/variables/icons.jsx</code>, all the variables regarding the
-          charts in <code>src/variables/charts.jsx</code> and all the rest
+          <code>src/variables/icons.js</code>, all the variables regarding the
+          charts in <code>src/variables/charts.js</code> and all the rest
           variables (variables used for example in tables, timeline page etc.)
-          in <code>src/variables/general.jsx</code>.
+          in <code>src/variables/general.js</code>.
         </p>
         <p>
           At the end of each of these three files you will find the exports with
@@ -47,12 +47,12 @@ class Variables extends React.Component {
         <SyntaxHighlighter
           language="jsx"
           style={prism}
-        >{`import { variableName } from 'variables/variableFile.jsx';`}</SyntaxHighlighter>
+        >{`import { variableName } from 'variables/variableFile.js';`}</SyntaxHighlighter>
         <p>
-          Where <code>variableFile.jsx</code> is one of <code>charts.jsx</code>,{" "}
-          <code>general.jsx</code> or <code>icons.jsx</code> and{" "}
+          Where <code>variableFile.js</code> is one of <code>charts.js</code>,{" "}
+          <code>general.js</code> or <code>icons.js</code> and{" "}
           <code>variableName</code> is a variable found at the end of the{" "}
-          <code>variableFile.jsx</code>.
+          <code>variableFile.js</code>.
         </p>
       </div>
     );

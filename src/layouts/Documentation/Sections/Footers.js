@@ -19,9 +19,9 @@ import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/dist/styles/prism";
 
-import Footer from "components/Footer/Footer.jsx";
+import Footer from "components/Footer/Footer.js";
 
-const codeImport = `import Footer from 'components/Footer/Footer.jsx';`;
+const codeImport = `import Footer from 'components/Footer/Footer.js';`;
 
 const codeExample = `<Footer fluid/>
 <Footer fluid default/>`;
@@ -35,7 +35,7 @@ class FooterSection extends React.Component {
         </h1>
         <p className="bd-lead">
           Our demo footer is located in{" "}
-          <code>src/components/Footer/Footer.jsx</code>.
+          <code>src/components/Footer/Footer.js</code>.
         </p>
         <p>To use it, import it like so:</p>
         <SyntaxHighlighter language="jsx" style={prism}>

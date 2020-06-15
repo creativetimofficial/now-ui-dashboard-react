@@ -43,56 +43,56 @@ const fileStructure = `now-ui-dashboad-react
     │       │   └── plugins
     ├── components
     │   ├── CardElements
-    │   │   ├── CardAuthor.jsx
-    │   │   ├── CardCategory.jsx
-    │   │   └── CardSocials.jsx
+    │   │   ├── CardAuthor.js
+    │   │   ├── CardCategory.js
+    │   │   └── CardSocials.js
     │   ├── CustomButton
-    │   │   └── CustomButton.jsx
+    │   │   └── CustomButton.js
     │   ├── CustomCheckbox
-    │   │   └── SimpleCheckbox.jsx
+    │   │   └── SimpleCheckbox.js
     │   ├── CustomRadio
-    │   │   └── CustomRadio.jsx
+    │   │   └── CustomRadio.js
     │   ├── Footer
-    │   │   └── Footer.jsx
+    │   │   └── Footer.js
     │   ├── FormInputs
-    │   │   └── FormInputs.jsx
+    │   │   └── FormInputs.js
     │   ├── Header
-    │   │   └── Header.jsx
+    │   │   └── Header.js
     │   ├── PanelHeader
-    │   │   └── PanelHeader.jsx
+    │   │   └── PanelHeader.js
     │   ├── Sidebar
-    │   │   └── Sidebar.jsx
+    │   │   └── Sidebar.js
     │   ├── Stats
-    │   │   └── Stats.jsx
+    │   │   └── Stats.js
     │   ├── Tasks
-    │   │   └── Tasks.jsx
+    │   │   └── Tasks.js
     │   └── index.js
     ├── index.js
     ├── layouts
     │   └── Dashboard
-    │       └── Dashboard.jsx
+    │       └── Dashboard.js
     ├── routes
-    │   ├── dashboard.jsx
-    │   └── index.jsx
+    │   ├── dashboard.js
+    │   └── index.js
     ├── variables
-    │   ├── charts.jsx
-    │   ├── general.jsx
-    │   └── icons.jsx
+    │   ├── charts.js
+    │   ├── general.js
+    │   └── icons.js
     └── views
         ├── Dashboard
-        │   └── Dashboard.jsx
+        │   └── Dashboard.js
         ├── Icons
-        │   └── Icons.jsx
+        │   └── Icons.js
         ├── Maps
-        │   └── Maps.jsx
+        │   └── Maps.js
         ├── Notifications
-        │   └── Notifications.jsx
+        │   └── Notifications.js
         ├── TableList
-        │   └── TableList.jsx
+        │   └── TableList.js
         ├── Typography
-        │   └── Typography.jsx
+        │   └── Typography.js
         └── UserPage
-            └── UserPage.jsx`;
+            └── UserPage.js`;
 
 class Tutorial extends React.Component {
   render() {

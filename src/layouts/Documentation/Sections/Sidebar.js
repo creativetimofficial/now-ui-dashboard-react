@@ -29,7 +29,7 @@ class Sidebar extends React.Component {
         <p className="bd-lead">
           We have created a component for the main navigation of this dashboard,{" "}
           <code>Sidebar</code>, which is located in{" "}
-          <code>src/components/Sidebar/Sidebar.jsx</code>. It contains the
+          <code>src/components/Sidebar/Sidebar.js</code>. It contains the
           company title, a photo of the logged in user with options inside a
           dropdown, and a list of all the pages. Every element in the list of
           pages can have a sublist of pages.
