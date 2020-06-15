@@ -34,7 +34,7 @@ var ps;
 
 class Dashboard extends React.Component {
   state = {
-    backgroundColor: "blue"
+    backgroundColor: "blue",
   };
   mainPanel = React.createRef();
   componentDidMount() {
@@ -56,7 +56,7 @@ class Dashboard extends React.Component {
       this.mainPanel.current.scrollTop = 0;
     }
   }
-  handleColorClick = color => {
+  handleColorClick = (color) => {
     this.setState({ backgroundColor: color });
   };
   render() {

@@ -28,7 +28,7 @@ import {
   CardHeader,
   Row,
   Col,
-  Button
+  Button,
 } from "reactstrap";
 
 // core components
@@ -38,7 +38,7 @@ class Notifications extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      visible: true
+      visible: true,
     };
     this.onDismiss = this.onDismiss.bind(this);
     this.notify = this.notify.bind(this);
@@ -79,7 +79,7 @@ class Notifications extends React.Component {
       ),
       type: type,
       icon: "now-ui-icons ui-1_bell-53",
-      autoDismiss: 7
+      autoDismiss: 7,
     };
     this.refs.notificationAlert.notificationAlert(options);
   }

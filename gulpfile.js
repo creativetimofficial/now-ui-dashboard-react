@@ -25,11 +25,11 @@ gulp.task("licenses", async function () {
     )
     .pipe(gulp.dest("./", { overwrite: true }));
 
-    // this is to add Creative Tim licenses in the production mode for the minified js
-    gulp
-      .src("build/static/js/runtime*.js", { base: "./" })
-      .pipe(
-        gap.prependText(`/*!
+  // this is to add Creative Tim licenses in the production mode for the minified js
+  gulp
+    .src("build/static/js/runtime*.js", { base: "./" })
+    .pipe(
+      gap.prependText(`/*!
 
   =========================================================
   * Now UI Dashboard React - v1.4.0
@@ -45,8 +45,8 @@ gulp.task("licenses", async function () {
   * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
   */`)
-      )
-      .pipe(gulp.dest("./", { overwrite: true }));
+    )
+    .pipe(gulp.dest("./", { overwrite: true }));
 
   // this is to add Creative Tim licenses in the production mode for the minified html
   gulp

@@ -37,7 +37,7 @@ import {
   Label,
   FormGroup,
   Input,
-  UncontrolledTooltip
+  UncontrolledTooltip,
 } from "reactstrap";
 
 // core components
@@ -47,7 +47,7 @@ import {
   dashboardPanelChart,
   dashboardShippedProductsChart,
   dashboardAllProductsChart,
-  dashboard24HoursPerformanceChart
+  dashboard24HoursPerformanceChart,
 } from "variables/charts.js";
 
 class Dashboard extends React.Component {
