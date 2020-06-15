@@ -1,21 +1,30 @@
 {
   "files": {
-    "main.css": "/now-ui-dashboard-react/static/css/main.2f2a5fbc.chunk.css",
-    "main.js": "/now-ui-dashboard-react/static/js/main.7d585262.chunk.js",
-    "main.js.map": "/now-ui-dashboard-react/static/js/main.7d585262.chunk.js.map",
-    "runtime~main.js": "/now-ui-dashboard-react/static/js/runtime~main.6231c9ca.js",
-    "runtime~main.js.map": "/now-ui-dashboard-react/static/js/runtime~main.6231c9ca.js.map",
-    "static/css/2.903a27b1.chunk.css": "/now-ui-dashboard-react/static/css/2.903a27b1.chunk.css",
-    "static/js/2.0abf6628.chunk.js": "/now-ui-dashboard-react/static/js/2.0abf6628.chunk.js",
-    "static/js/2.0abf6628.chunk.js.map": "/now-ui-dashboard-react/static/js/2.0abf6628.chunk.js.map",
+    "main.css": "/now-ui-dashboard-react/static/css/main.72e4e30b.chunk.css",
+    "main.js": "/now-ui-dashboard-react/static/js/main.f3fbadcc.chunk.js",
+    "main.js.map": "/now-ui-dashboard-react/static/js/main.f3fbadcc.chunk.js.map",
+    "runtime-main.js": "/now-ui-dashboard-react/static/js/runtime-main.ef4dcee8.js",
+    "runtime-main.js.map": "/now-ui-dashboard-react/static/js/runtime-main.ef4dcee8.js.map",
+    "static/css/2.829c9cb5.chunk.css": "/now-ui-dashboard-react/static/css/2.829c9cb5.chunk.css",
+    "static/js/2.c7cfc248.chunk.js": "/now-ui-dashboard-react/static/js/2.c7cfc248.chunk.js",
+    "static/js/2.c7cfc248.chunk.js.map": "/now-ui-dashboard-react/static/js/2.c7cfc248.chunk.js.map",
     "index.html": "/now-ui-dashboard-react/index.html",
-    "precache-manifest.eaf450748ccb1059103a9300e96bc8e5.js": "/now-ui-dashboard-react/precache-manifest.eaf450748ccb1059103a9300e96bc8e5.js",
+    "precache-manifest.e894a5c709a227780171470ea79266af.js": "/now-ui-dashboard-react/precache-manifest.e894a5c709a227780171470ea79266af.js",
     "service-worker.js": "/now-ui-dashboard-react/service-worker.js",
-    "static/css/2.903a27b1.chunk.css.map": "/now-ui-dashboard-react/static/css/2.903a27b1.chunk.css.map",
-    "static/css/main.2f2a5fbc.chunk.css.map": "/now-ui-dashboard-react/static/css/main.2f2a5fbc.chunk.css.map",
+    "static/css/2.829c9cb5.chunk.css.map": "/now-ui-dashboard-react/static/css/2.829c9cb5.chunk.css.map",
+    "static/css/main.72e4e30b.chunk.css.map": "/now-ui-dashboard-react/static/css/main.72e4e30b.chunk.css.map",
+    "static/js/2.c7cfc248.chunk.js.LICENSE.txt": "/now-ui-dashboard-react/static/js/2.c7cfc248.chunk.js.LICENSE.txt",
+    "static/js/main.f3fbadcc.chunk.js.LICENSE.txt": "/now-ui-dashboard-react/static/js/main.f3fbadcc.chunk.js.LICENSE.txt",
     "static/media/bg5.jpg": "/now-ui-dashboard-react/static/media/bg5.056eb058.jpg",
     "static/media/logo-white.svg": "/now-ui-dashboard-react/static/media/logo-white.eec7c7f6.svg",
     "static/media/mike.jpg": "/now-ui-dashboard-react/static/media/mike.aab414f7.jpg",
-    "static/media/now-ui-dashboard.scss?v1.2.0": "/now-ui-dashboard-react/static/media/nucleo-outline.8ebec31f.woff2"
-  }
+    "static/media/now-ui-dashboard.scss?v1.4.0": "/now-ui-dashboard-react/static/media/nucleo-outline.8ebec31f.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ef4dcee8.js",
+    "static/css/2.829c9cb5.chunk.css",
+    "static/js/2.c7cfc248.chunk.js",
+    "static/css/main.72e4e30b.chunk.css",
+    "static/js/main.f3fbadcc.chunk.js"
+  ]
 }

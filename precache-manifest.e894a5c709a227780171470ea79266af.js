@@ -1,27 +1,35 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2f7fbd1c16c93889b131370c1d4226b8",
+    "revision": "14b48a151950c5717e658b834ab2f0f0",
     "url": "/now-ui-dashboard-react/index.html"
   },
   {
-    "revision": "27de17f91ecb2d49a111",
-    "url": "/now-ui-dashboard-react/static/css/2.903a27b1.chunk.css"
+    "revision": "153e537d08a43ecf7b5b",
+    "url": "/now-ui-dashboard-react/static/css/2.829c9cb5.chunk.css"
   },
   {
-    "revision": "5a383f591e2c2fe42150",
-    "url": "/now-ui-dashboard-react/static/css/main.2f2a5fbc.chunk.css"
+    "revision": "ce2b129bf03b26e87b5c",
+    "url": "/now-ui-dashboard-react/static/css/main.72e4e30b.chunk.css"
   },
   {
-    "revision": "27de17f91ecb2d49a111",
-    "url": "/now-ui-dashboard-react/static/js/2.0abf6628.chunk.js"
+    "revision": "153e537d08a43ecf7b5b",
+    "url": "/now-ui-dashboard-react/static/js/2.c7cfc248.chunk.js"
   },
   {
-    "revision": "5a383f591e2c2fe42150",
-    "url": "/now-ui-dashboard-react/static/js/main.7d585262.chunk.js"
+    "revision": "589a987f1095ce8a9b0ed987fad0f793",
+    "url": "/now-ui-dashboard-react/static/js/2.c7cfc248.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5c5c1d61a25fa76a6548",
-    "url": "/now-ui-dashboard-react/static/js/runtime~main.6231c9ca.js"
+    "revision": "ce2b129bf03b26e87b5c",
+    "url": "/now-ui-dashboard-react/static/js/main.f3fbadcc.chunk.js"
+  },
+  {
+    "revision": "c5eafabe4b2314660f3de33fe2c9484b",
+    "url": "/now-ui-dashboard-react/static/js/main.f3fbadcc.chunk.js.LICENSE.txt"
+  },
+  {
+    "revision": "3117e657dfc56b42b75b",
+    "url": "/now-ui-dashboard-react/static/js/runtime-main.ef4dcee8.js"
   },
   {
     "revision": "056eb0586182a8d28273ad11c028e912",
