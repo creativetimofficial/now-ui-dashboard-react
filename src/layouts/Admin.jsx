@@ -51,8 +51,9 @@ class Dashboard extends React.Component {
   }
   componentDidUpdate(e) {
     if (e.history.action === "PUSH") {
-      this.mainPanel.current.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
       document.scrollingElement.scrollTop = 0;
+      this.mainPanel.current.scrollTop = 0;
     }
   }
   handleColorClick = color => {
