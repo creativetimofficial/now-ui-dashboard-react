@@ -1,6 +1,6 @@
 {
   "name": "now-ui-dashboard-react",
-  "version": "1.2.0",
+  "version": "1.4.0",
   "main": "dist/index.js",
   "private": true,
   "homepage": "https://demos.creative-tim.com/now-ui-dashboard-react/#/",
