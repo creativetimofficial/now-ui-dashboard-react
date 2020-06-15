@@ -1,11 +1,11 @@
 /*!
 
 =========================================================
-* Now UI Dashboard React - v1.2.0
+* Now UI Dashboard React - v1.4.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/now-ui-dashboard-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Copyright 2020 Creative Tim (https://www.creative-tim.com)
 * Licensed under MIT (https://github.com/creativetimofficial/now-ui-dashboard-react/blob/master/LICENSE.md)
 
 * Coded by Creative Tim
@@ -27,11 +27,11 @@ import {
   Form,
   Input,
   Row,
-  Col
+  Col,
 } from "reactstrap";
 
 // core components
-import PanelHeader from "components/PanelHeader/PanelHeader.jsx";
+import PanelHeader from "components/PanelHeader/PanelHeader.js";
 
 class User extends React.Component {
   render() {
@@ -166,7 +166,7 @@ class User extends React.Component {
                 </div>
                 <CardBody>
                   <div className="author">
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                    <a href="#pablo" onClick={(e) => e.preventDefault()}>
                       <img
                         alt="..."
                         className="avatar border-gray"
@@ -188,7 +188,7 @@ class User extends React.Component {
                     className="btn-neutral btn-icon btn-round"
                     color="default"
                     href="#pablo"
-                    onClick={e => e.preventDefault()}
+                    onClick={(e) => e.preventDefault()}
                     size="lg"
                   >
                     <i className="fab fa-facebook-f" />
@@ -197,7 +197,7 @@ class User extends React.Component {
                     className="btn-neutral btn-icon btn-round"
                     color="default"
                     href="#pablo"
-                    onClick={e => e.preventDefault()}
+                    onClick={(e) => e.preventDefault()}
                     size="lg"
                   >
                     <i className="fab fa-twitter" />
@@ -206,7 +206,7 @@ class User extends React.Component {
                     className="btn-neutral btn-icon btn-round"
                     color="default"
                     href="#pablo"
-                    onClick={e => e.preventDefault()}
+                    onClick={(e) => e.preventDefault()}
                     size="lg"
                   >
                     <i className="fab fa-google-plus-g" />

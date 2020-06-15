@@ -1,11 +1,11 @@
 /*!
 
 =========================================================
-* Now UI Dashboard React - v1.2.0
+* Now UI Dashboard React - v1.4.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/now-ui-dashboard-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Copyright 2020 Creative Tim (https://www.creative-tim.com)
 * Licensed under MIT (https://github.com/creativetimofficial/now-ui-dashboard-react/blob/master/LICENSE.md)
 
 * Coded by Creative Tim
@@ -21,17 +21,17 @@ import {
   withScriptjs,
   withGoogleMap,
   GoogleMap,
-  Marker
+  Marker,
 } from "react-google-maps";
 
 // reactstrap components
 import { Row, Col, Card, CardHeader, CardBody } from "reactstrap";
 
 // core components
-import PanelHeader from "components/PanelHeader/PanelHeader.jsx";
+import PanelHeader from "components/PanelHeader/PanelHeader.js";
 
 const MapWrapper = withScriptjs(
-  withGoogleMap(props => (
+  withGoogleMap((props) => (
     <GoogleMap
       defaultZoom={13}
       defaultCenter={{ lat: 40.748817, lng: -73.985428 }}
@@ -41,76 +41,76 @@ const MapWrapper = withScriptjs(
           {
             featureType: "water",
             elementType: "geometry",
-            stylers: [{ color: "#e9e9e9" }, { lightness: 17 }]
+            stylers: [{ color: "#e9e9e9" }, { lightness: 17 }],
           },
           {
             featureType: "landscape",
             elementType: "geometry",
-            stylers: [{ color: "#f5f5f5" }, { lightness: 20 }]
+            stylers: [{ color: "#f5f5f5" }, { lightness: 20 }],
           },
           {
             featureType: "road.highway",
             elementType: "geometry.fill",
-            stylers: [{ color: "#ffffff" }, { lightness: 17 }]
+            stylers: [{ color: "#ffffff" }, { lightness: 17 }],
           },
           {
             featureType: "road.highway",
             elementType: "geometry.stroke",
-            stylers: [{ color: "#ffffff" }, { lightness: 29 }, { weight: 0.2 }]
+            stylers: [{ color: "#ffffff" }, { lightness: 29 }, { weight: 0.2 }],
           },
           {
             featureType: "road.arterial",
             elementType: "geometry",
-            stylers: [{ color: "#ffffff" }, { lightness: 18 }]
+            stylers: [{ color: "#ffffff" }, { lightness: 18 }],
           },
           {
             featureType: "road.local",
             elementType: "geometry",
-            stylers: [{ color: "#ffffff" }, { lightness: 16 }]
+            stylers: [{ color: "#ffffff" }, { lightness: 16 }],
           },
           {
             featureType: "poi",
             elementType: "geometry",
-            stylers: [{ color: "#f5f5f5" }, { lightness: 21 }]
+            stylers: [{ color: "#f5f5f5" }, { lightness: 21 }],
           },
           {
             featureType: "poi.park",
             elementType: "geometry",
-            stylers: [{ color: "#dedede" }, { lightness: 21 }]
+            stylers: [{ color: "#dedede" }, { lightness: 21 }],
           },
           {
             elementType: "labels.text.stroke",
             stylers: [
               { visibility: "on" },
               { color: "#ffffff" },
-              { lightness: 16 }
-            ]
+              { lightness: 16 },
+            ],
           },
           {
             elementType: "labels.text.fill",
             stylers: [
               { saturation: 36 },
               { color: "#333333" },
-              { lightness: 40 }
-            ]
+              { lightness: 40 },
+            ],
           },
           { elementType: "labels.icon", stylers: [{ visibility: "off" }] },
           {
             featureType: "transit",
             elementType: "geometry",
-            stylers: [{ color: "#f2f2f2" }, { lightness: 19 }]
+            stylers: [{ color: "#f2f2f2" }, { lightness: 19 }],
           },
           {
             featureType: "administrative",
             elementType: "geometry.fill",
-            stylers: [{ color: "#fefefe" }, { lightness: 20 }]
+            stylers: [{ color: "#fefefe" }, { lightness: 20 }],
           },
           {
             featureType: "administrative",
             elementType: "geometry.stroke",
-            stylers: [{ color: "#fefefe" }, { lightness: 17 }, { weight: 1.2 }]
-          }
-        ]
+            stylers: [{ color: "#fefefe" }, { lightness: 17 }, { weight: 1.2 }],
+          },
+        ],
       }}
     >
       <Marker position={{ lat: 40.748817, lng: -73.985428 }} />

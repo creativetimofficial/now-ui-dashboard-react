@@ -1,11 +1,11 @@
 /*!
 
 =========================================================
-* Now UI Dashboard React - v1.2.0
+* Now UI Dashboard React - v1.4.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/now-ui-dashboard-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Copyright 2020 Creative Tim (https://www.creative-tim.com)
 * Licensed under MIT (https://github.com/creativetimofficial/now-ui-dashboard-react/blob/master/LICENSE.md)
 
 * Coded by Creative Tim
@@ -31,13 +31,28 @@ class Footer extends React.Component {
           <nav>
             <ul>
               <li>
-                <a href="https://www.creative-tim.com?ref=nudr-footer" target="_blank">Creative Tim</a>
+                <a
+                  href="https://www.creative-tim.com?ref=nudr-footer"
+                  target="_blank"
+                >
+                  Creative Tim
+                </a>
               </li>
               <li>
-                <a href="https://presentation.creative-tim.com?ref=nudr-footer" target="_blank">About Us</a>
+                <a
+                  href="https://presentation.creative-tim.com?ref=nudr-footer"
+                  target="_blank"
+                >
+                  About Us
+                </a>
               </li>
               <li>
-                <a href="https://blog.creative-tim.com?ref=nudr-footer" target="_blank">Blog</a>
+                <a
+                  href="https://blog.creative-tim.com?ref=nudr-footer"
+                  target="_blank"
+                >
+                  Blog
+                </a>
               </li>
             </ul>
           </nav>
@@ -68,7 +83,7 @@ class Footer extends React.Component {
 
 Footer.propTypes = {
   default: PropTypes.bool,
-  fluid: PropTypes.bool
+  fluid: PropTypes.bool,
 };
 
 export default Footer;

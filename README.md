@@ -2,7 +2,7 @@
 
 
 
-![version](https://img.shields.io/badge/version-1.2.0-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/now-ui-dashboard-react.svg?maxAge=2592000)]() [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/now-ui-dashboard-react.svg?maxAge=2592000)]() [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/E4aHAQy)
+![version](https://img.shields.io/badge/version-1.4.0-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/now-ui-dashboard-react.svg?maxAge=2592000)]() [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/now-ui-dashboard-react.svg?maxAge=2592000)]() [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/E4aHAQy)
 
 ![Product Gif](./now-ui-dashboard-react.gif)
 
@@ -98,56 +98,56 @@ Now UI Dashboard React
     │       └── now-ui-dashboard.scss
     ├── components
     │   ├── Card
-    │   │   └── Card.jsx
+    │   │   └── Card.js
     │   ├── Footer
-    │   │   └── Footer.jsx
+    │   │   └── Footer.js
     │   ├── FormInputs
-    │   │   └── FormInputs.jsx
+    │   │   └── FormInputs.js
     │   ├── Header
-    │   │   └── Header.jsx
+    │   │   └── Header.js
     │   ├── Sidebar
-    │   │   └── Sidebar.jsx
+    │   │   └── Sidebar.js
     │   └── Task
-    │       └── Task.jsx
+    │       └── Task.js
     ├── containers
     │   └── App
-    │       └── App.jsx
+    │       └── App.js
     ├── elements
     │   ├── CardElements
-    │   │   ├── CardLegend.jsx
-    │   │   ├── CardStatistics.jsx
-    │   │   ├── CardStats.jsx
-    │   │   └── UserCardAuthor.jsx
+    │   │   ├── CardLegend.js
+    │   │   ├── CardStatistics.js
+    │   │   ├── CardStats.js
+    │   │   └── UserCardAuthor.js
     │   ├── CustomButton
-    │   │   └── CustomButton.jsx
+    │   │   └── CustomButton.js
     │   ├── CustomCheckbox
-    │   │   └── CustomCheckbox.jsx
+    │   │   └── CustomCheckbox.js
     │   └── CustomRadio
-    │       └── CustomRadio.jsx
+    │       └── CustomRadio.js
     ├── index.js
     ├── routes
-    │   └── app.jsx
+    │   └── app.js
     ├── variables
-    │   ├── charts.jsx
-    │   ├── general.jsx
-    │   └── icons.jsx
+    │   ├── charts.js
+    │   ├── general.js
+    │   └── icons.js
     └── views
         ├── Dashboard
-        │   └── Dashboard.jsx
+        │   └── Dashboard.js
         ├── Icons
-        │   └── Icons.jsx
+        │   └── Icons.js
         ├── Maps
-        │   └── Maps.jsx
+        │   └── Maps.js
         ├── Notifications
         │   ├── NotificationSystem
-        │   │   └── NotificationSystem.jsx
-        │   └── Notifications.jsx
+        │   │   └── NotificationSystem.js
+        │   └── Notifications.js
         ├── Table
-        │   └── Tables.jsx
+        │   └── Tables.js
         ├── Typography
-        │   └── Typography.jsx
+        │   └── Typography.js
         └── User
-            └── User.jsx
+            └── User.js
 ```
 
 ## Browser Support
@@ -178,7 +178,7 @@ If you have questions or need help integrating the product please [contact us](h
 
 ## Licensing
 
-- Copyright 2018 Creative Tim (https://www.creative-tim.com)
+- Copyright 2020 Creative Tim (https://www.creative-tim.com)
 - Licensed under MIT (https://github.com/creativetimofficial/now-ui-dashboard-react/blob/master/LICENSE.md)
 
 ## Useful Links

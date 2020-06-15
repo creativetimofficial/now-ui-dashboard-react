@@ -1,11 +1,11 @@
 /*!
 
 =========================================================
-* Now UI Dashboard React - v1.2.0
+* Now UI Dashboard React - v1.4.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/now-ui-dashboard-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Copyright 2020 Creative Tim (https://www.creative-tim.com)
 * Licensed under MIT (https://github.com/creativetimofficial/now-ui-dashboard-react/blob/master/LICENSE.md)
 
 * Coded by Creative Tim
@@ -32,7 +32,7 @@ import {
   InputGroup,
   InputGroupText,
   InputGroupAddon,
-  Input
+  Input,
 } from "reactstrap";
 
 import routes from "routes.js";
@@ -41,26 +41,26 @@ class Header extends React.Component {
   state = {
     isOpen: false,
     dropdownOpen: false,
-    color: "transparent"
+    color: "transparent",
   };
   sidebarToggle = React.createRef();
   toggle = () => {
     if (this.state.isOpen) {
       this.setState({
-        color: "transparent"
+        color: "transparent",
       });
     } else {
       this.setState({
-        color: "white"
+        color: "white",
       });
     }
     this.setState({
-      isOpen: !this.state.isOpen
+      isOpen: !this.state.isOpen,
     });
   };
-  dropdownToggle = e => {
+  dropdownToggle = (e) => {
     this.setState({
-      dropdownOpen: !this.state.dropdownOpen
+      dropdownOpen: !this.state.dropdownOpen,
     });
   };
   getBrand = () => {
@@ -96,11 +96,11 @@ class Header extends React.Component {
   updateColor = () => {
     if (window.innerWidth < 993 && this.state.isOpen) {
       this.setState({
-        color: "white"
+        color: "white",
       });
     } else {
       this.setState({
-        color: "transparent"
+        color: "transparent",
       });
     }
   };
@@ -182,7 +182,7 @@ class Header extends React.Component {
               <Dropdown
                 nav
                 isOpen={this.state.dropdownOpen}
-                toggle={e => this.dropdownToggle(e)}
+                toggle={(e) => this.dropdownToggle(e)}
               >
                 <DropdownToggle caret nav>
                   <i className="now-ui-icons location_world" />

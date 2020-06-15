@@ -1,11 +1,11 @@
 /*!
 
 =========================================================
-* Now UI Dashboard React - v1.2.0
+* Now UI Dashboard React - v1.4.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/now-ui-dashboard-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Copyright 2020 Creative Tim (https://www.creative-tim.com)
 * Licensed under MIT (https://github.com/creativetimofficial/now-ui-dashboard-react/blob/master/LICENSE.md)
 
 * Coded by Creative Tim
@@ -26,11 +26,11 @@ import {
   CardBody,
   CardHeader,
   CardTitle,
-  Button
+  Button,
 } from "reactstrap";
 
 // core components
-import PanelHeader from "components/PanelHeader/PanelHeader.jsx";
+import PanelHeader from "components/PanelHeader/PanelHeader.js";
 
 class Upgrade extends Component {
   render() {
@@ -112,7 +112,7 @@ class Upgrade extends Component {
                       <tr>
                         <td />
                         <td className="text-center">Free</td>
-                        <td className="text-center">Just $59</td>
+                        <td className="text-center">From $59</td>
                       </tr>
                       <tr>
                         <td />
