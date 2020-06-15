@@ -1,6 +1,6 @@
 # Change Log
 
-## [1.4.0] date
+## [1.4.0] 2019-06-15
 ### Bug fixing
 - Changed all `jsx` files to `js` ones
 - Run prettier on all files, so there might be changes due to this
