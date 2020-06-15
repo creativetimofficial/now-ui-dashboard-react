@@ -98,56 +98,56 @@ Now UI Dashboard React
     │       └── now-ui-dashboard.scss
     ├── components
     │   ├── Card
-    │   │   └── Card.jsx
+    │   │   └── Card.js
     │   ├── Footer
-    │   │   └── Footer.jsx
+    │   │   └── Footer.js
     │   ├── FormInputs
-    │   │   └── FormInputs.jsx
+    │   │   └── FormInputs.js
     │   ├── Header
-    │   │   └── Header.jsx
+    │   │   └── Header.js
     │   ├── Sidebar
-    │   │   └── Sidebar.jsx
+    │   │   └── Sidebar.js
     │   └── Task
-    │       └── Task.jsx
+    │       └── Task.js
     ├── containers
     │   └── App
-    │       └── App.jsx
+    │       └── App.js
     ├── elements
     │   ├── CardElements
-    │   │   ├── CardLegend.jsx
-    │   │   ├── CardStatistics.jsx
-    │   │   ├── CardStats.jsx
-    │   │   └── UserCardAuthor.jsx
+    │   │   ├── CardLegend.js
+    │   │   ├── CardStatistics.js
+    │   │   ├── CardStats.js
+    │   │   └── UserCardAuthor.js
     │   ├── CustomButton
-    │   │   └── CustomButton.jsx
+    │   │   └── CustomButton.js
     │   ├── CustomCheckbox
-    │   │   └── CustomCheckbox.jsx
+    │   │   └── CustomCheckbox.js
     │   └── CustomRadio
-    │       └── CustomRadio.jsx
+    │       └── CustomRadio.js
     ├── index.js
     ├── routes
-    │   └── app.jsx
+    │   └── app.js
     ├── variables
-    │   ├── charts.jsx
-    │   ├── general.jsx
-    │   └── icons.jsx
+    │   ├── charts.js
+    │   ├── general.js
+    │   └── icons.js
     └── views
         ├── Dashboard
-        │   └── Dashboard.jsx
+        │   └── Dashboard.js
         ├── Icons
-        │   └── Icons.jsx
+        │   └── Icons.js
         ├── Maps
-        │   └── Maps.jsx
+        │   └── Maps.js
         ├── Notifications
         │   ├── NotificationSystem
-        │   │   └── NotificationSystem.jsx
-        │   └── Notifications.jsx
+        │   │   └── NotificationSystem.js
+        │   └── Notifications.js
         ├── Table
-        │   └── Tables.jsx
+        │   └── Tables.js
         ├── Typography
-        │   └── Typography.jsx
+        │   └── Typography.js
         └── User
-            └── User.jsx
+            └── User.js
 ```
 
 ## Browser Support
