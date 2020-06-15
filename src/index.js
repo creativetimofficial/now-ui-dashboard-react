@@ -17,8 +17,7 @@
 */
 import React from "react";
 import ReactDOM from "react-dom";
-import { createHashHistory } from "history";
-import { Router, Route, Switch, Redirect } from "react-router-dom";
+import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "assets/scss/now-ui-dashboard.scss?v1.4.0";
@@ -27,18 +26,16 @@ import "assets/css/demo.css";
 import AdminLayout from "layouts/Admin.js";
 import DocumentationLayout from "layouts/Documentation/Documentation.js";
 
-const hist = createHashHistory();
-
 ReactDOM.render(
-  <Router history={hist}>
+  <HashRouter>
     <Switch>
-      <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
+      <Route path="/admin" render={props => <AdminLayout {...props} />} />
       <Route
         path="/documentation"
-        render={(props) => <DocumentationLayout {...props} />}
+        render={props => <DocumentationLayout {...props} />}
       />
       <Redirect to="/admin/dashboard" />
     </Switch>
-  </Router>,
+  </HashRouter>,
   document.getElementById("root")
 );
