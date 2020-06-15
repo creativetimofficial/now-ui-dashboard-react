@@ -126,7 +126,7 @@ class FixedPlugin extends Component {
                 Download free
               </a>
               <NavLink
-                to={"/documentation/tutorial"}
+                to="/documentation/tutorial"
                 className="btn btn-block btn-round btn-info"
                 activeClassName="active"
               >
