@@ -35,10 +35,10 @@ var ps;
 function Admin(props) {
   const location = useLocation();
   const [backgroundColor, setBackgroundColor] = React.useState("blue");
-  mainPanel = React.useRef();
+  const mainPanel = React.useRef();
   React.useEffect(() => {
     if (navigator.platform.indexOf("Win") > -1) {
-      ps = new PerfectScrollbar(this.mainPanel.current);
+      ps = new PerfectScrollbar(mainPanel.current);
       document.body.classList.toggle("perfect-scrollbar-on");
     }
     return function cleanup() {
@@ -51,20 +51,16 @@ function Admin(props) {
   React.useEffect(() => {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
-    this.mainPanel.current.scrollTop = 0;
+    mainPanel.current.scrollTop = 0;
   }, [location]);
   const handleColorClick = (color) => {
     setBackgroundColor(color);
   };
   return (
     <div className="wrapper">
-      <Sidebar
-        {...props}
-        routes={routes}
-        backgroundColor={this.state.backgroundColor}
-      />
-      <div className="main-panel" ref={this.mainPanel}>
-        <DemoNavbar {...this.props} />
+      <Sidebar {...props} routes={routes} backgroundColor={backgroundColor} />
+      <div className="main-panel" ref={mainPanel}>
+        <DemoNavbar {...props} />
         <Switch>
           {routes.map((prop, key) => {
             return (
@@ -80,8 +76,8 @@ function Admin(props) {
         <Footer fluid />
       </div>
       <FixedPlugin
-        bgColor={this.state.backgroundColor}
-        handleColorClick={this.handleColorClick}
+        bgColor={backgroundColor}
+        handleColorClick={handleColorClick}
       />
     </div>
   );
