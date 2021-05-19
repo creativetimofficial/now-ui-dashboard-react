@@ -205,14 +205,16 @@ class Tutorial extends React.Component {
         </p>
         <ul>
           <li>
-            Install NodeJs from{" "}
+            Install NodeJS LTS from{" "}
             <a
               href="https://nodejs.org/en/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              NodeJs Official Page
-            </a>
+              NodeJS Official Page
+            </a>{" "}
+            (NOTE: Our products only work with NodeJS LTS version, and the
+            version of npm that NodeJS LTS comes with)
           </li>
           <li>
             Go to{" "}
@@ -269,25 +271,9 @@ class Tutorial extends React.Component {
               language="jsx"
               style={prism}
             >{`Module not found`}</SyntaxHighlighter>
-            you need to do the following
-            <SyntaxHighlighter
-              language="jsx"
-              style={prism}
-            >{`npm install --g cross-env`}</SyntaxHighlighter>
-            then change the script, for example the start script from
-            <SyntaxHighlighter
-              language="jsx"
-              style={prism}
-            >{`"start": "npm-run-all -p watch-css start-js",`}</SyntaxHighlighter>
-            to
-            <SyntaxHighlighter
-              language="jsx"
-              style={prism}
-            >{`"start": "NODE_PATH=./src npm-run-all -p watch-css start-js",`}</SyntaxHighlighter>
-            <b>
-              The same should be done with any other script that has the above
-              error.
-            </b>
+            You should check if in your root project folder you have a file
+            named <code>jsconfig.json</code>. If you do not have it, please copy
+            it from the downloaded folder.
           </li>
           <li>
             If you have an error containing{" "}
@@ -305,46 +291,6 @@ class Tutorial extends React.Component {
               {" "}
               here
             </a>
-          </li>
-          <li>
-            (Optional) You can create a new react application like this
-            <ul>
-              <li>
-                Run in terminal{" "}
-                <SyntaxHighlighter
-                  language="jsx"
-                  style={prism}
-                >{`npm install -g create-react-app`}</SyntaxHighlighter>
-              </li>
-              <li>Go to the folder where you want to create your app</li>
-              <li>
-                Run in terminal{" "}
-                <SyntaxHighlighter
-                  language="jsx"
-                  style={prism}
-                >{`create-react-app your-app-name`}</SyntaxHighlighter>
-              </li>
-              <li>
-                Navigate to <code>your-app-name</code>
-              </li>
-              <li>
-                Run in terminal{" "}
-                <SyntaxHighlighter
-                  language="jsx"
-                  style={prism}
-                >{`npm start`}</SyntaxHighlighter>
-              </li>
-              <li>
-                More information →{" "}
-                <a
-                  href="https://github.com/facebookincubator/create-react-app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  create-react-app
-                </a>
-              </li>
-            </ul>
           </li>
           <li>
             Navigate to{" "}
@@ -365,6 +311,16 @@ class Tutorial extends React.Component {
               rel="noopener noreferrer"
             >
               react
+            </a>
+          </li>
+          <li>
+            More information →{" "}
+            <a
+              href="https://github.com/facebookincubator/create-react-app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              create-react-app
             </a>
           </li>
         </ul>
