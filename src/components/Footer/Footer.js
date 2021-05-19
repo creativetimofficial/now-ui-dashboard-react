@@ -21,12 +21,10 @@ import { Container } from "reactstrap";
 // used for making the prop types of this component
 import PropTypes from "prop-types";
 
-function Footer() {
+function Footer(props) {
   return (
-    <footer
-      className={"footer" + (this.props.default ? " footer-default" : "")}
-    >
-      <Container fluid={this.props.fluid ? true : false}>
+    <footer className={"footer" + (props.default ? " footer-default" : "")}>
+      <Container fluid={props.fluid ? true : false}>
         <nav>
           <ul>
             <li>
