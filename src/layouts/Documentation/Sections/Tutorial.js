@@ -194,8 +194,8 @@ class Tutorial extends React.Component {
             reactstrap
           </a>{" "}
           (Bootstrap 4), so you can safely use it on your existing or new
-          Reactstrap project. No line of code from Bootstrap 4 was changed,
-          so you don't have to worry about undesired effects in your work.
+          Reactstrap project. No line of code from Bootstrap 4 was changed, so
+          you don't have to worry about undesired effects in your work.
         </p>
         <p>
           We provide all the necessary CSS resources. So, to immediately change
