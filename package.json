@@ -13,6 +13,7 @@
     "node-sass": "6.0.0",
     "perfect-scrollbar": "1.5.1",
     "react": "17.0.2",
+    "react-bootstrap-switch": "15.5.3",
     "react-chartjs-2": "3.0.3",
     "react-dom": "17.0.2",
     "react-github-button": "0.1.11",
