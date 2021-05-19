@@ -32,11 +32,6 @@ typescript                   3.9.5   →    4.2.4
 ### Warning
 _We will update Bootstrap to v5 when we'll release a new design for the Now UI products._
 _While in development some of the plugins that were used for this product will throw some warnings - note, this only happens in development, the UI or the functionality of the product is not affected, also, if the issues will persist in React 17, we'll drop usage of those plugins, and replace them with other ones._
-_Warnings might appear while doing an npm install - they do not affect the UI or the functionality of the product, and they appear because of NodeJS and not from the product itself._
-```
-
-```
-_In our next update we'll replace this plugin with something else to stop these._
 _You will also have the following message: found 80 vulnerabilities (1 low, 79 moderate). This comes from react-scripts, and will be fixed in the next version. NOTE: the product works as expected with these vulnerabilities._
 
 ## [1.4.0] 2020-06-15
