@@ -202,7 +202,7 @@ function Notifications() {
                           <Button
                             color="primary"
                             block
-                            onClick={() => this.notify("tl")}
+                            onClick={() => notify("tl")}
                           >
                             Top Left
                           </Button>
@@ -211,7 +211,7 @@ function Notifications() {
                           <Button
                             color="primary"
                             block
-                            onClick={() => this.notify("tc")}
+                            onClick={() => notify("tc")}
                           >
                             Top Center
                           </Button>
@@ -220,7 +220,7 @@ function Notifications() {
                           <Button
                             color="primary"
                             block
-                            onClick={() => this.notify("tr")}
+                            onClick={() => notify("tr")}
                           >
                             Top Right
                           </Button>
@@ -235,7 +235,7 @@ function Notifications() {
                           <Button
                             color="primary"
                             block
-                            onClick={() => this.notify("bl")}
+                            onClick={() => notify("bl")}
                           >
                             Bottom Left
                           </Button>
@@ -244,7 +244,7 @@ function Notifications() {
                           <Button
                             color="primary"
                             block
-                            onClick={() => this.notify("bc")}
+                            onClick={() => notify("bc")}
                           >
                             Bottom Center
                           </Button>
@@ -253,7 +253,7 @@ function Notifications() {
                           <Button
                             color="primary"
                             block
-                            onClick={() => this.notify("br")}
+                            onClick={() => notify("br")}
                           >
                             Bottom Right
                           </Button>
