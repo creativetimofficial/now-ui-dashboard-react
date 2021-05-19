@@ -162,7 +162,7 @@ class User extends React.Component {
             <Col md="4">
               <Card className="card-user">
                 <div className="image">
-                  <img alt="..." src={require("assets/img/bg5.jpg")} />
+                  <img alt="..." src={require("assets/img/bg5.jpg").default} />
                 </div>
                 <CardBody>
                   <div className="author">
@@ -170,7 +170,7 @@ class User extends React.Component {
                       <img
                         alt="..."
                         className="avatar border-gray"
-                        src={require("assets/img/mike.jpg")}
+                        src={require("assets/img/mike.jpg").default}
                       />
                       <h5 className="title">Mike Andrew</h5>
                     </a>
