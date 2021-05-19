@@ -39,17 +39,19 @@ const chartColor = "#FFFFFF";
 // General configuration for the charts with Line gradientStroke
 const gradientChartOptionsConfiguration = {
   maintainAspectRatio: false,
-  legend: {
-    display: false,
-  },
-  tooltips: {
-    bodySpacing: 4,
-    mode: "nearest",
-    intersect: 0,
-    position: "nearest",
-    xPadding: 10,
-    yPadding: 10,
-    caretPadding: 10,
+  plugins: {
+    legend: {
+      display: false,
+    },
+    tooltips: {
+      bodySpacing: 4,
+      mode: "nearest",
+      intersect: 0,
+      position: "nearest",
+      xPadding: 10,
+      yPadding: 10,
+      caretPadding: 10,
+    },
   },
   responsive: 1,
   scales: {
@@ -59,7 +61,7 @@ const gradientChartOptionsConfiguration = {
         display: false,
         maxTicksLimit: 7,
       },
-      gridLines: {
+      grid: {
         zeroLineColor: "transparent",
         drawTicks: false,
         display: false,
@@ -71,7 +73,7 @@ const gradientChartOptionsConfiguration = {
       ticks: {
         display: false,
       },
-      gridLines: {
+      grid: {
         zeroLineColor: "transparent",
         drawTicks: false,
         display: false,
@@ -86,22 +88,24 @@ const gradientChartOptionsConfiguration = {
 
 var gradientChartOptionsConfigurationWithNumbersAndGrid = {
   maintainAspectRatio: false,
-  legend: {
-    display: false,
-  },
-  tooltips: {
-    bodySpacing: 4,
-    mode: "nearest",
-    intersect: 0,
-    position: "nearest",
-    xPadding: 10,
-    yPadding: 10,
-    caretPadding: 10,
+  plugins: {
+    legend: {
+      display: false,
+    },
+    tooltips: {
+      bodySpacing: 4,
+      mode: "nearest",
+      intersect: 0,
+      position: "nearest",
+      xPadding: 10,
+      yPadding: 10,
+      caretPadding: 10,
+    },
   },
   responsive: 1,
   scales: {
     y: {
-      gridLines: {
+      grid: {
         zeroLineColor: "transparent",
         drawBorder: false,
       },
@@ -114,7 +118,7 @@ var gradientChartOptionsConfigurationWithNumbersAndGrid = {
       ticks: {
         display: false,
       },
-      gridLines: {
+      grid: {
         zeroLineColor: "transparent",
         drawTicks: false,
         display: false,
@@ -276,6 +280,7 @@ const dashboardShippedProductsChart = {
           fill: true,
           backgroundColor: gradientFill,
           borderWidth: 2,
+          tension: 0.4,
           data: [542, 480, 430, 550, 530, 453, 380, 434, 568, 610, 700, 630],
         },
       ],
@@ -312,6 +317,7 @@ const dashboardAllProductsChart = {
           fill: true,
           backgroundColor: gradientFill,
           borderWidth: 2,
+          tension: 0.4,
           data: [40, 500, 650, 700, 1200, 1250, 1300, 1900],
         },
       ],
@@ -365,17 +371,19 @@ const dashboard24HoursPerformanceChart = {
   },
   options: {
     maintainAspectRatio: false,
-    legend: {
-      display: false,
-    },
-    tooltips: {
-      bodySpacing: 4,
-      mode: "nearest",
-      intersect: 0,
-      position: "nearest",
-      xPadding: 10,
-      yPadding: 10,
-      caretPadding: 10,
+    plugins: {
+      legend: {
+        display: false,
+      },
+      tooltips: {
+        bodySpacing: 4,
+        mode: "nearest",
+        intersect: 0,
+        position: "nearest",
+        xPadding: 10,
+        yPadding: 10,
+        caretPadding: 10,
+      },
     },
     responsive: 1,
     scales: {
@@ -383,7 +391,7 @@ const dashboard24HoursPerformanceChart = {
         ticks: {
           maxTicksLimit: 7,
         },
-        gridLines: {
+        grid: {
           zeroLineColor: "transparent",
           drawBorder: false,
         },
@@ -393,7 +401,7 @@ const dashboard24HoursPerformanceChart = {
         ticks: {
           display: false,
         },
-        gridLines: {
+        grid: {
           zeroLineColor: "transparent",
           drawTicks: false,
           display: false,
