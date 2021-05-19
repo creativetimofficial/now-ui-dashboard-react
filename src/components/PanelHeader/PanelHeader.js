@@ -17,15 +17,15 @@
 */
 import React from "react";
 
-function PanelHeader() {
+function PanelHeader(props) {
   return (
     <div
       className={
         "panel-header " +
-        (this.props.size !== undefined ? "panel-header-" + this.props.size : "")
+        (props.size !== undefined ? "panel-header-" + props.size : "")
       }
     >
-      {this.props.content}
+      {props.content}
     </div>
   );
 }
