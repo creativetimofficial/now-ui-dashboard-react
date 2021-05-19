@@ -172,6 +172,7 @@ const dashboardPanelChart = {
           fill: true,
           backgroundColor: gradientFill,
           borderWidth: 2,
+          tension: 0.4,
           data: [50, 150, 100, 190, 130, 90, 150, 160, 120, 140, 190, 95],
         },
       ],
@@ -186,22 +187,22 @@ const dashboardPanelChart = {
         bottom: 0,
       },
     },
+    plugins: {
+      legend: {
+        display: false,
+      },
+      tooltips: {
+        backgroundColor: "#fff",
+        titleFontColor: "#333",
+        bodyFontColor: "#666",
+        bodySpacing: 4,
+        xPadding: 12,
+        mode: "nearest",
+        intersect: 0,
+        position: "nearest",
+      },
+    },
     maintainAspectRatio: false,
-    tooltips: {
-      backgroundColor: "#fff",
-      titleFontColor: "#333",
-      bodyFontColor: "#666",
-      bodySpacing: 4,
-      xPadding: 12,
-      mode: "nearest",
-      intersect: 0,
-      position: "nearest",
-    },
-    legend: {
-      position: "bottom",
-      fillStyle: "#FFF",
-      display: false,
-    },
     scales: {
       y: {
         ticks: {
@@ -211,7 +212,7 @@ const dashboardPanelChart = {
           maxTicksLimit: 5,
           padding: 10,
         },
-        gridLines: {
+        grid: {
           drawTicks: true,
           drawBorder: false,
           display: true,
@@ -220,7 +221,7 @@ const dashboardPanelChart = {
         },
       },
       x: {
-        gridLines: {
+        grid: {
           display: false,
           color: "rgba(255,255,255,0.1)",
         },
