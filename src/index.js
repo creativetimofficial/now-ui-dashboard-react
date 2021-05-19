@@ -29,10 +29,10 @@ import DocumentationLayout from "layouts/Documentation/Documentation.js";
 ReactDOM.render(
   <HashRouter>
     <Switch>
-      <Route path="/admin" render={props => <AdminLayout {...props} />} />
+      <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
       <Route
         path="/documentation"
-        render={props => <DocumentationLayout {...props} />}
+        render={(props) => <DocumentationLayout {...props} />}
       />
       <Redirect to="/admin/dashboard" />
     </Switch>
