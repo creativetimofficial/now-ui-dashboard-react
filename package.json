@@ -31,6 +31,7 @@
     "map-sass": "node-sass src/assets/scss/now-ui-dashboard.scss src/assets/css/now-ui-dashboard.css --source-map true"
   },
   "optionalDependencies": {
+    "@babel/core": "7.14.3",
     "jquery": "3.6.0",
     "typescript": "4.2.4"
   },
