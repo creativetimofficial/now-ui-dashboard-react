@@ -65,7 +65,7 @@ function Sidebar(props) {
           Creative Tim
         </a>
       </div>
-      <div className="sidebar-wrapper" ref="sidebar">
+      <div className="sidebar-wrapper" ref={sidebar}>
         <Nav>
           {props.routes.map((prop, key) => {
             if (prop.redirect) return null;
