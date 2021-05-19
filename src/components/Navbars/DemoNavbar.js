@@ -42,7 +42,7 @@ function DemoNavbar(props) {
   const [isOpen, setIsOpen] = React.useState(false);
   const [dropdownOpen, setDropdownOpen] = React.useState(false);
   const [color, setColor] = React.useState("transparent");
-  sidebarToggle = React.useRef();
+  const sidebarToggle = React.useRef();
   const toggle = () => {
     if (isOpen) {
       setColor("transparent");
@@ -85,7 +85,7 @@ function DemoNavbar(props) {
   };
   // function that adds color white/transparent to the navbar on resize (this is for the collapse)
   const updateColor = () => {
-    if (window.innerWidth < 993 && this.state.isOpen) {
+    if (window.innerWidth < 993 && isOpen) {
       setColor("white");
     } else {
       setColor("transparent");
@@ -100,7 +100,7 @@ function DemoNavbar(props) {
       document.documentElement.className.indexOf("nav-open") !== -1
     ) {
       document.documentElement.classList.toggle("nav-open");
-      this.sidebarToggle.current.classList.toggle("toggled");
+      sidebarToggle.current.classList.toggle("toggled");
     }
   }, [location]);
   return (
@@ -109,14 +109,14 @@ function DemoNavbar(props) {
       color={
         props.location.pathname.indexOf("full-screen-maps") !== -1
           ? "white"
-          : this.state.color
+          : color
       }
       expand="lg"
       className={
         props.location.pathname.indexOf("full-screen-maps") !== -1
           ? "navbar-absolute fixed-top"
           : "navbar-absolute fixed-top " +
-            (this.state.color === "transparent" ? "navbar-transparent " : "")
+            (color === "transparent" ? "navbar-transparent " : "")
       }
     >
       <Container fluid>
@@ -124,27 +124,23 @@ function DemoNavbar(props) {
           <div className="navbar-toggle">
             <button
               type="button"
-              ref={this.sidebarToggle}
+              ref={sidebarToggle}
               className="navbar-toggler"
-              onClick={() => this.openSidebar()}
+              onClick={() => openSidebar()}
             >
               <span className="navbar-toggler-bar bar1" />
               <span className="navbar-toggler-bar bar2" />
               <span className="navbar-toggler-bar bar3" />
             </button>
           </div>
-          <NavbarBrand href="/">{this.getBrand()}</NavbarBrand>
+          <NavbarBrand href="/">{getBrand()}</NavbarBrand>
         </div>
-        <NavbarToggler onClick={this.toggle}>
+        <NavbarToggler onClick={toggle}>
           <span className="navbar-toggler-bar navbar-kebab" />
           <span className="navbar-toggler-bar navbar-kebab" />
           <span className="navbar-toggler-bar navbar-kebab" />
         </NavbarToggler>
-        <Collapse
-          isOpen={this.state.isOpen}
-          navbar
-          className="justify-content-end"
-        >
+        <Collapse isOpen={isOpen} navbar className="justify-content-end">
           <form>
             <InputGroup className="no-border">
               <Input placeholder="Search..." />
@@ -166,8 +162,8 @@ function DemoNavbar(props) {
             </NavItem>
             <Dropdown
               nav
-              isOpen={this.state.dropdownOpen}
-              toggle={(e) => this.dropdownToggle(e)}
+              isOpen={dropdownOpen}
+              toggle={(e) => dropdownToggle(e)}
             >
               <DropdownToggle caret nav>
                 <i className="now-ui-icons location_world" />
