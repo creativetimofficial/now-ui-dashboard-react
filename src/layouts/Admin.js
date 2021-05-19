@@ -20,7 +20,7 @@ import React from "react";
 import PerfectScrollbar from "perfect-scrollbar";
 
 // reactstrap components
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch, Redirect, useLocation } from "react-router-dom";
 
 // core components
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
@@ -32,64 +32,59 @@ import routes from "routes.js";
 
 var ps;
 
-class Dashboard extends React.Component {
-  state = {
-    backgroundColor: "blue",
-  };
-  mainPanel = React.createRef();
-  componentDidMount() {
+function Admin(props) {
+  const location = useLocation();
+  const [backgroundColor, setBackgroundColor] = React.useState("blue");
+  mainPanel = React.useRef();
+  React.useEffect(() => {
     if (navigator.platform.indexOf("Win") > -1) {
       ps = new PerfectScrollbar(this.mainPanel.current);
       document.body.classList.toggle("perfect-scrollbar-on");
     }
-  }
-  componentWillUnmount() {
-    if (navigator.platform.indexOf("Win") > -1) {
-      ps.destroy();
-      document.body.classList.toggle("perfect-scrollbar-on");
-    }
-  }
-  componentDidUpdate(e) {
-    if (e.history.action === "PUSH") {
-      document.documentElement.scrollTop = 0;
-      document.scrollingElement.scrollTop = 0;
-      this.mainPanel.current.scrollTop = 0;
-    }
-  }
-  handleColorClick = (color) => {
-    this.setState({ backgroundColor: color });
+    return function cleanup() {
+      if (navigator.platform.indexOf("Win") > -1) {
+        ps.destroy();
+        document.body.classList.toggle("perfect-scrollbar-on");
+      }
+    };
+  });
+  React.useEffect(() => {
+    document.documentElement.scrollTop = 0;
+    document.scrollingElement.scrollTop = 0;
+    this.mainPanel.current.scrollTop = 0;
+  }, [location]);
+  const handleColorClick = (color) => {
+    setBackgroundColor(color);
   };
-  render() {
-    return (
-      <div className="wrapper">
-        <Sidebar
-          {...this.props}
-          routes={routes}
-          backgroundColor={this.state.backgroundColor}
-        />
-        <div className="main-panel" ref={this.mainPanel}>
-          <DemoNavbar {...this.props} />
-          <Switch>
-            {routes.map((prop, key) => {
-              return (
-                <Route
-                  path={prop.layout + prop.path}
-                  component={prop.component}
-                  key={key}
-                />
-              );
-            })}
-            <Redirect from="/admin" to="/admin/dashboard" />
-          </Switch>
-          <Footer fluid />
-        </div>
-        <FixedPlugin
-          bgColor={this.state.backgroundColor}
-          handleColorClick={this.handleColorClick}
-        />
+  return (
+    <div className="wrapper">
+      <Sidebar
+        {...props}
+        routes={routes}
+        backgroundColor={this.state.backgroundColor}
+      />
+      <div className="main-panel" ref={this.mainPanel}>
+        <DemoNavbar {...this.props} />
+        <Switch>
+          {routes.map((prop, key) => {
+            return (
+              <Route
+                path={prop.layout + prop.path}
+                component={prop.component}
+                key={key}
+              />
+            );
+          })}
+          <Redirect from="/admin" to="/admin/dashboard" />
+        </Switch>
+        <Footer fluid />
       </div>
-    );
-  }
+      <FixedPlugin
+        bgColor={this.state.backgroundColor}
+        handleColorClick={this.handleColorClick}
+      />
+    </div>
+  );
 }
 
-export default Dashboard;
+export default Admin;
