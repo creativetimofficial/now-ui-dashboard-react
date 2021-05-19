@@ -9,11 +9,11 @@ gulp.task("licenses", async function () {
       gap.prependText(`/*!
 
 =========================================================
-* Now UI Dashboard React - v1.4.0
+* Now UI Dashboard React - v1.5.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/now-ui-dashboard-react
-* Copyright 2020 Creative Tim (http://www.creative-tim.com)
+* Copyright 2021 Creative Tim (http://www.creative-tim.com)
 
 * Coded by Creative Tim
 
@@ -32,11 +32,11 @@ gulp.task("licenses", async function () {
       gap.prependText(`/*!
 
   =========================================================
-  * Now UI Dashboard React - v1.4.0
+  * Now UI Dashboard React - v1.5.0
   =========================================================
 
   * Product Page: https://www.creative-tim.com/product/now-ui-dashboard-react
-  * Copyright 2020 Creative Tim (http://www.creative-tim.com)
+  * Copyright 2021 Creative Tim (http://www.creative-tim.com)
 
   * Coded by Creative Tim
 
@@ -55,11 +55,11 @@ gulp.task("licenses", async function () {
       gap.prependText(`<!--
 
 =========================================================
-* Now UI Dashboard React - v1.4.0
+* Now UI Dashboard React - v1.5.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/now-ui-dashboard-react
-* Copyright 2020 Creative Tim (http://www.creative-tim.com)
+* Copyright 2021 Creative Tim (http://www.creative-tim.com)
 
 * Coded by Creative Tim
 
@@ -78,11 +78,11 @@ gulp.task("licenses", async function () {
       gap.prependText(`/*!
 
 =========================================================
-* Now UI Dashboard React - v1.4.0
+* Now UI Dashboard React - v1.5.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/now-ui-dashboard-react
-* Copyright 2020 Creative Tim (http://www.creative-tim.com)
+* Copyright 2021 Creative Tim (http://www.creative-tim.com)
 
 * Coded by Creative Tim
 

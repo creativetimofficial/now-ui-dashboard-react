@@ -1,6 +1,40 @@
 # Change Log
 
-## [1.4.0] date
+## [1.5.0] 2021-05-19
+### Bug fixing
+### Major style changes
+### Deleted components
+### Added components
+### Deleted dependencies
+- `history` (no longer needed due to the `BrowserRouter`)
+- `react-google-maps` (no longer maintained, so we'll use simple Google Maps API)
+- `@types/googlemaps`
+- `@types/markerclustererplus`
+- `@types/react`
+### Added dependencies
+- `@babel/core@7.14.3` (to stop warnings on install)
+### Updated dependencies
+```
+bootstrap                    4.5.0   →    4.6.0
+chart.js                     2.9.3   →    3.2.1
+gulp-append-prepend          1.0.8   →    1.0.9
+node-sass                   4.14.1   →    6.0.0
+perfect-scrollbar            1.5.0   →    1.5.1
+react                      16.13.1   →   17.0.2
+react-chartjs-2              2.9.0   →    3.0.3
+react-dom                  16.13.1   →   17.0.2
+react-notification-alert    0.0.12   →   0.0.13
+react-scripts                3.4.1   →    4.0.3
+reactstrap                   8.4.1   →    8.9.0
+jquery                       3.5.1   →    3.6.0
+typescript                   3.9.5   →    4.2.4
+```
+### Warning
+_We will update Bootstrap to v5 when we'll release a new design for the Now UI products._
+_While in development some of the plugins that were used for this product will throw some warnings - note, this only happens in development, the UI or the functionality of the product is not affected, also, if the issues will persist in React 17, we'll drop usage of those plugins, and replace them with other ones._
+_You will also have the following message: found 80 vulnerabilities (1 low, 79 moderate). This comes from react-scripts, and will be fixed in the next version. NOTE: the product works as expected with these vulnerabilities._
+
+## [1.4.0] 2020-06-15
 ### Bug fixing
 - Changed all `jsx` files to `js` ones
 - Run prettier on all files, so there might be changes due to this
