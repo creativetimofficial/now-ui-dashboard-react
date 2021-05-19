@@ -53,35 +53,31 @@ const gradientChartOptionsConfiguration = {
   },
   responsive: 1,
   scales: {
-    yAxes: [
-      {
-        display: 0,
-        ticks: {
-          display: false,
-          maxTicksLimit: 7,
-        },
-        gridLines: {
-          zeroLineColor: "transparent",
-          drawTicks: false,
-          display: false,
-          drawBorder: false,
-        },
+    y: {
+      display: 0,
+      ticks: {
+        display: false,
+        maxTicksLimit: 7,
       },
-    ],
-    xAxes: [
-      {
-        display: 0,
-        ticks: {
-          display: false,
-        },
-        gridLines: {
-          zeroLineColor: "transparent",
-          drawTicks: false,
-          display: false,
-          drawBorder: false,
-        },
+      gridLines: {
+        zeroLineColor: "transparent",
+        drawTicks: false,
+        display: false,
+        drawBorder: false,
       },
-    ],
+    },
+    x: {
+      display: 0,
+      ticks: {
+        display: false,
+      },
+      gridLines: {
+        zeroLineColor: "transparent",
+        drawTicks: false,
+        display: false,
+        drawBorder: false,
+      },
+    },
   },
   layout: {
     padding: { left: 0, right: 0, top: 15, bottom: 15 },
@@ -104,31 +100,27 @@ var gradientChartOptionsConfigurationWithNumbersAndGrid = {
   },
   responsive: 1,
   scales: {
-    yAxes: [
-      {
-        gridLines: {
-          zeroLineColor: "transparent",
-          drawBorder: false,
-        },
-        ticks: {
-          maxTicksLimit: 7,
-        },
+    y: {
+      gridLines: {
+        zeroLineColor: "transparent",
+        drawBorder: false,
       },
-    ],
-    xAxes: [
-      {
-        display: 0,
-        ticks: {
-          display: false,
-        },
-        gridLines: {
-          zeroLineColor: "transparent",
-          drawTicks: false,
-          display: false,
-          drawBorder: false,
-        },
+      ticks: {
+        maxTicksLimit: 7,
       },
-    ],
+    },
+    x: {
+      display: 0,
+      ticks: {
+        display: false,
+      },
+      gridLines: {
+        zeroLineColor: "transparent",
+        drawTicks: false,
+        display: false,
+        drawBorder: false,
+      },
+    },
   },
   layout: {
     padding: { left: 0, right: 0, top: 15, bottom: 15 },
@@ -211,37 +203,33 @@ const dashboardPanelChart = {
       display: false,
     },
     scales: {
-      yAxes: [
-        {
-          ticks: {
-            fontColor: "rgba(255,255,255,0.4)",
-            fontStyle: "bold",
-            beginAtZero: true,
-            maxTicksLimit: 5,
-            padding: 10,
-          },
-          gridLines: {
-            drawTicks: true,
-            drawBorder: false,
-            display: true,
-            color: "rgba(255,255,255,0.1)",
-            zeroLineColor: "transparent",
-          },
+      y: {
+        ticks: {
+          fontColor: "rgba(255,255,255,0.4)",
+          fontStyle: "bold",
+          beginAtZero: true,
+          maxTicksLimit: 5,
+          padding: 10,
         },
-      ],
-      xAxes: [
-        {
-          gridLines: {
-            display: false,
-            color: "rgba(255,255,255,0.1)",
-          },
-          ticks: {
-            padding: 10,
-            fontColor: "rgba(255,255,255,0.4)",
-            fontStyle: "bold",
-          },
+        gridLines: {
+          drawTicks: true,
+          drawBorder: false,
+          display: true,
+          color: "rgba(255,255,255,0.1)",
+          zeroLineColor: "transparent",
         },
-      ],
+      },
+      x: {
+        gridLines: {
+          display: false,
+          color: "rgba(255,255,255,0.1)",
+        },
+        ticks: {
+          padding: 10,
+          fontColor: "rgba(255,255,255,0.4)",
+          fontStyle: "bold",
+        },
+      },
     },
   },
 };
@@ -390,31 +378,27 @@ const dashboard24HoursPerformanceChart = {
     },
     responsive: 1,
     scales: {
-      yAxes: [
-        {
-          ticks: {
-            maxTicksLimit: 7,
-          },
-          gridLines: {
-            zeroLineColor: "transparent",
-            drawBorder: false,
-          },
+      y: {
+        ticks: {
+          maxTicksLimit: 7,
         },
-      ],
-      xAxes: [
-        {
-          display: 0,
-          ticks: {
-            display: false,
-          },
-          gridLines: {
-            zeroLineColor: "transparent",
-            drawTicks: false,
-            display: false,
-            drawBorder: false,
-          },
+        gridLines: {
+          zeroLineColor: "transparent",
+          drawBorder: false,
         },
-      ],
+      },
+      x: {
+        display: 0,
+        ticks: {
+          display: false,
+        },
+        gridLines: {
+          zeroLineColor: "transparent",
+          drawTicks: false,
+          display: false,
+          drawBorder: false,
+        },
+      },
     },
     layout: {
       padding: { left: 0, right: 0, top: 15, bottom: 15 },
