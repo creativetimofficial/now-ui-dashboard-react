@@ -140,32 +140,30 @@ const MapWrapper = () => {
   );
 };
 
-class FullScreenMap extends React.Component {
-  render() {
-    return (
-      <>
-        <PanelHeader size="sm" />
-        <div className="content">
-          <Row>
-            <Col xs={12}>
-              <Card>
-                <CardHeader>Google Maps</CardHeader>
-                <CardBody>
-                  <div
-                    id="map"
-                    className="map"
-                    style={{ position: "relative", overflow: "hidden" }}
-                  >
-                    <MapWrapper />
-                  </div>
-                </CardBody>
-              </Card>
-            </Col>
-          </Row>
-        </div>
-      </>
-    );
-  }
+function FullScreenMap() {
+  return (
+    <>
+      <PanelHeader size="sm" />
+      <div className="content">
+        <Row>
+          <Col xs={12}>
+            <Card>
+              <CardHeader>Google Maps</CardHeader>
+              <CardBody>
+                <div
+                  id="map"
+                  className="map"
+                  style={{ position: "relative", overflow: "hidden" }}
+                >
+                  <MapWrapper />
+                </div>
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
+      </div>
+    </>
+  );
 }
 
 export default FullScreenMap;
