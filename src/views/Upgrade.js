@@ -1,12 +1,12 @@
 /*!
 
 =========================================================
-* Now UI Dashboard React - v1.4.0
+* Now UI Dashboard React - v1.5.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/now-ui-dashboard-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/now-ui-dashboard-react/blob/master/LICENSE.md)
+* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/now-ui-dashboard-react/blob/main/LICENSE.md)
 
 * Coded by Creative Tim
 
