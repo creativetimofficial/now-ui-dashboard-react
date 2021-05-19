@@ -72,7 +72,7 @@ function Sidebar(props) {
             return (
               <li
                 className={
-                  this.activeRoute(prop.layout + prop.path) +
+                  activeRoute(prop.layout + prop.path) +
                   (prop.pro ? " active active-pro" : "")
                 }
                 key={key}
