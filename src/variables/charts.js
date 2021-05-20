@@ -1,12 +1,12 @@
 /*!
 
 =========================================================
-* Now UI Dashboard React - v1.4.0
+* Now UI Dashboard React - v1.5.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/now-ui-dashboard-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/now-ui-dashboard-react/blob/master/LICENSE.md)
+* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/now-ui-dashboard-react/blob/main/LICENSE.md)
 
 * Coded by Creative Tim
 
@@ -39,49 +39,47 @@ const chartColor = "#FFFFFF";
 // General configuration for the charts with Line gradientStroke
 const gradientChartOptionsConfiguration = {
   maintainAspectRatio: false,
-  legend: {
-    display: false,
-  },
-  tooltips: {
-    bodySpacing: 4,
-    mode: "nearest",
-    intersect: 0,
-    position: "nearest",
-    xPadding: 10,
-    yPadding: 10,
-    caretPadding: 10,
+  plugins: {
+    legend: {
+      display: false,
+    },
+    tooltips: {
+      bodySpacing: 4,
+      mode: "nearest",
+      intersect: 0,
+      position: "nearest",
+      xPadding: 10,
+      yPadding: 10,
+      caretPadding: 10,
+    },
   },
   responsive: 1,
   scales: {
-    yAxes: [
-      {
-        display: 0,
-        ticks: {
-          display: false,
-          maxTicksLimit: 7,
-        },
-        gridLines: {
-          zeroLineColor: "transparent",
-          drawTicks: false,
-          display: false,
-          drawBorder: false,
-        },
+    y: {
+      display: 0,
+      ticks: {
+        display: false,
+        maxTicksLimit: 7,
       },
-    ],
-    xAxes: [
-      {
-        display: 0,
-        ticks: {
-          display: false,
-        },
-        gridLines: {
-          zeroLineColor: "transparent",
-          drawTicks: false,
-          display: false,
-          drawBorder: false,
-        },
+      grid: {
+        zeroLineColor: "transparent",
+        drawTicks: false,
+        display: false,
+        drawBorder: false,
       },
-    ],
+    },
+    x: {
+      display: 0,
+      ticks: {
+        display: false,
+      },
+      grid: {
+        zeroLineColor: "transparent",
+        drawTicks: false,
+        display: false,
+        drawBorder: false,
+      },
+    },
   },
   layout: {
     padding: { left: 0, right: 0, top: 15, bottom: 15 },
@@ -90,45 +88,43 @@ const gradientChartOptionsConfiguration = {
 
 var gradientChartOptionsConfigurationWithNumbersAndGrid = {
   maintainAspectRatio: false,
-  legend: {
-    display: false,
-  },
-  tooltips: {
-    bodySpacing: 4,
-    mode: "nearest",
-    intersect: 0,
-    position: "nearest",
-    xPadding: 10,
-    yPadding: 10,
-    caretPadding: 10,
+  plugins: {
+    legend: {
+      display: false,
+    },
+    tooltips: {
+      bodySpacing: 4,
+      mode: "nearest",
+      intersect: 0,
+      position: "nearest",
+      xPadding: 10,
+      yPadding: 10,
+      caretPadding: 10,
+    },
   },
   responsive: 1,
   scales: {
-    yAxes: [
-      {
-        gridLines: {
-          zeroLineColor: "transparent",
-          drawBorder: false,
-        },
-        ticks: {
-          maxTicksLimit: 7,
-        },
+    y: {
+      grid: {
+        zeroLineColor: "transparent",
+        drawBorder: false,
       },
-    ],
-    xAxes: [
-      {
-        display: 0,
-        ticks: {
-          display: false,
-        },
-        gridLines: {
-          zeroLineColor: "transparent",
-          drawTicks: false,
-          display: false,
-          drawBorder: false,
-        },
+      ticks: {
+        maxTicksLimit: 7,
       },
-    ],
+    },
+    x: {
+      display: 0,
+      ticks: {
+        display: false,
+      },
+      grid: {
+        zeroLineColor: "transparent",
+        drawTicks: false,
+        display: false,
+        drawBorder: false,
+      },
+    },
   },
   layout: {
     padding: { left: 0, right: 0, top: 15, bottom: 15 },
@@ -180,6 +176,7 @@ const dashboardPanelChart = {
           fill: true,
           backgroundColor: gradientFill,
           borderWidth: 2,
+          tension: 0.4,
           data: [50, 150, 100, 190, 130, 90, 150, 160, 120, 140, 190, 95],
         },
       ],
@@ -194,54 +191,50 @@ const dashboardPanelChart = {
         bottom: 0,
       },
     },
+    plugins: {
+      legend: {
+        display: false,
+      },
+      tooltips: {
+        backgroundColor: "#fff",
+        titleFontColor: "#333",
+        bodyFontColor: "#666",
+        bodySpacing: 4,
+        xPadding: 12,
+        mode: "nearest",
+        intersect: 0,
+        position: "nearest",
+      },
+    },
     maintainAspectRatio: false,
-    tooltips: {
-      backgroundColor: "#fff",
-      titleFontColor: "#333",
-      bodyFontColor: "#666",
-      bodySpacing: 4,
-      xPadding: 12,
-      mode: "nearest",
-      intersect: 0,
-      position: "nearest",
-    },
-    legend: {
-      position: "bottom",
-      fillStyle: "#FFF",
-      display: false,
-    },
     scales: {
-      yAxes: [
-        {
-          ticks: {
-            fontColor: "rgba(255,255,255,0.4)",
-            fontStyle: "bold",
-            beginAtZero: true,
-            maxTicksLimit: 5,
-            padding: 10,
-          },
-          gridLines: {
-            drawTicks: true,
-            drawBorder: false,
-            display: true,
-            color: "rgba(255,255,255,0.1)",
-            zeroLineColor: "transparent",
-          },
+      y: {
+        ticks: {
+          fontColor: "rgba(255,255,255,0.4)",
+          fontStyle: "bold",
+          beginAtZero: true,
+          maxTicksLimit: 5,
+          padding: 10,
         },
-      ],
-      xAxes: [
-        {
-          gridLines: {
-            display: false,
-            color: "rgba(255,255,255,0.1)",
-          },
-          ticks: {
-            padding: 10,
-            fontColor: "rgba(255,255,255,0.4)",
-            fontStyle: "bold",
-          },
+        grid: {
+          drawTicks: true,
+          drawBorder: false,
+          display: true,
+          color: "rgba(255,255,255,0.1)",
+          zeroLineColor: "transparent",
         },
-      ],
+      },
+      x: {
+        grid: {
+          display: false,
+          color: "rgba(255,255,255,0.1)",
+        },
+        ticks: {
+          padding: 10,
+          fontColor: "rgba(255,255,255,0.4)",
+          fontStyle: "bold",
+        },
+      },
     },
   },
 };
@@ -287,6 +280,7 @@ const dashboardShippedProductsChart = {
           fill: true,
           backgroundColor: gradientFill,
           borderWidth: 2,
+          tension: 0.4,
           data: [542, 480, 430, 550, 530, 453, 380, 434, 568, 610, 700, 630],
         },
       ],
@@ -323,6 +317,7 @@ const dashboardAllProductsChart = {
           fill: true,
           backgroundColor: gradientFill,
           borderWidth: 2,
+          tension: 0.4,
           data: [40, 500, 650, 700, 1200, 1250, 1300, 1900],
         },
       ],
@@ -376,45 +371,43 @@ const dashboard24HoursPerformanceChart = {
   },
   options: {
     maintainAspectRatio: false,
-    legend: {
-      display: false,
-    },
-    tooltips: {
-      bodySpacing: 4,
-      mode: "nearest",
-      intersect: 0,
-      position: "nearest",
-      xPadding: 10,
-      yPadding: 10,
-      caretPadding: 10,
+    plugins: {
+      legend: {
+        display: false,
+      },
+      tooltips: {
+        bodySpacing: 4,
+        mode: "nearest",
+        intersect: 0,
+        position: "nearest",
+        xPadding: 10,
+        yPadding: 10,
+        caretPadding: 10,
+      },
     },
     responsive: 1,
     scales: {
-      yAxes: [
-        {
-          ticks: {
-            maxTicksLimit: 7,
-          },
-          gridLines: {
-            zeroLineColor: "transparent",
-            drawBorder: false,
-          },
+      y: {
+        ticks: {
+          maxTicksLimit: 7,
         },
-      ],
-      xAxes: [
-        {
-          display: 0,
-          ticks: {
-            display: false,
-          },
-          gridLines: {
-            zeroLineColor: "transparent",
-            drawTicks: false,
-            display: false,
-            drawBorder: false,
-          },
+        grid: {
+          zeroLineColor: "transparent",
+          drawBorder: false,
         },
-      ],
+      },
+      x: {
+        display: 0,
+        ticks: {
+          display: false,
+        },
+        grid: {
+          zeroLineColor: "transparent",
+          drawTicks: false,
+          display: false,
+          drawBorder: false,
+        },
+      },
     },
     layout: {
       padding: { left: 0, right: 0, top: 15, bottom: 15 },
