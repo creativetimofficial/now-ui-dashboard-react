@@ -3020,6 +3020,7 @@ Created using IcoMoon - icomoon.io
   z-index: 1031;
   border-radius: 8px 0 0 8px;
   text-align: center;
+  cursor: pointer;
   top: 120px; }
   .fixed-plugin li > a,
   .fixed-plugin .badge {
