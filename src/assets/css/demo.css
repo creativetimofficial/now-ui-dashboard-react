@@ -1,11 +1,11 @@
 /*!
 
 =========================================================
-* Now UI Dashboard React - v1.5.0
+* Now UI Dashboard React - v1.5.1
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/now-ui-dashboard-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+* Copyright 2022 Creative Tim (https://www.creative-tim.com)
 * Licensed under MIT (https://github.com/creativetimofficial/now-ui-dashboard-react/blob/main/LICENSE.md)
 
 * Coded by Creative Tim
@@ -15,45 +15,45 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-.tim-row{
-    margin-bottom: 20px;
+.tim-row {
+  margin-bottom: 20px;
 }
 
 .tim-white-buttons {
-    background-color: #777777;
+  background-color: #777777;
 }
-.typography-line{
-    padding-left: 25%;
-    margin-bottom: 35px;
-    position: relative;
-    display: block;
-    width: 100%;
+.typography-line {
+  padding-left: 25%;
+  margin-bottom: 35px;
+  position: relative;
+  display: block;
+  width: 100%;
 }
-.typography-line span{
-    bottom: 10px;
-    color: #c0c1c2;
-    display: block;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 13px;
-    left: 0;
-    position: absolute;
-    width: 260px;
-    text-transform: none;
+.typography-line span {
+  bottom: 10px;
+  color: #c0c1c2;
+  display: block;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 13px;
+  left: 0;
+  position: absolute;
+  width: 260px;
+  text-transform: none;
 }
-.tim-row{
-    padding-top: 60px;
+.tim-row {
+  padding-top: 60px;
 }
-.tim-row h3{
-    margin-top: 0;
+.tim-row h3 {
+  margin-top: 0;
 }
 
-.offline-doc .page-header{
+.offline-doc .page-header {
   display: flex;
   align-items: center;
 }
 
-.offline-doc .footer{
+.offline-doc .footer {
   position: absolute;
   width: 100%;
   background: transparent;
@@ -61,13 +61,13 @@
   color: #fff;
   z-index: 1;
 }
-.sidebar .nav > li.active-pro{
-    position: absolute;
-    width: 100%;
-    bottom: 10px;
+.sidebar .nav > li.active-pro {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
 }
-.sidebar .nav > li.active-pro a{
-    background: rgba(255, 255, 255, 0.14);
-    opacity: 1;
-    color: #FFFFFF;
+.sidebar .nav > li.active-pro a {
+  background: rgba(255, 255, 255, 0.14);
+  opacity: 1;
+  color: #ffffff;
 }

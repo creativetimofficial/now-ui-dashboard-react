@@ -1,11 +1,11 @@
 /*!
 
 =========================================================
-* Now UI Dashboard React - v1.5.0
+* Now UI Dashboard React - v1.5.1
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/now-ui-dashboard-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+* Copyright 2022 Creative Tim (https://www.creative-tim.com)
 * Licensed under MIT (https://github.com/creativetimofficial/now-ui-dashboard-react/blob/main/LICENSE.md)
 
 * Coded by Creative Tim
@@ -115,7 +115,7 @@ const icons = [
   "ui-2_time-alarm",
   "ui-1_email-85",
   "users_circle-08",
-  "users_single-02",
+  "users_single-02"
 ];
 
 export default icons;
