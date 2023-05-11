@@ -1,5 +1,9 @@
 # Change Log
 
+## [1.5.2] 2023-05-11
+
+- Update dependencies
+
 ## [1.5.1] 2021-07-19
 
 - Update the dependencies
