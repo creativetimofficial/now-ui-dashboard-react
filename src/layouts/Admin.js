@@ -20,7 +20,7 @@ import React from "react";
 import PerfectScrollbar from "perfect-scrollbar";
 
 // reactstrap components
-import { Route, Switch, Redirect, useLocation } from "react-router-dom";
+import { Route, Routes, Navigate, useLocation } from "react-router-dom";
 
 // core components
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
@@ -61,18 +61,22 @@ function Admin(props) {
       <Sidebar {...props} routes={routes} backgroundColor={backgroundColor} />
       <div className="main-panel" ref={mainPanel}>
         <DemoNavbar {...props} />
-        <Switch>
+        <Routes>
           {routes.map((prop, key) => {
             return (
               <Route
-                path={prop.layout + prop.path}
-                component={prop.component}
+                path={prop.path}
+                element={prop.component}
                 key={key}
+                exact
               />
             );
           })}
-          <Redirect from="/admin" to="/admin/dashboard" />
-        </Switch>
+          <Route
+            path="/admin"
+            element={<Navigate to="/admin/dashboard" replace />}
+          />
+        </Routes>
         <Footer fluid />
       </div>
       <FixedPlugin

@@ -17,7 +17,7 @@
 */
 /*eslint-disable*/
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { Nav } from "reactstrap";
 // javascript plugin used to create scrollbars on windows
 import PerfectScrollbar from "perfect-scrollbar";
@@ -28,15 +28,16 @@ var ps;
 
 function Sidebar(props) {
   const sidebar = React.useRef();
+  const location = useLocation();
   // verifies if routeName is the one active (in browser input)
   const activeRoute = (routeName) => {
-    return props.location.pathname.indexOf(routeName) > -1 ? "active" : "";
+    return location.pathname.indexOf(routeName) > -1 ? "active" : "";
   };
   React.useEffect(() => {
     if (navigator.platform.indexOf("Win") > -1) {
       ps = new PerfectScrollbar(sidebar.current, {
         suppressScrollX: true,
-        suppressScrollY: false
+        suppressScrollY: false,
       });
     }
     return function cleanup() {
@@ -77,11 +78,7 @@ function Sidebar(props) {
                 }
                 key={key}
               >
-                <NavLink
-                  to={prop.layout + prop.path}
-                  className="nav-link"
-                  activeClassName="active"
-                >
+                <NavLink to={prop.layout + prop.path} className="nav-link">
                   <i className={"now-ui-icons " + prop.icon} />
                   <p>{prop.name}</p>
                 </NavLink>

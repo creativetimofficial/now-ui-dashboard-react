@@ -32,7 +32,7 @@ import {
   InputGroup,
   InputGroupText,
   InputGroupAddon,
-  Input
+  Input,
 } from "reactstrap";
 
 import routes from "routes.js";
@@ -59,18 +59,18 @@ function DemoNavbar(props) {
     routes.map((prop, key) => {
       if (prop.collapse) {
         prop.views.map((prop, key) => {
-          if (prop.path === props.location.pathname) {
+          if (prop.path === location.pathname) {
             name = prop.name;
           }
           return null;
         });
       } else {
         if (prop.redirect) {
-          if (prop.path === props.location.pathname) {
+          if (prop.path === location.pathname) {
             name = prop.name;
           }
         } else {
-          if (prop.path === props.location.pathname) {
+          if (prop.path === location.pathname) {
             name = prop.name;
           }
         }
@@ -107,13 +107,11 @@ function DemoNavbar(props) {
     // add or remove classes depending if we are on full-screen-maps page or not
     <Navbar
       color={
-        props.location.pathname.indexOf("full-screen-maps") !== -1
-          ? "white"
-          : color
+        location.pathname.indexOf("full-screen-maps") !== -1 ? "white" : color
       }
       expand="lg"
       className={
-        props.location.pathname.indexOf("full-screen-maps") !== -1
+        location.pathname.indexOf("full-screen-maps") !== -1
           ? "navbar-absolute fixed-top"
           : "navbar-absolute fixed-top " +
             (color === "transparent" ? "navbar-transparent " : "")
