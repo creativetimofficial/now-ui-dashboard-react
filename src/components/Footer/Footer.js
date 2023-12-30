@@ -32,23 +32,20 @@ function Footer(props) {
                 href="https://www.creative-tim.com?ref=nudr-footer"
                 target="_blank"
               >
-                Creative Tim
+                Abdullah Javed
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/tskaj" target="_blank">
+                About Me
               </a>
             </li>
             <li>
               <a
-                href="https://presentation.creative-tim.com?ref=nudr-footer"
+                href="https://medium.com/@aj.sure/unveiling-the-illusion-the-narrative-of-a-conflict-that-never-was-63ecd0d34abd"
                 target="_blank"
               >
-                About Us
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://blog.creative-tim.com?ref=nudr-footer"
-                target="_blank"
-              >
-                Blog
+                Blogs
               </a>
             </li>
           </ul>
@@ -56,19 +53,19 @@ function Footer(props) {
         <div className="copyright">
           &copy; {1900 + new Date().getYear()}, Designed by{" "}
           <a
-            href="https://www.invisionapp.com"
+            href="https://www.linkedin.com/in/abdullah-javed-a17b3629b/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Invision
+            Abdullah Javed
           </a>
           . Coded by{" "}
           <a
-            href="https://www.creative-tim.com?ref=nudr-footer"
+            href="https://www.linkedin.com/in/abdullah-javed-a17b3629b/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Creative Tim
+            Abdullah Javed
           </a>
           .
         </div>

@@ -1,20 +1,3 @@
-/*!
-
-=========================================================
-* Now UI Dashboard React - v1.5.2
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/now-ui-dashboard-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/now-ui-dashboard-react/blob/main/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 // react plugin used to create charts
 import { Line, Bar } from "react-chartjs-2";
@@ -53,22 +36,14 @@ import {
 function Dashboard() {
   return (
     <>
-      <PanelHeader
-        size="lg"
-        content={
-          <Line
-            data={dashboardPanelChart.data}
-            options={dashboardPanelChart.options}
-          />
-        }
-      />
+      <PanelHeader size="lg" />
       <div className="content">
         <Row>
           <Col xs={12} md={4}>
             <Card className="card-chart">
               <CardHeader>
-                <h5 className="card-category">Global Sales</h5>
-                <CardTitle tag="h4">Shipped Products</CardTitle>
+                <h5 className="card-category">Assignments</h5>
+                <CardTitle tag="h4">Recently Added Assignments</CardTitle>
                 <UncontrolledDropdown>
                   <DropdownToggle
                     className="btn-round btn-outline-default btn-icon"
@@ -87,12 +62,7 @@ function Dashboard() {
                 </UncontrolledDropdown>
               </CardHeader>
               <CardBody>
-                <div className="chart-area">
-                  <Line
-                    data={dashboardShippedProductsChart.data}
-                    options={dashboardShippedProductsChart.options}
-                  />
-                </div>
+                <div className="chart-area">Hi</div>
               </CardBody>
               <CardFooter>
                 <div className="stats">
@@ -105,8 +75,8 @@ function Dashboard() {
           <Col xs={12} md={4}>
             <Card className="card-chart">
               <CardHeader>
-                <h5 className="card-category">2021 Sales</h5>
-                <CardTitle tag="h4">All products</CardTitle>
+                <h5 className="card-category">Courses</h5>
+                <CardTitle tag="h4">All Courses</CardTitle>
                 <UncontrolledDropdown>
                   <DropdownToggle
                     className="btn-round btn-outline-default btn-icon"
@@ -115,22 +85,15 @@ function Dashboard() {
                     <i className="now-ui-icons loader_gear" />
                   </DropdownToggle>
                   <DropdownMenu right>
-                    <DropdownItem>Action</DropdownItem>
-                    <DropdownItem>Another Action</DropdownItem>
-                    <DropdownItem>Something else here</DropdownItem>
+                    <DropdownItem>Register Regular Courses</DropdownItem>
                     <DropdownItem className="text-danger">
-                      Remove data
+                      View Fee Structure
                     </DropdownItem>
                   </DropdownMenu>
                 </UncontrolledDropdown>
               </CardHeader>
               <CardBody>
-                <div className="chart-area">
-                  <Line
-                    data={dashboardAllProductsChart.data}
-                    options={dashboardAllProductsChart.options}
-                  />
-                </div>
+                <div className="chart-area">Registered courses come here</div>
               </CardBody>
               <CardFooter>
                 <div className="stats">

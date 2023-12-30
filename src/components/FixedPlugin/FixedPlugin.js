@@ -101,20 +101,20 @@ function FixedPlugin(props) {
               target="_blank"
               className="btn btn-primary btn-block btn-round"
             >
-              Buy pro
+              View Assignments
             </a>
             <a
               href="https://www.creative-tim.com/product/now-ui-dashboard-react?ref=nudr-fixed-plugin"
               target="_blank"
               className="btn btn-warning btn-block btn-round"
             >
-              Download free
+              View Attendance
             </a>
             <a
               href="https://demos.creative-tim.com/now-ui-dashboard-react/#/documentation/tutorial?ref=nudr-fixed-plugin"
               className="btn btn-block btn-round btn-info"
             >
-              Documentation
+              View Timetable
             </a>
           </li>
         </ul>

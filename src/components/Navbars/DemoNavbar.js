@@ -153,9 +153,9 @@ function DemoNavbar(props) {
             <NavItem>
               <Link to="#pablo" className="nav-link">
                 <i className="now-ui-icons media-2_sound-wave" />
-                <p>
-                  <span className="d-lg-none d-md-block">Stats</span>
-                </p>
+                <a href="https://www.bahria.edu.pk">
+                  <span className="d-lg-none d-md-block">BU Official Site</span>
+                </a>
               </Link>
             </NavItem>
             <Dropdown
@@ -170,9 +170,9 @@ function DemoNavbar(props) {
                 </p>
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem tag="a">Action</DropdownItem>
-                <DropdownItem tag="a">Another Action</DropdownItem>
-                <DropdownItem tag="a">Something else here</DropdownItem>
+                <DropdownItem tag="a">File a complaint</DropdownItem>
+                <DropdownItem tag="a">Report a bug</DropdownItem>
+                <DropdownItem tag="a">Visit BU TV</DropdownItem>
               </DropdownMenu>
             </Dropdown>
             <NavItem>
