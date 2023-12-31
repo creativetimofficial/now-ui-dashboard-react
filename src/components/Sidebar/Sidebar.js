@@ -12,14 +12,14 @@ function Sidebar(props) {
   const sidebar = React.useRef();
   const location = useLocation();
   // verifies if routeName is the one active (in browser input)
-  const activeRoute = (routeName) => {
+  const activeRoute = routeName => {
     return location.pathname.indexOf(routeName) > -1 ? "active" : "";
   };
   React.useEffect(() => {
     if (navigator.platform.indexOf("Win") > -1) {
       ps = new PerfectScrollbar(sidebar.current, {
         suppressScrollX: true,
-        suppressScrollY: false,
+        suppressScrollY: false
       });
     }
     return function cleanup() {
