@@ -14,44 +14,32 @@ router.post("/create", [
         return res.json({message: errors.errors[0].msg.error, success: false});
     }
 
+    const allowedExtensions = ['png', 'jpeg', 'jpg'];
+
     const course = new Course(req.body);
+
+    if (req.files){
+        if (req.files.image){
+            const fileExtension = req.files.image.name.split('.').pop().toLowerCase();
+            if (!allowedExtensions.includes(fileExtension)){
+                return res.json({message: "File Type provided is not acceptable", success: false})
+            }
+            const imageBuffer = fs.readFileSync(req.files.image.tempFilePath);
+            course.image = imageBuffer
+            fs.rm("./tmp", {
+                recursive: true,
+              }, (err)=>{
+                if (err){
+                    console.log("There was an error");
+                }
+              });
+        }
+    }
 
     await course.save();
 
     return res.json({message: "New Course Created", success: true})
 
-})
-
-router.post("/addimage/:id", async (req, res)=>{
-
-    const allowedExtensions = ['png', 'jpeg', 'jpg'];
-
-    if (!req.files){
-        return res.json({message: "You must provide an image file", success: false})
-    }
-
-    if (!req.files.image){
-        return res.json({message: "You must provide image", success: false})
-    }
-    const fileExtension = req.files.image.name.split('.').pop().toLowerCase();
-
-    if (!allowedExtensions.includes(fileExtension)){
-        return res.json({message: "File Type provided is not acceptable", success: false})
-    }
-
-    const imageBuffer = fs.readFileSync(req.files.image.tempFilePath);
-
-    await Course.findByIdAndUpdate(req.params.id, { $set: {image: imageBuffer} });
-
-    fs.rm("./tmp", {
-        recursive: true,
-      }, (err)=>{
-        if (err){
-            console.log("There was an error");
-        }
-      });
-
-    return res.json({message: "Image added with the course", success: true});
 })
 
 router.get("/:id", async (req, res)=>{
@@ -64,7 +52,16 @@ router.get("/:id", async (req, res)=>{
 router.get("/", async (req, res)=>{
     const courses = await Course.find();
 
-    return res.json({courses, success: true})
+    const coursesToSend = [];
+    const len = courses.length;
+
+    for (let i=0; i<len; i++){
+        const base64Data = courses[i].image.toString('base64');
+        const imageUri = `data:${courses[i].image.contentType};base64,${base64Data}`;
+        coursesToSend.push({name: courses[i].name, instructor: courses[i].instructor, image: imageUri});
+    }
+
+    return res.json({courses : coursesToSend, success: true})
 })
 
 module.exports = router;

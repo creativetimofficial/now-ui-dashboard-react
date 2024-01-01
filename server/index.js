@@ -13,7 +13,7 @@ app.use(fileUpload({
 
 app.use(cors())
 
-app.use(bodyParser.json({limit: "100mb"}));
+app.use(bodyParser.json({limit: "512mb"}));
 
 app.use('/assignments', require("./routes/assignments"))
 app.use('/courses', require("./routes/courses"))
