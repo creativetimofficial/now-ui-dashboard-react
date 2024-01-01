@@ -5,7 +5,7 @@ dotenv.config();
 const mongoUri = process.env.MONGO_URI;
 
 const connectToMongo = async () => {
-    mongoose.connect(mongoUri);
-}
+  mongoose.connect(mongoUri);
+};
 
 module.exports = connectToMongo;
