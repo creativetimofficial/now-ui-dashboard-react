@@ -1,0 +1,9 @@
+.App {
+  font-family: sans-serif;
+  /*text-align: center*/
+}
+/* Dark mode styles */
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}

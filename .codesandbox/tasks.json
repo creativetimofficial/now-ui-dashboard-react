@@ -16,33 +16,27 @@
     },
     "build": {
       "name": "build",
-      "command": "yarn build",
-      "runAtStart": false
+      "command": "yarn build"
     },
     "test": {
       "name": "test",
-      "command": "yarn test",
-      "runAtStart": false
+      "command": "yarn test"
     },
     "eject": {
       "name": "eject",
-      "command": "yarn eject",
-      "runAtStart": false
+      "command": "yarn eject"
     },
     "install:clean": {
       "name": "install:clean",
-      "command": "yarn install:clean",
-      "runAtStart": false
+      "command": "yarn install:clean"
     },
     "compile-sass": {
       "name": "compile-sass",
-      "command": "yarn compile-sass",
-      "runAtStart": false
+      "command": "yarn compile-sass"
     },
     "minify-sass": {
       "name": "minify-sass",
-      "command": "yarn minify-sass",
-      "runAtStart": false
+      "command": "yarn minify-sass"
     }
   }
 }
