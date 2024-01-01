@@ -1,6 +1,8 @@
-import React from "react";
+import {React,  useState, useEffect} from "react";
 // react plugin used to create charts
 import { Line, Bar } from "react-chartjs-2";
+import AddAssignmentModal from "./AddAssignmentModal";
+import AddCourseModal from "./AddCourseModal";
 
 // reactstrap components
 import {
@@ -34,6 +36,82 @@ import {
 } from "variables/charts.js";
 
 function Dashboard() {
+
+  const [assignments, setAssignments] = useState();
+  const [courses, setCourses] = useState();
+
+  const [currentAssignmentIndex, setCurrentAssignmentIndex] = useState();
+  const [currentCourseIndex, setCurrentCourseIndex] = useState();
+
+  const host = "http://localhost:5000";
+
+  const getAssignments = async ()=>{
+    const response = await fetch(`${host}/assignments`, {
+      method: "GET"
+    })
+
+    const json = await response.json();
+    setCurrentAssignmentIndex(json.assignments?.length-1)
+    setAssignments(json.assignments);
+  }
+
+  const getCourses = async ()=>{
+    const response = await fetch(`${host}/courses`, {
+      method: "GET"
+    })
+    const json = await response.json();
+    setCurrentCourseIndex(json.courses?.length-1)
+    setCourses(json.courses);
+  }
+
+  useEffect(()=>{
+    const getAllAssignments = async ()=>{
+      await getAssignments();
+    }
+
+    const getAllCourses = async ()=>{
+      await getCourses();
+    }
+    getAllAssignments();
+    getAllCourses();
+    console.log(assignments);
+  }, []);
+
+  const [showAddAssignmentModal, setShowAddAssignmentModal] = useState(false);
+  const [showAddCourseModal, setShowAddCourseModal] = useState(false);
+
+  const toggleShowAddAssignmentModal = ()=>{
+    if (showAddAssignmentModal){
+      setShowAddAssignmentModal(false);
+    }else{
+      setShowAddAssignmentModal(true);
+    }
+  }
+
+  const toggleShowAddCourseModal = ()=>{
+    if (showAddCourseModal){
+      setShowAddCourseModal(false);
+    }else{
+      setShowAddCourseModal(true);
+    }
+  }
+
+  const viewNext = ()=>{
+      setCurrentAssignmentIndex(currentAssignmentIndex-1);
+  }
+
+  const viewPrev = ()=>{
+    setCurrentAssignmentIndex(currentAssignmentIndex+1);
+  }
+
+  const viewNextCourse = ()=>{
+    setCurrentCourseIndex(currentCourseIndex-1);
+  }
+
+  const viewPrevCourse = ()=>{
+    setCurrentCourseIndex(currentCourseIndex+1);
+  }
+
   return (
     <>
       <PanelHeader size="lg" />
@@ -52,7 +130,7 @@ function Dashboard() {
                     <i className="now-ui-icons loader_gear" />
                   </DropdownToggle>
                   <DropdownMenu right>
-                    <DropdownItem>Action</DropdownItem>
+                    <DropdownItem onClick={toggleShowAddAssignmentModal}>Add Assignment</DropdownItem>
                     <DropdownItem>Another Action</DropdownItem>
                     <DropdownItem>Something else here</DropdownItem>
                     <DropdownItem className="text-danger">
@@ -62,7 +140,12 @@ function Dashboard() {
                 </UncontrolledDropdown>
               </CardHeader>
               <CardBody>
-                <div className="chart-area">Hi</div>
+                <div className="chart-area">
+                    <p style={{"marginLeft": "20px"}}>{assignments && assignments[currentAssignmentIndex]?.name}</p>
+                    <p style={{"marginLeft": "20px"}}>{assignments && assignments[currentAssignmentIndex]?.course}</p>
+                    <button style={{"marginLeft": "20px", "cursor": "pointer"}} onClick={viewPrev} disabled={currentAssignmentIndex===assignments?.length-1}>View Prev</button>
+                    <button style={{"marginLeft": "20px", "cursor": "pointer"}} onClick={viewNext} disabled = {currentAssignmentIndex===0}>View Next</button>
+                </div>
               </CardBody>
               <CardFooter>
                 <div className="stats">
@@ -85,7 +168,7 @@ function Dashboard() {
                     <i className="now-ui-icons loader_gear" />
                   </DropdownToggle>
                   <DropdownMenu right>
-                    <DropdownItem>Register Regular Courses</DropdownItem>
+                    <DropdownItem onClick={toggleShowAddCourseModal}>Register Regular Courses</DropdownItem>
                     <DropdownItem className="text-danger">
                       View Fee Structure
                     </DropdownItem>
@@ -93,7 +176,12 @@ function Dashboard() {
                 </UncontrolledDropdown>
               </CardHeader>
               <CardBody>
-                <div className="chart-area">Registered courses come here</div>
+                <div className="chart-area">
+                <img src={courses && courses[currentCourseIndex]?.image} style={{"marginLeft": "20px"}} width="200px"/>
+                <p style={{"marginLeft": "20px"}}> Course: {courses && courses[currentCourseIndex]?.name} | Instructor: {courses && courses[currentCourseIndex]?.instructor}</p>
+                <button style={{"marginLeft": "20px", "cursor": "pointer"}} onClick={viewPrevCourse} disabled={currentCourseIndex===courses?.length-1}>View Prev</button>
+                <button style={{"marginLeft": "20px", "cursor": "pointer"}} onClick={viewNextCourse} disabled = {currentCourseIndex===0}>View Next</button>
+                </div>
               </CardBody>
               <CardFooter>
                 <div className="stats">
@@ -335,6 +423,8 @@ function Dashboard() {
             </Card>
           </Col>
         </Row>
+        {showAddAssignmentModal && <AddAssignmentModal toggleShowAddAssignmentModal={toggleShowAddAssignmentModal}/>}
+        {showAddCourseModal && <AddCourseModal toggleShowAddCourseModal={toggleShowAddCourseModal}/>}
       </div>
     </>
   );

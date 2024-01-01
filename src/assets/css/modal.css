@@ -1,0 +1,31 @@
+.modal-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.modal-wrapper form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border: 1px solid brown;
+    border-radius: 6px;
+    width: 300px;
+    height: 400px;
+    background-color: #EBECF1;
+}
+
+input[type="file"]{
+    margin-left: 40px;
+}
+
+input{
+    margin-bottom: 10px;
+}
