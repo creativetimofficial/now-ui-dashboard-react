@@ -4,6 +4,7 @@ import { Line, Bar } from "react-chartjs-2";
 import AddAssignmentModal from "./AddAssignmentModal";
 import AddCourseModal from "./AddCourseModal";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 // reactstrap components
 import {
@@ -123,6 +124,29 @@ function Dashboard() {
     setCurrentCourseIndex(currentCourseIndex+1);
   }
 
+  const handleDownload = async () => {
+    try {
+      const response = await axios.get(assignments[currentAssignmentIndex].content, {
+        responseType: 'blob',
+      });
+
+      const url = window.URL.createObjectURL(new Blob([response.data], { type: response.headers['content-type'] }));
+      const link = document.createElement('a');
+      link.href = url;
+
+      let fileName = assignments[currentAssignmentIndex].name + "." + assignments[currentAssignmentIndex].fileExtension;
+
+      link.setAttribute('download', fileName);
+      document.body.appendChild(link);
+
+
+      link.click();
+      link.remove();
+    } catch (error) {
+      window.alert("Download Failed")
+    }
+  };
+
   return (
     <>
       <PanelHeader size="lg" />
@@ -152,7 +176,7 @@ function Dashboard() {
               </CardHeader>
               <CardBody>
                 <div className="chart-area">
-                    <p style={{"marginLeft": "20px"}}>{assignments && assignments[currentAssignmentIndex]?.name}</p>
+                    <p style={{"marginLeft": "20px", "color": "blue", "cursor": "pointer"}} onClick={handleDownload}>{assignments && assignments[currentAssignmentIndex]?.name}</p>
                     <p style={{"marginLeft": "20px"}}>{assignments && assignments[currentAssignmentIndex]?.course}</p>
                     <button style={{"marginLeft": "20px", "cursor": "pointer"}} onClick={viewPrev} disabled={currentAssignmentIndex===assignments?.length-1}>View Prev</button>
                     <button style={{"marginLeft": "20px", "cursor": "pointer"}} onClick={viewNext} disabled = {currentAssignmentIndex===0}>View Next</button>

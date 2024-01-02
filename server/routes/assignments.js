@@ -49,7 +49,8 @@ router.post(
     const assignment = new Assignment({
       courseId: req.params.id,
       name: req.body.name,
-      content: assignmentBuffer
+      content: assignmentBuffer,
+      fileExtension
     });
 
     await assignment.save();
@@ -87,11 +88,13 @@ router.get("/", fetchFaculty, async (req, res) => {
 
   for (let i = 0; i < len; i++) {
     const course = await Course.findById(assignments[i].courseId);
-    assignments[i].content = "";
+    const base64Data = assignments[i].content.toString("base64");
+    const content = `data:${assignments[i].content.contentType};base64,${base64Data}`;
     assignmentsToSend.push({
       name: assignments[i].name,
       course: course.name,
-      content: assignments[i].content
+      content,
+      fileExtension: assignments[i].fileExtension
     });
   }
 
