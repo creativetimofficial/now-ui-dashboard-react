@@ -29,6 +29,9 @@ function AddCourseModal({ toggleShowAddCourseModal }) {
     axios({
       url: `${host}/courses/create`,
       method: "POST",
+      headers: {
+        "faculty-token": localStorage.getItem("faculty-token"),
+      },
       data
     }).then(response => {
       const json = response.data;

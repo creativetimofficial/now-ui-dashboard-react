@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Nav } from "reactstrap";
 // javascript plugin used to create scrollbars on windows
 import PerfectScrollbar from "perfect-scrollbar";
@@ -28,6 +28,7 @@ function Sidebar(props) {
       }
     };
   });
+
   return (
     <div className="sidebar" data-color={props.backgroundColor}>
       <div className="logo">
@@ -52,7 +53,7 @@ function Sidebar(props) {
               <li>
                 <NavLink to={prop.layout + prop.path} className="nav-link">
                   <i className={"now-ui-icons " + prop.icon} />
-                  <p>{prop.name}</p>
+                  <p onClick={prop.function}>{prop.name}</p>
                 </NavLink>
               </li>
             );

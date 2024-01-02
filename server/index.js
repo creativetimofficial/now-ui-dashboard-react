@@ -17,6 +17,7 @@ app.use(bodyParser.json({limit: "512mb"}));
 
 app.use('/assignments', require("./routes/assignments"))
 app.use('/courses', require("./routes/courses"))
+app.use('/faculty', require("./routes/faculty"))
 
 connectToMongo()
 

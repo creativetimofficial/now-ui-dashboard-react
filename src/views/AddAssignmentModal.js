@@ -25,10 +25,12 @@ function AddAssignmentModal({ toggleShowAddAssignmentModal }) {
     e.preventDefault();
     data.append("name", formData.name);
     data.append("assignment", formData.assignment);
-    console.log(`${host}/assignments/create/${formData.courseId}`);
     axios({
       url: `${host}/assignments/create/${formData.courseId}`,
       method: "POST",
+      headers: {
+        "faculty-token": localStorage.getItem("faculty-token"),
+      },
       data
     }).then(response => {
       const json = response.data;

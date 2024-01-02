@@ -1,0 +1,28 @@
+h1{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border: 1px solid brown;
+    border-radius: 6px;
+    width: 300px;
+    height: 400px;
+    background-color: #EBECF1;
+    margin: auto;
+}
+
+input{
+    margin-bottom: 10px;
+}
+
+button{
+    background-color: white;
+    padding: 10px;
+}

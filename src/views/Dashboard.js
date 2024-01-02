@@ -3,6 +3,7 @@ import {React,  useState, useEffect} from "react";
 import { Line, Bar } from "react-chartjs-2";
 import AddAssignmentModal from "./AddAssignmentModal";
 import AddCourseModal from "./AddCourseModal";
+import { useNavigate } from "react-router-dom";
 
 // reactstrap components
 import {
@@ -47,7 +48,10 @@ function Dashboard() {
 
   const getAssignments = async ()=>{
     const response = await fetch(`${host}/assignments`, {
-      method: "GET"
+      method: "GET",
+      headers: {
+        "faculty-token": localStorage.getItem("faculty-token"),
+      } 
     })
 
     const json = await response.json();
@@ -57,14 +61,22 @@ function Dashboard() {
 
   const getCourses = async ()=>{
     const response = await fetch(`${host}/courses`, {
-      method: "GET"
+      method: "GET",
+      headers: {
+        "faculty-token": localStorage.getItem("faculty-token"),
+      }
     })
     const json = await response.json();
     setCurrentCourseIndex(json.courses?.length-1)
     setCourses(json.courses);
   }
 
+  const navigate = useNavigate("/");
+
   useEffect(()=>{
+    if (!localStorage.getItem("faculty-token")){
+      navigate("/");
+    }
     const getAllAssignments = async ()=>{
       await getAssignments();
     }
@@ -74,7 +86,6 @@ function Dashboard() {
     }
     getAllAssignments();
     getAllCourses();
-    console.log(assignments);
   }, []);
 
   const [showAddAssignmentModal, setShowAddAssignmentModal] = useState(false);

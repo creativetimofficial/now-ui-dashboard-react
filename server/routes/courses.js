@@ -3,9 +3,10 @@ const router = express.Router();
 const Course = require("../models/Course");
 const fs = require("fs");
 const { body, validationResult } = require("express-validator");
+const fetchFaculty = require("../fectchFaculty")
 
 router.post(
-  "/create",
+  "/create", fetchFaculty,
   [
     body("name", { error: "Provide name of the course." }).isLength({ min: 1 }),
     body("instructor", { error: "Provide instructor name." }).isLength({
@@ -57,13 +58,13 @@ router.post(
   }
 );
 
-router.get("/:id", async (req, res) => {
+router.get("/:id", fetchFaculty, async (req, res) => {
   const course = await Course.findById(req.params.id);
 
   return res.json({ course, success: true });
 });
 
-router.get("/", async (req, res) => {
+router.get("/", fetchFaculty, async (req, res) => {
   const courses = await Course.find();
 
   const coursesToSend = [];

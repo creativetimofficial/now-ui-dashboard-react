@@ -4,9 +4,10 @@ const Assignment = require("../models/Assignment");
 const Course = require("../models/Course");
 const { body, validationResult } = require("express-validator");
 const fs = require("fs");
+const fetchFaculty = require("../fectchFaculty")
 
 router.post(
-  "/create/:id",
+  "/create/:id", fetchFaculty,
   [body("name", { error: "Assignment Name is required" })],
   async (req, res) => {
     const errors = validationResult(req);
@@ -69,7 +70,7 @@ router.post(
   }
 );
 
-router.get("/:id", async (req, res) => {
+router.get("/:id", fetchFaculty, async (req, res) => {
   const assignment = await Assignment.findById(req.params.id);
 
   const course = await Course.findById(assignment.courseId);
@@ -77,7 +78,7 @@ router.get("/:id", async (req, res) => {
   return res.json({ assignment, course: course.name, success: true });
 });
 
-router.get("/", async (req, res) => {
+router.get("/", fetchFaculty, async (req, res) => {
   const assignments = await Assignment.find();
 
   const len = assignments.length;
