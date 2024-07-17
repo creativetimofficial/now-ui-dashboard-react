@@ -5,21 +5,23 @@
   "private": true,
   "homepage": "https://demos.creative-tim.com/now-ui-dashboard-react/#/",
   "dependencies": {
+    "ajv": "^8.17.1",
     "bootstrap": "4.6.2",
     "chart.js": "3.9.1",
-    "sass": "1.62.1",
+    "cross-env": "^7.0.3",
     "perfect-scrollbar": "1.5.5",
-    "react": "18.2.0",
+    "react": ">=16.8.0",
     "react-chartjs-2": "3.3.0",
-    "react-dom": "18.2.0",
+    "react-dom": ">=16.8.0",
     "react-notification-alert": "0.0.13",
     "react-router-dom": "6.11.1",
     "react-scripts": "5.0.1",
-    "reactstrap": "8.10.0"
+    "reactstrap": "8.10.0",
+    "sass": "1.62.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env PUBLIC_URL=/ react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
