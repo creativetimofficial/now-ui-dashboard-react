@@ -29,7 +29,7 @@
     "minify-sass": "sass src/assets/scss/paper-dashboard.scss src/assets/css/paper-dashboard.min.css --style compressed"
   },
   "optionalDependencies": {
-    "@babel/core": "7.21.8",
+    "@babel/core": "7.29.6",
     "typescript": "5.0.4"
   },
   "peerDependencies": {
